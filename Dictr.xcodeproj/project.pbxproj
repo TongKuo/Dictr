@@ -15,6 +15,9 @@
 		83B5238A1C3BDE2E00FA6D4E /* DictrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523891C3BDE2E00FA6D4E /* DictrTests.m */; };
 		83B523951C3BDE2E00FA6D4E /* DictrUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523941C3BDE2E00FA6D4E /* DictrUITests.m */; };
 		83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */; settings = {ASSET_TAGS = (); }; };
+		83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */; settings = {ASSET_TAGS = (); }; };
+		83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		83B523A21C3BE0C300FA6D4E /* Dictr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dictr.entitlements; sourceTree = "<group>"; };
 		83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMainWindowController.h; sourceTree = "<group>"; };
 		83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMainWindowController.m; sourceTree = "<group>"; };
+		83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardViewController.h; sourceTree = "<group>"; };
+		83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardViewController.m; sourceTree = "<group>"; };
+		83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrBestMatchingCardViewController.xib; sourceTree = "<group>"; };
+		83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardView.h; sourceTree = "<group>"; };
+		83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,11 @@
 				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
 				83B523781C3BDE2E00FA6D4E /* DictrViewController.h */,
 				83B523791C3BDE2E00FA6D4E /* DictrViewController.m */,
+				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
+				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
+				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
+				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
+				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
 				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
 			);
 			path = Dictr;
@@ -253,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */,
 				83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */,
 				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
 			);
@@ -281,6 +295,8 @@
 			files = (
 				83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */,
 				83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */,
+				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
+				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
 				83B523771C3BDE2E00FA6D4E /* main.m in Sources */,
 				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,
 			);
