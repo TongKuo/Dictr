@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */; };
+		83B523771C3BDE2E00FA6D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523761C3BDE2E00FA6D4E /* main.m */; };
+		83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523791C3BDE2E00FA6D4E /* DictrViewController.m */; };
+		83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */; };
+		83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */; };
+		83B5238A1C3BDE2E00FA6D4E /* DictrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523891C3BDE2E00FA6D4E /* DictrTests.m */; };
+		83B523951C3BDE2E00FA6D4E /* DictrUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523941C3BDE2E00FA6D4E /* DictrUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83B523861C3BDE2E00FA6D4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B523671C3BDE2E00FA6D4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B5236E1C3BDE2E00FA6D4E;
+			remoteInfo = Dictr;
+		};
+		83B523911C3BDE2E00FA6D4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B523671C3BDE2E00FA6D4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83B5236E1C3BDE2E00FA6D4E;
+			remoteInfo = Dictr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83B5236F1C3BDE2E00FA6D4E /* Dictr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrAppDelegate.h; sourceTree = "<group>"; };
+		83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrAppDelegate.m; sourceTree = "<group>"; };
+		83B523761C3BDE2E00FA6D4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83B523781C3BDE2E00FA6D4E /* DictrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrViewController.h; sourceTree = "<group>"; };
+		83B523791C3BDE2E00FA6D4E /* DictrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrViewController.m; sourceTree = "<group>"; };
+		83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83B5237E1C3BDE2E00FA6D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DictrMain.storyboard; sourceTree = "<group>"; };
+		83B523801C3BDE2E00FA6D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B523851C3BDE2E00FA6D4E /* DictrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B523891C3BDE2E00FA6D4E /* DictrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrTests.m; sourceTree = "<group>"; };
+		83B5238B1C3BDE2E00FA6D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B523901C3BDE2E00FA6D4E /* DictrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B523941C3BDE2E00FA6D4E /* DictrUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrUITests.m; sourceTree = "<group>"; };
+		83B523961C3BDE2E00FA6D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B523A21C3BE0C300FA6D4E /* Dictr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dictr.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83B5236C1C3BDE2E00FA6D4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B523821C3BDE2E00FA6D4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B5238D1C3BDE2E00FA6D4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83B523661C3BDE2E00FA6D4E = {
+			isa = PBXGroup;
+			children = (
+				83B523711C3BDE2E00FA6D4E /* Dictr */,
+				83B523881C3BDE2E00FA6D4E /* DictrTests */,
+				83B523931C3BDE2E00FA6D4E /* DictrUITests */,
+				83B523701C3BDE2E00FA6D4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83B523701C3BDE2E00FA6D4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83B5236F1C3BDE2E00FA6D4E /* Dictr.app */,
+				83B523851C3BDE2E00FA6D4E /* DictrTests.xctest */,
+				83B523901C3BDE2E00FA6D4E /* DictrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83B523711C3BDE2E00FA6D4E /* Dictr */ = {
+			isa = PBXGroup;
+			children = (
+				83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */,
+				83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */,
+				83B523781C3BDE2E00FA6D4E /* DictrViewController.h */,
+				83B523791C3BDE2E00FA6D4E /* DictrViewController.m */,
+				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
+				83B523751C3BDE2E00FA6D4E /* Supporting Files */,
+			);
+			path = Dictr;
+			sourceTree = "<group>";
+		};
+		83B523751C3BDE2E00FA6D4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83B523801C3BDE2E00FA6D4E /* Info.plist */,
+				83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */,
+				83B523A21C3BE0C300FA6D4E /* Dictr.entitlements */,
+				83B523761C3BDE2E00FA6D4E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83B523881C3BDE2E00FA6D4E /* DictrTests */ = {
+			isa = PBXGroup;
+			children = (
+				83B523891C3BDE2E00FA6D4E /* DictrTests.m */,
+				83B5238B1C3BDE2E00FA6D4E /* Info.plist */,
+			);
+			path = DictrTests;
+			sourceTree = "<group>";
+		};
+		83B523931C3BDE2E00FA6D4E /* DictrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83B523941C3BDE2E00FA6D4E /* DictrUITests.m */,
+				83B523961C3BDE2E00FA6D4E /* Info.plist */,
+			);
+			path = DictrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83B5236E1C3BDE2E00FA6D4E /* Dictr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B523991C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "Dictr" */;
+			buildPhases = (
+				83B5236B1C3BDE2E00FA6D4E /* Sources */,
+				83B5236C1C3BDE2E00FA6D4E /* Frameworks */,
+				83B5236D1C3BDE2E00FA6D4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dictr;
+			productName = Dictr;
+			productReference = 83B5236F1C3BDE2E00FA6D4E /* Dictr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83B523841C3BDE2E00FA6D4E /* DictrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B5239C1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrTests" */;
+			buildPhases = (
+				83B523811C3BDE2E00FA6D4E /* Sources */,
+				83B523821C3BDE2E00FA6D4E /* Frameworks */,
+				83B523831C3BDE2E00FA6D4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83B523871C3BDE2E00FA6D4E /* PBXTargetDependency */,
+			);
+			name = DictrTests;
+			productName = DictrTests;
+			productReference = 83B523851C3BDE2E00FA6D4E /* DictrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83B5238F1C3BDE2E00FA6D4E /* DictrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B5239F1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrUITests" */;
+			buildPhases = (
+				83B5238C1C3BDE2E00FA6D4E /* Sources */,
+				83B5238D1C3BDE2E00FA6D4E /* Frameworks */,
+				83B5238E1C3BDE2E00FA6D4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83B523921C3BDE2E00FA6D4E /* PBXTargetDependency */,
+			);
+			name = DictrUITests;
+			productName = DictrUITests;
+			productReference = 83B523901C3BDE2E00FA6D4E /* DictrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83B523671C3BDE2E00FA6D4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Tong Kuo";
+				TargetAttributes = {
+					83B5236E1C3BDE2E00FA6D4E = {
+						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					83B523841C3BDE2E00FA6D4E = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 83B5236E1C3BDE2E00FA6D4E;
+					};
+					83B5238F1C3BDE2E00FA6D4E = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 83B5236E1C3BDE2E00FA6D4E;
+					};
+				};
+			};
+			buildConfigurationList = 83B5236A1C3BDE2E00FA6D4E /* Build configuration list for PBXProject "Dictr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83B523661C3BDE2E00FA6D4E;
+			productRefGroup = 83B523701C3BDE2E00FA6D4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83B5236E1C3BDE2E00FA6D4E /* Dictr */,
+				83B523841C3BDE2E00FA6D4E /* DictrTests */,
+				83B5238F1C3BDE2E00FA6D4E /* DictrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83B5236D1C3BDE2E00FA6D4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */,
+				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B523831C3BDE2E00FA6D4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B5238E1C3BDE2E00FA6D4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83B5236B1C3BDE2E00FA6D4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */,
+				83B523771C3BDE2E00FA6D4E /* main.m in Sources */,
+				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B523811C3BDE2E00FA6D4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B5238A1C3BDE2E00FA6D4E /* DictrTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B5238C1C3BDE2E00FA6D4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B523951C3BDE2E00FA6D4E /* DictrUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83B523871C3BDE2E00FA6D4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83B5236E1C3BDE2E00FA6D4E /* Dictr */;
+			targetProxy = 83B523861C3BDE2E00FA6D4E /* PBXContainerItemProxy */;
+		};
+		83B523921C3BDE2E00FA6D4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83B5236E1C3BDE2E00FA6D4E /* Dictr */;
+			targetProxy = 83B523911C3BDE2E00FA6D4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83B5237E1C3BDE2E00FA6D4E /* Base */,
+			);
+			name = DictrMain.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83B523971C3BDE2E00FA6D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83B523981C3BDE2E00FA6D4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		83B5239A1C3BDE2E00FA6D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dictr/Dictr.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dictr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.Dictr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83B5239B1C3BDE2E00FA6D4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dictr/Dictr.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dictr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.Dictr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83B5239D1C3BDE2E00FA6D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DictrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.DictrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dictr.app/Contents/MacOS/Dictr";
+			};
+			name = Debug;
+		};
+		83B5239E1C3BDE2E00FA6D4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DictrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.DictrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dictr.app/Contents/MacOS/Dictr";
+			};
+			name = Release;
+		};
+		83B523A01C3BDE2E00FA6D4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DictrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.DictrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dictr;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		83B523A11C3BDE2E00FA6D4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DictrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.DictrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dictr;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83B5236A1C3BDE2E00FA6D4E /* Build configuration list for PBXProject "Dictr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B523971C3BDE2E00FA6D4E /* Debug */,
+				83B523981C3BDE2E00FA6D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B523991C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "Dictr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B5239A1C3BDE2E00FA6D4E /* Debug */,
+				83B5239B1C3BDE2E00FA6D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83B5239C1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B5239D1C3BDE2E00FA6D4E /* Debug */,
+				83B5239E1C3BDE2E00FA6D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		83B5239F1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B523A01C3BDE2E00FA6D4E /* Debug */,
+				83B523A11C3BDE2E00FA6D4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83B523671C3BDE2E00FA6D4E /* Project object */;
+}
