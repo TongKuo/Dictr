@@ -8,8 +8,7 @@
 
 @import Cocoa;
 
+// DictrAppDelegate class
 @interface DictrAppDelegate : NSObject <NSApplicationDelegate>
-
-
-@end
+@end // DictrAppDelegate class
 

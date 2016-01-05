@@ -8,18 +8,21 @@
 
 #import "DictrViewController.h"
 
+// DictrViewController class
 @implementation DictrViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- ( void ) viewDidLoad
+    {
+    [ super viewDidLoad ];
 
     // Do any additional setup after loading the view.
-}
+    }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
+- ( void ) setRepresentedObject: ( id )_RepresentedObject
+    {
+    [ super setRepresentedObject: _RepresentedObject ];
 
     // Update the view, if already loaded.
-}
+    }
 
-@end
+@end // DictrViewController class

@@ -8,18 +8,22 @@
 
 #import "DictrAppDelegate.h"
 
+// Private Interfaces
 @interface DictrAppDelegate ()
 
-@end
+@end // Private Interfaces
 
+// DictrAppDelegate class
 @implementation DictrAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- ( void ) applicationDidFinishLaunching: ( NSNotification* )_Notif
+    {
     // Insert code here to initialize your application
-}
+    }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
+- ( void ) applicationWillTerminate: ( NSNotification* )_Notif
+    {
     // Insert code here to tear down your application
-}
+    }
 
-@end
+@end // DictrAppDelegate class

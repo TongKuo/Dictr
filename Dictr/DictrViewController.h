@@ -8,8 +8,7 @@
 
 @import Cocoa;
 
+// DictrViewController class
 @interface DictrViewController : NSViewController
-
-
-@end
+@end // DictrViewController class
 
