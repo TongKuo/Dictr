@@ -11,4 +11,3 @@
 // DictrAppDelegate class
 @interface DictrAppDelegate : NSObject <NSApplicationDelegate>
 @end // DictrAppDelegate class
-

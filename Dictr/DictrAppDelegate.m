@@ -10,11 +10,12 @@
 
 // Private Interfaces
 @interface DictrAppDelegate ()
-
 @end // Private Interfaces
 
 // DictrAppDelegate class
 @implementation DictrAppDelegate
+
+#pragma mark - Delegations
 
 - ( void ) applicationDidFinishLaunching: ( NSNotification* )_Notif
     {

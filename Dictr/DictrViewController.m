@@ -11,6 +11,8 @@
 // DictrViewController class
 @implementation DictrViewController
 
+#pragma mark - Initializations
+
 - ( void ) viewDidLoad
     {
     [ super viewDidLoad ];
