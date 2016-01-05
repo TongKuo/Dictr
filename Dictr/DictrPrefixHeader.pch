@@ -1,0 +1,18 @@
+//
+//  DictrPrefixHeader.pch
+//  Dictr
+//
+//  Created by Tong G. on 1/5/16.
+//  Copyright © 2016 Tong Kuo. All rights reserved.
+//
+
+#ifndef DictrPrefixHeader_pch
+#define DictrPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// Third Party Modules
+#import "PureLayout.h"
+
+#endif /* DictrPrefixHeader_pch */

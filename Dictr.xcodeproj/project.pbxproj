@@ -18,6 +18,10 @@
 		83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */; settings = {ASSET_TAGS = (); }; };
+		83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */; settings = {ASSET_TAGS = (); }; };
+		83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B5248F1C3BF5E500FA6D4E /* ALView+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
+		83B524981C3BF5E500FA6D4E /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524911C3BF5E500FA6D4E /* NSArray+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
+		83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524931C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,18 @@
 		83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrBestMatchingCardViewController.xib; sourceTree = "<group>"; };
 		83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardView.h; sourceTree = "<group>"; };
 		83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardView.m; sourceTree = "<group>"; };
+		83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMainContentView.h; sourceTree = "<group>"; };
+		83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMainContentView.m; sourceTree = "<group>"; };
+		83B5248E1C3BF5E500FA6D4E /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		83B5248F1C3BF5E500FA6D4E /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		83B524901C3BF5E500FA6D4E /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		83B524911C3BF5E500FA6D4E /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		83B524921C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		83B524931C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		83B524941C3BF5E500FA6D4E /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		83B524951C3BF5E500FA6D4E /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		83B524961C3BF5E500FA6D4E /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		83B5249A1C3BF60600FA6D4E /* DictrPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				83B523711C3BDE2E00FA6D4E /* Dictr */,
+				83B523B11C3BF5D200FA6D4E /* vendors */,
 				83B523751C3BDE2E00FA6D4E /* Supporting Files */,
 				83B523881C3BDE2E00FA6D4E /* DictrTests */,
 				83B523931C3BDE2E00FA6D4E /* DictrUITests */,
@@ -118,6 +135,8 @@
 				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
 				83B523781C3BDE2E00FA6D4E /* DictrViewController.h */,
 				83B523791C3BDE2E00FA6D4E /* DictrViewController.m */,
+				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
+				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
 				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
 				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
 				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
@@ -135,6 +154,7 @@
 				83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */,
 				83B523A21C3BE0C300FA6D4E /* Dictr.entitlements */,
 				83B523761C3BDE2E00FA6D4E /* main.m */,
+				83B5249A1C3BF60600FA6D4E /* DictrPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			path = Dictr;
@@ -156,6 +176,32 @@
 				83B523961C3BDE2E00FA6D4E /* Info.plist */,
 			);
 			path = DictrUITests;
+			sourceTree = "<group>";
+		};
+		83B523B11C3BF5D200FA6D4E /* vendors */ = {
+			isa = PBXGroup;
+			children = (
+				83B5248D1C3BF5E500FA6D4E /* PureLayout */,
+			);
+			name = vendors;
+			path = Dictr/vendors;
+			sourceTree = "<group>";
+		};
+		83B5248D1C3BF5E500FA6D4E /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				83B5248E1C3BF5E500FA6D4E /* ALView+PureLayout.h */,
+				83B5248F1C3BF5E500FA6D4E /* ALView+PureLayout.m */,
+				83B524901C3BF5E500FA6D4E /* NSArray+PureLayout.h */,
+				83B524911C3BF5E500FA6D4E /* NSArray+PureLayout.m */,
+				83B524921C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.h */,
+				83B524931C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m */,
+				83B524941C3BF5E500FA6D4E /* PureLayout+Internal.h */,
+				83B524951C3BF5E500FA6D4E /* PureLayout.h */,
+				83B524961C3BF5E500FA6D4E /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
+			path = PureLayout/PureLayout/PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +294,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 83B523661C3BDE2E00FA6D4E;
 			productRefGroup = 83B523701C3BDE2E00FA6D4E /* Products */;
@@ -294,10 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */,
+				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,
 				83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */,
+				83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */,
+				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
 				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
 				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
 				83B523771C3BDE2E00FA6D4E /* main.m in Sources */,
+				83B524981C3BF5E500FA6D4E /* NSArray+PureLayout.m in Sources */,
 				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +482,7 @@
 				CODE_SIGN_ENTITLEMENTS = Dictr/Dictr.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = Dictr/DictrPrefixHeader.pch;
 				INFOPLIST_FILE = Dictr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.Dictr;
@@ -445,6 +497,7 @@
 				CODE_SIGN_ENTITLEMENTS = Dictr/Dictr.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = Dictr/DictrPrefixHeader.pch;
 				INFOPLIST_FILE = Dictr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.Dictr;

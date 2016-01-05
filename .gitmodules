@@ -1,0 +1,3 @@
+[submodule "Dictr/vendors/PureLayout"]
+	path = Dictr/vendors/PureLayout
+	url = https://github.com/TongKuo/PureLayout.git
