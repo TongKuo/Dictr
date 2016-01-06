@@ -10,4 +10,10 @@
 
 // DictrSearchField class
 @implementation DictrSearchField
+
+- ( void ) awakeFromNib
+    {
+    [ self setDelegate: [ DictrTranslator defaultTranslator ] ];
+    }
+
 @end // DictrSearchField class

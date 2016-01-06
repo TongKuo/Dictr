@@ -10,3 +10,11 @@
 
 // UI Constants
 extern CGFloat const DictrMainWindowMinHeight;
+
+// Notification Names
+extern NSString* const DictrTranslatorShouldBeginSearchingNotif;
+extern NSString* const DictrTranslatorShouldStopSearchingNotif;
+
+// Notification Keys
+extern NSString* const kSearchString;
+extern NSString* const kError;

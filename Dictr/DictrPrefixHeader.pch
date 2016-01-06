@@ -18,5 +18,6 @@
 
 // Frequently Used Headers
 #import "DictrConstants.h"
+#import "DictrTranslator.h"
 
 #endif /* DictrPrefixHeader_pch */

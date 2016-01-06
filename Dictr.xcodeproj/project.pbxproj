@@ -33,6 +33,7 @@
 		83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B71C3C082700FA6D4E /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C21C3D423C00FA6D4E /* DictrConstants.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C51C3D474C00FA6D4E /* DictrSearchField.m */; settings = {ASSET_TAGS = (); }; };
+		83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524CA1C3D489000FA6D4E /* DictrTranslator.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		83B524C21C3D423C00FA6D4E /* DictrConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrConstants.m; sourceTree = "<group>"; };
 		83B524C41C3D474C00FA6D4E /* DictrSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSearchField.h; sourceTree = "<group>"; };
 		83B524C51C3D474C00FA6D4E /* DictrSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSearchField.m; sourceTree = "<group>"; };
+		83B524C91C3D489000FA6D4E /* DictrTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrTranslator.h; sourceTree = "<group>"; };
+		83B524CA1C3D489000FA6D4E /* DictrTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrTranslator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				83B524C71C3D47D400FA6D4E /* ui */,
 				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
 				83B524C21C3D423C00FA6D4E /* DictrConstants.m */,
+				83B524C91C3D489000FA6D4E /* DictrTranslator.h */,
+				83B524CA1C3D489000FA6D4E /* DictrTranslator.m */,
 				83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */,
 				83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */,
 			);
@@ -423,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
 				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,

@@ -10,3 +10,11 @@
 
 // UI Constants
 CGFloat const DictrMainWindowMinHeight = 520.f;
+
+// Notification Names
+NSString* const DictrTranslatorShouldBeginSearchingNotif = @"Dictr.TranslatorShouldBeginSearching.Notif";
+NSString* const DictrTranslatorShouldStopSearchingNotif = @"Dictr.TranslatorShouldStopSearching.Notif";
+
+// Notification Keys
+NSString* const kSearchString = @"kSearchString";
+NSString* const kError = @"kError";
