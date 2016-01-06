@@ -13,6 +13,8 @@
 
 @property ( strong, readonly ) NSString* __dictCode;
 
+- ( void ) __timerFireMethod: ( NSTimer* )_Timer;
+
 @end // Private Interfaces
 
 // DictrTranslator class
@@ -33,6 +35,8 @@ DictrTranslator static* sDefaultTranslator;
         if ( self = [ super init ] )
             {
             self->__apiBaseURL = [ NSURL URLWithString: @"https://dictionary.cambridge.org/api/v1/" ];
+
+            self.accessKey = @"rv88bp4e1EKjDNMZKOuO6nex5Wa5mq1ykQtBcT8bldDM10SjTnMEaOPBKZpWAzC4";
             self.translatorType = DictrCambridgeEnglish2English;
 
             sDefaultTranslator = self;
@@ -44,12 +48,34 @@ DictrTranslator static* sDefaultTranslator;
 
 #pragma mark - Conforms to <NSTextFieldDelegate>
 
-- ( void ) controlTextDidBeginEditing: ( NSNotification* )_Notif
+- ( void ) controlTextDidChange: ( NSNotification* )_Notif
     {
-    NSLog( @"%@", _Notif );
+    NSText* fieldEditor = _Notif.userInfo[ @"NSFieldEditor" ];
+    NSString* searchValue = [ fieldEditor string ];
+
+    if ( searchValue.length > 0 )
+        {
+        [ self->__searchTimer invalidate ];
+        self->__searchTimer = [ NSTimer timerWithTimeInterval: ( NSTimeInterval ).6f
+                                                       target: self
+                                                     selector: @selector( __timerFireMethod: )
+                                                     userInfo: @{ kSearchString : searchValue ?: @"" }
+                                                      repeats: NO ];
+
+        [ [ NSRunLoop currentRunLoop ] addTimer: self->__searchTimer forMode: NSDefaultRunLoopMode ];
+        }
+    // if user emptied the search field
+    else if ( searchValue.length == 0 )
+        {
+        [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorShouldClearSearchResultNotif
+                                                               object: self
+                                                             userInfo: nil ];
+        }
     }
 
 #pragma mark - Private Interfaces
+
+@dynamic __dictCode;
 
 - ( NSString* ) __dictCode
     {
@@ -92,6 +118,13 @@ DictrTranslator static* sDefaultTranslator;
         }
 
     return dictCode;
+    }
+
+- ( void ) __timerFireMethod: ( NSTimer* )_Timer
+    {
+    NSLog( @"%@", _Timer.userInfo[ kSearchString ] );
+
+    [ self->__searchTimer invalidate ];
     }
 
 @end // DictrTranslator class

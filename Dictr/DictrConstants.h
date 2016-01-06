@@ -14,6 +14,7 @@ extern CGFloat const DictrMainWindowMinHeight;
 // Notification Names
 extern NSString* const DictrTranslatorShouldBeginSearchingNotif;
 extern NSString* const DictrTranslatorShouldStopSearchingNotif;
+extern NSString* const DictrTranslatorShouldClearSearchResultNotif;
 
 // Notification Keys
 extern NSString* const kSearchString;
