@@ -13,7 +13,7 @@
 
 - ( void ) awakeFromNib
     {
-    [ self setDelegate: [ DictrTranslator defaultTranslator ] ];
+    [ self setDelegate: [ NSApp delegate ] ];
     }
 
 @end // DictrSearchField class

@@ -27,8 +27,6 @@ typedef NS_ENUM( NSUInteger, DictrCambridgeTranslatorType )
     {
 @private
     NSURL* __apiBaseURL;
-
-    NSTimer* __searchTimer;
     }
 
 @property ( strong, readwrite ) NSString* accessKey;

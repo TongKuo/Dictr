@@ -10,4 +10,9 @@
 
 // DictrAppDelegate class
 @interface DictrAppDelegate : NSObject <NSApplicationDelegate>
+    {
+@private
+    NSTimer* __searchTimer;
+    }
+
 @end // DictrAppDelegate class

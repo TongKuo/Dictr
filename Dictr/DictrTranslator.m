@@ -13,8 +13,6 @@
 
 @property ( strong, readonly ) NSString* __dictCode;
 
-- ( void ) __timerFireMethod: ( NSTimer* )_Timer;
-
 @end // Private Interfaces
 
 // DictrTranslator class
@@ -44,33 +42,6 @@ DictrTranslator static* sDefaultTranslator;
         }
 
     return sDefaultTranslator;
-    }
-
-#pragma mark - Conforms to <NSTextFieldDelegate>
-
-- ( void ) controlTextDidChange: ( NSNotification* )_Notif
-    {
-    NSText* fieldEditor = _Notif.userInfo[ @"NSFieldEditor" ];
-    NSString* searchValue = [ fieldEditor string ];
-
-    if ( searchValue.length > 0 )
-        {
-        [ self->__searchTimer invalidate ];
-        self->__searchTimer = [ NSTimer timerWithTimeInterval: ( NSTimeInterval ).6f
-                                                       target: self
-                                                     selector: @selector( __timerFireMethod: )
-                                                     userInfo: @{ kSearchString : searchValue ?: @"" }
-                                                      repeats: NO ];
-
-        [ [ NSRunLoop currentRunLoop ] addTimer: self->__searchTimer forMode: NSDefaultRunLoopMode ];
-        }
-    // if user emptied the search field
-    else if ( searchValue.length == 0 )
-        {
-        [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorShouldClearSearchResultNotif
-                                                               object: self
-                                                             userInfo: nil ];
-        }
     }
 
 #pragma mark - Private Interfaces
@@ -118,13 +89,6 @@ DictrTranslator static* sDefaultTranslator;
         }
 
     return dictCode;
-    }
-
-- ( void ) __timerFireMethod: ( NSTimer* )_Timer
-    {
-    NSLog( @"%@", _Timer.userInfo[ kSearchString ] );
-
-    [ self->__searchTimer invalidate ];
     }
 
 @end // DictrTranslator class
