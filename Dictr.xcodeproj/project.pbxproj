@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */; };
 		83B523771C3BDE2E00FA6D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523761C3BDE2E00FA6D4E /* main.m */; };
-		83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523791C3BDE2E00FA6D4E /* DictrViewController.m */; };
+		83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */; };
 		83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */; };
 		83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */; };
 		83B5238A1C3BDE2E00FA6D4E /* DictrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523891C3BDE2E00FA6D4E /* DictrTests.m */; };
@@ -55,8 +55,8 @@
 		83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrAppDelegate.h; sourceTree = "<group>"; };
 		83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrAppDelegate.m; sourceTree = "<group>"; };
 		83B523761C3BDE2E00FA6D4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		83B523781C3BDE2E00FA6D4E /* DictrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrViewController.h; sourceTree = "<group>"; };
-		83B523791C3BDE2E00FA6D4E /* DictrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrViewController.m; sourceTree = "<group>"; };
+		83B523781C3BDE2E00FA6D4E /* DictrMainContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrMainContentViewController.h; sourceTree = "<group>"; };
+		83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrMainContentViewController.m; sourceTree = "<group>"; };
 		83B5237B1C3BDE2E00FA6D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B5237E1C3BDE2E00FA6D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DictrMain.storyboard; sourceTree = "<group>"; };
 		83B523801C3BDE2E00FA6D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 				83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */,
 				83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */,
 				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
-				83B523781C3BDE2E00FA6D4E /* DictrViewController.h */,
-				83B523791C3BDE2E00FA6D4E /* DictrViewController.m */,
+				83B523781C3BDE2E00FA6D4E /* DictrMainContentViewController.h */,
+				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
 				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
 				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
 				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
@@ -398,7 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
-				83B5237A1C3BDE2E00FA6D4E /* DictrViewController.m in Sources */,
+				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,
 				83B524B91C3C082700FA6D4E /* AFHTTPRequestOperationManager.m in Sources */,

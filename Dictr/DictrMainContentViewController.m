@@ -1,15 +1,15 @@
 //
-//  DictrViewController.m
+//  DictrMainContentViewController.m
 //  Dictr
 //
 //  Created by Tong G. on 1/5/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrViewController.h"
+#import "DictrMainContentViewController.h"
 
-// DictrViewController class
-@implementation DictrViewController
+// DictrMainContentViewController class
+@implementation DictrMainContentViewController
 
 #pragma mark - Initializations
 
@@ -27,4 +27,4 @@
     // Update the view, if already loaded.
     }
 
-@end // DictrViewController class
+@end // DictrMainContentViewController class
