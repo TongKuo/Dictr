@@ -1,20 +1,20 @@
 //
-//  DictrProjectorViewController.m
+//  DictrProjectorController.m
 //  Dictr
 //
 //  Created by Tong G. on 1/7/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrProjectorViewController.h"
+#import "DictrProjectorController.h"
 
 // Private Interfaces
-@interface DictrProjectorViewController ()
+@interface DictrProjectorController ()
 
 @end // Private Interfaces
 
-// DictrProjectorViewController class
-@implementation DictrProjectorViewController
+// DictrProjectorController class
+@implementation DictrProjectorController
 
 #pragma mark - Initializations
 
@@ -24,4 +24,4 @@
     // Do view setup here.
     }
 
-@end // DictrProjectorViewController class
+@end // DictrProjectorController class
