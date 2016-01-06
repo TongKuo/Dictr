@@ -31,6 +31,7 @@
 		83B524BE1C3C082700FA6D4E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B31C3C082700FA6D4E /* AFURLRequestSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		83B524BF1C3C082700FA6D4E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B51C3C082700FA6D4E /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B71C3C082700FA6D4E /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
+		83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C21C3D423C00FA6D4E /* DictrConstants.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		83B524B51C3C082700FA6D4E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		83B524B61C3C082700FA6D4E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		83B524B71C3C082700FA6D4E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		83B524C11C3D423C00FA6D4E /* DictrConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrConstants.h; sourceTree = "<group>"; };
+		83B524C21C3D423C00FA6D4E /* DictrConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 		83B523711C3BDE2E00FA6D4E /* Dictr */ = {
 			isa = PBXGroup;
 			children = (
+				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
+				83B524C21C3D423C00FA6D4E /* DictrConstants.m */,
 				83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */,
 				83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */,
 				83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */,
@@ -399,6 +404,7 @@
 			files = (
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
+				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,
 				83B524B91C3C082700FA6D4E /* AFHTTPRequestOperationManager.m in Sources */,

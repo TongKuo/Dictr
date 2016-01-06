@@ -10,5 +10,12 @@
 
 // DictrMainContentViewController class
 @interface DictrMainContentViewController : NSViewController
+
+#pragma mark - Outlets
+
+@property ( weak ) IBOutlet NSTextField* searchField;
+@property ( weak ) IBOutlet NSScrollView* moreRelatedEntriesScrollView;
+@property ( weak ) IBOutlet NSButton* showTranslateIntoButton;
+
 @end // DictrMainContentViewController class
 

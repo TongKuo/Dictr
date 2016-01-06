@@ -16,4 +16,7 @@
 #import "AFNetworking.h"
 #import "PureLayout.h"
 
+// Frequently Used Headers
+#import "DictrConstants.h"
+
 #endif /* DictrPrefixHeader_pch */

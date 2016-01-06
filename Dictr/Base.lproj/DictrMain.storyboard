@@ -674,6 +674,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="moreRelatedEntriesScrollView" destination="6eF-D3-hzs" id="Chc-KA-Kjq"/>
+                        <outlet property="searchField" destination="8dy-8k-YRB" id="jZT-lU-h40"/>
+                        <outlet property="showTranslateIntoButton" destination="T1q-c4-3dj" id="mmn-YV-1gd"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <textField verticalHuggingPriority="750" id="8dy-8k-YRB">
@@ -686,7 +691,6 @@
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                     </textFieldCell>
                 </textField>
-                <customObject id="PfU-hZ-agQ" customClass="DictrBestMatchingCardViewController"/>
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6eF-D3-hzs">
                     <rect key="frame" x="0.0" y="0.0" width="362" height="135"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -755,10 +759,10 @@
                     </scroller>
                 </scrollView>
                 <button verticalHuggingPriority="750" id="T1q-c4-3dj">
-                    <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
+                    <rect key="frame" x="0.0" y="0.0" width="142" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <animations/>
-                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP9-aS-kTF">
+                    <buttonCell key="cell" type="push" title="Translate Into" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP9-aS-kTF">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>

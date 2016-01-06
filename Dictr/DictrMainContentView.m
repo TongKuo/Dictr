@@ -11,6 +11,16 @@
 // DictrMainContentView class
 @implementation DictrMainContentView
 
+#pragma mark - Initializations
+
+- ( void ) awakeFromNib
+    {
+    [ self configureForAutoLayout ];
+
+    [ self autoSetDimension: ALDimensionWidth toSize: NSWidth( self.frame ) relation: NSLayoutRelationEqual ];
+    [ self autoSetDimension: ALDimensionHeight toSize: DictrMainWindowMinHeight relation: NSLayoutRelationGreaterThanOrEqual ];
+    }
+
 #pragma mark - Drawing
 
 - ( void ) drawRect: ( NSRect )_DirtyRect
