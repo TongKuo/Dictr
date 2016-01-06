@@ -34,6 +34,8 @@
 		83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C21C3D423C00FA6D4E /* DictrConstants.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C51C3D474C00FA6D4E /* DictrSearchField.m */; settings = {ASSET_TAGS = (); }; };
 		83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524CA1C3D489000FA6D4E /* DictrTranslator.m */; settings = {ASSET_TAGS = (); }; };
+		83B524CF1C3D7FE200FA6D4E /* DictrProjectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524CD1C3D7FE200FA6D4E /* DictrProjectorViewController.m */; settings = {ASSET_TAGS = (); }; };
+		83B524D01C3D7FE200FA6D4E /* DictrProjectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B524CE1C3D7FE200FA6D4E /* DictrProjectorViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,9 @@
 		83B524C51C3D474C00FA6D4E /* DictrSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSearchField.m; sourceTree = "<group>"; };
 		83B524C91C3D489000FA6D4E /* DictrTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrTranslator.h; sourceTree = "<group>"; };
 		83B524CA1C3D489000FA6D4E /* DictrTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrTranslator.m; sourceTree = "<group>"; };
+		83B524CC1C3D7FE200FA6D4E /* DictrProjectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrProjectorViewController.h; sourceTree = "<group>"; };
+		83B524CD1C3D7FE200FA6D4E /* DictrProjectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrProjectorViewController.m; sourceTree = "<group>"; };
+		83B524CE1C3D7FE200FA6D4E /* DictrProjectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrProjectorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +281,8 @@
 				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
 				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
 				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
+				83B524CC1C3D7FE200FA6D4E /* DictrProjectorViewController.h */,
+				83B524CD1C3D7FE200FA6D4E /* DictrProjectorViewController.m */,
 				83B524C41C3D474C00FA6D4E /* DictrSearchField.h */,
 				83B524C51C3D474C00FA6D4E /* DictrSearchField.m */,
 			);
@@ -286,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
+				83B524CE1C3D7FE200FA6D4E /* DictrProjectorViewController.xib */,
 				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
 			);
 			name = wysiwyg;
@@ -401,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B524D01C3D7FE200FA6D4E /* DictrProjectorViewController.xib in Resources */,
 				83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */,
 				83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */,
 				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
@@ -448,6 +457,7 @@
 				83B524BE1C3C082700FA6D4E /* AFURLRequestSerialization.m in Sources */,
 				83B524BB1C3C082700FA6D4E /* AFNetworkReachabilityManager.m in Sources */,
 				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,
+				83B524CF1C3D7FE200FA6D4E /* DictrProjectorViewController.m in Sources */,
 				83B524B81C3C082700FA6D4E /* AFHTTPRequestOperation.m in Sources */,
 				83B524BA1C3C082700FA6D4E /* AFHTTPSessionManager.m in Sources */,
 			);
