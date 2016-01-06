@@ -32,6 +32,7 @@
 		83B524BF1C3C082700FA6D4E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B51C3C082700FA6D4E /* AFURLResponseSerialization.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524B71C3C082700FA6D4E /* AFURLSessionManager.m */; settings = {ASSET_TAGS = (); }; };
 		83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C21C3D423C00FA6D4E /* DictrConstants.m */; settings = {ASSET_TAGS = (); }; };
+		83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524C51C3D474C00FA6D4E /* DictrSearchField.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		83B524B71C3C082700FA6D4E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		83B524C11C3D423C00FA6D4E /* DictrConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrConstants.h; sourceTree = "<group>"; };
 		83B524C21C3D423C00FA6D4E /* DictrConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrConstants.m; sourceTree = "<group>"; };
+		83B524C41C3D474C00FA6D4E /* DictrSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSearchField.h; sourceTree = "<group>"; };
+		83B524C51C3D474C00FA6D4E /* DictrSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSearchField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
 				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
 				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
+				83B524C41C3D474C00FA6D4E /* DictrSearchField.h */,
+				83B524C51C3D474C00FA6D4E /* DictrSearchField.m */,
 				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
 				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
 			);
@@ -412,6 +417,7 @@
 				83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */,
 				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
 				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
+				83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */,
 				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
 				83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */,
 				83B524BF1C3C082700FA6D4E /* AFURLResponseSerialization.m in Sources */,

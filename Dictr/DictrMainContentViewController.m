@@ -7,6 +7,7 @@
 //
 
 #import "DictrMainContentViewController.h"
+#import "DictrSearchField.h"
 
 // DictrMainContentViewController class
 @implementation DictrMainContentViewController

@@ -8,12 +8,14 @@
 
 @import Cocoa;
 
+@class DictrSearchField;
+
 // DictrMainContentViewController class
 @interface DictrMainContentViewController : NSViewController
 
 #pragma mark - Outlets
 
-@property ( weak ) IBOutlet NSTextField* searchField;
+@property ( weak ) IBOutlet DictrSearchField* searchField;
 @property ( weak ) IBOutlet NSScrollView* moreRelatedEntriesScrollView;
 @property ( weak ) IBOutlet NSButton* showTranslateIntoButton;
 

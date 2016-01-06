@@ -681,7 +681,7 @@
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <textField verticalHuggingPriority="750" id="8dy-8k-YRB">
+                <textField verticalHuggingPriority="750" id="8dy-8k-YRB" customClass="DictrSearchField">
                     <rect key="frame" x="0.0" y="0.0" width="415" height="139"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <animations/>
