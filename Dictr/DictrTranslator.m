@@ -37,11 +37,57 @@ DictrTranslator static* sDefaultTranslator;
             self.accessKey = @"rv88bp4e1EKjDNMZKOuO6nex5Wa5mq1ykQtBcT8bldDM10SjTnMEaOPBKZpWAzC4";
             self.translatorType = DictrCambridgeEnglish2English;
 
+            NSURLSessionConfiguration* config = [ NSURLSessionConfiguration defaultSessionConfiguration ];
+            [ config setHTTPAdditionalHeaders: @{ @"accessKey" : self.accessKey
+                                                , @"Accept" : @"application/json"
+                                                } ];
+
+            self->__httpSessionManager = [ [ AFHTTPSessionManager alloc ] initWithBaseURL: self->__apiBaseURL sessionConfiguration:config ];
+            self->__httpSessionManager.responseSerializer = [ AFJSONResponseSerializer serializer ];
+
             sDefaultTranslator = self;
             }
         }
 
     return sDefaultTranslator;
+    }
+
+#pragma mark - Dictionary Actions
+
+- ( void ) translateWordWithBestMatching: ( NSString* )_Word
+                                 success: ( DictrGeneralSuccessBlockType )_SuccessBlock
+                                 failure: ( DictrGeneralFailureBlockType )_FailureBlock
+    {
+    NSParameterAssert( ( _Word.length ) > ( 0 ) );
+
+    [ self stopTranslating ];
+    [ self->__httpSessionManager GET: [ NSString stringWithFormat: @"dictionaries/%@/search/first", self.__dictCode ]
+                          parameters: @{ @"format" : @"xml"
+                                       , @"q" : _Word
+                                       }
+                             success:
+        ^( NSURLSessionDataTask* _Nonnull _Task, id  _Nonnull _ResponseObject )
+            {
+            NSLog( @"%@", _ResponseObject );
+
+            NSError* error = nil;
+            NSXMLDocument* xmlDoc =
+                [ [ NSXMLDocument alloc ] initWithXMLString: _ResponseObject[ @"entryContent" ] options: NSXMLDocumentXMLKind error: &error ];
+
+            NSLog( @"%@", xmlDoc );
+
+            if ( error )
+                NSLog( @"%@", error );
+            } failure:
+                ^( NSURLSessionDataTask* _Nonnull _Task, NSError* _Nonnull _Error )
+                    {
+                    NSLog( @"%@", _Error );
+                    } ];
+    }
+
+- ( void ) stopTranslating
+    {
+    [ self->__httpSessionManager.operationQueue cancelAllOperations ];
     }
 
 #pragma mark - Private Interfaces

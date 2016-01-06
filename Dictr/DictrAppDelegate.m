@@ -61,7 +61,19 @@
 
 - ( void ) __timerFireMethod: ( NSTimer* )_Timer
     {
-    NSLog( @"%@", _Timer.userInfo[ kSearchString ] );
+    NSString* searchString = _Timer.userInfo[ kSearchString ];
+    NSLog( @"Searching: %@…", searchString );
+
+    [ [ DictrTranslator defaultTranslator ] translateWordWithBestMatching: searchString
+                                                                  success:
+        ^( NSXMLElement* _XMLData )
+            {
+
+            } failure:
+                ^( NSError* _Error )
+                    {
+                    NSLog( @"%@", _Error );
+                    } ];
 
     [ self->__searchTimer invalidate ];
     }

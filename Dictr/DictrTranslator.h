@@ -22,11 +22,16 @@ typedef NS_ENUM( NSUInteger, DictrCambridgeTranslatorType )
     , DictrCambridgeEnglish2TranditionalChinese
     };
 
+typedef void ( ^DictrGeneralSuccessBlockType )( NSXMLElement* _XMLData );
+typedef void ( ^DictrGeneralFailureBlockType )( NSError* _Error );
+
 // DictrTranslator class
 @interface DictrTranslator : NSObject <NSTextFieldDelegate>
     {
 @private
     NSURL* __apiBaseURL;
+
+    AFHTTPSessionManager* __httpSessionManager;
     }
 
 @property ( strong, readwrite ) NSString* accessKey;
@@ -35,5 +40,13 @@ typedef NS_ENUM( NSUInteger, DictrCambridgeTranslatorType )
 #pragma mark - Initializations
 
 + ( instancetype ) defaultTranslator;
+
+#pragma mark - Dictionary Actions
+
+- ( void ) translateWordWithBestMatching: ( NSString* )_Word
+                                 success: ( DictrGeneralSuccessBlockType )_SuccessBlock
+                                 failure: ( DictrGeneralFailureBlockType )_FailureBlock;
+
+- ( void ) stopTranslating;
 
 @end // DictrTranslator class
