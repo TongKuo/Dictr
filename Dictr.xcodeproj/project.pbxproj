@@ -163,24 +163,11 @@
 		83B523711C3BDE2E00FA6D4E /* Dictr */ = {
 			isa = PBXGroup;
 			children = (
+				83B524C71C3D47D400FA6D4E /* ui */,
 				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
 				83B524C21C3D423C00FA6D4E /* DictrConstants.m */,
 				83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */,
 				83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */,
-				83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */,
-				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
-				83B523781C3BDE2E00FA6D4E /* DictrMainContentViewController.h */,
-				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
-				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
-				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
-				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
-				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
-				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
-				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
-				83B524C41C3D474C00FA6D4E /* DictrSearchField.h */,
-				83B524C51C3D474C00FA6D4E /* DictrSearchField.m */,
-				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
-				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
 			);
 			path = Dictr;
 			sourceTree = "<group>";
@@ -268,6 +255,35 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		83B524C71C3D47D400FA6D4E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				83B524C81C3D47F000FA6D4E /* wysiwyg */,
+				83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */,
+				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
+				83B523781C3BDE2E00FA6D4E /* DictrMainContentViewController.h */,
+				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
+				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
+				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
+				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
+				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
+				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
+				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
+				83B524C41C3D474C00FA6D4E /* DictrSearchField.h */,
+				83B524C51C3D474C00FA6D4E /* DictrSearchField.m */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		83B524C81C3D47F000FA6D4E /* wysiwyg */ = {
+			isa = PBXGroup;
+			children = (
+				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
+				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
+			);
+			name = wysiwyg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
