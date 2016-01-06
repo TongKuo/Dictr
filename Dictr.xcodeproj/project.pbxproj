@@ -37,6 +37,7 @@
 		83B524CF1C3D7FE200FA6D4E /* DictrProjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524CD1C3D7FE200FA6D4E /* DictrProjectorController.m */; settings = {ASSET_TAGS = (); }; };
 		83B524D01C3D7FE200FA6D4E /* DictrProjectorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B524CE1C3D7FE200FA6D4E /* DictrProjectorController.xib */; settings = {ASSET_TAGS = (); }; };
 		83B524D31C3D80A400FA6D4E /* DictrProjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524D21C3D80A400FA6D4E /* DictrProjector.m */; settings = {ASSET_TAGS = (); }; };
+		83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		83B524CE1C3D7FE200FA6D4E /* DictrProjectorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrProjectorController.xib; sourceTree = "<group>"; };
 		83B524D11C3D80A400FA6D4E /* DictrProjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrProjector.h; sourceTree = "<group>"; };
 		83B524D21C3D80A400FA6D4E /* DictrProjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrProjector.m; sourceTree = "<group>"; };
+		83B524D41C3D813000FA6D4E /* DictrBestMatchingCardsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardsFactory.h; sourceTree = "<group>"; };
+		83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardsFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,8 @@
 				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
 				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
 				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
+				83B524D41C3D813000FA6D4E /* DictrBestMatchingCardsFactory.h */,
+				83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */,
 				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
 				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
 				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
@@ -443,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */,
+				83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
 				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,

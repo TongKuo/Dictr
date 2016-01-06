@@ -7,6 +7,7 @@
 //
 
 #import "DictrAppDelegate.h"
+#import "DictrBestMatchingCardsFactory.h"
 
 // Private Interfaces
 @interface DictrAppDelegate ()
@@ -66,7 +67,8 @@
                                                                   success:
         ^( NSXMLNode* _XMLData )
             {
-            NSLog( @"%@", [ _XMLData XMLStringWithOptions: NSXMLNodePrettyPrint ] );
+            [ DictrBestMatchingCardsFactory makeCardsWithMaterial: _XMLData ];
+//            NSLog( @"%@", [ _XMLData XMLStringWithOptions: NSXMLNodePrettyPrint ] );
             [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorDidFinishSearchingNotif
                                                                    object: self
                                                                  userInfo: @{ kEntry : _XMLData ?: [ NSNull null ] } ];
