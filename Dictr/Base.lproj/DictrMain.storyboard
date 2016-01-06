@@ -759,10 +759,10 @@
                     </scroller>
                 </scrollView>
                 <button verticalHuggingPriority="750" id="T1q-c4-3dj">
-                    <rect key="frame" x="0.0" y="0.0" width="142" height="32"/>
+                    <rect key="frame" x="0.0" y="0.0" width="36" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <animations/>
-                    <buttonCell key="cell" type="push" title="Translate Into" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP9-aS-kTF">
+                    <buttonCell key="cell" type="square" title="Into" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP9-aS-kTF">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>

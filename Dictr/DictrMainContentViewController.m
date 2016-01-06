@@ -21,13 +21,19 @@
     [ self.searchField configureForAutoLayout ];
     [ self.moreRelatedEntriesScrollView configureForAutoLayout ];
     [ self.showTranslateIntoButton configureForAutoLayout ];
-
     [ self.view setSubviews: @[ self.searchField, self.moreRelatedEntriesScrollView, self.showTranslateIntoButton ] ];
 
+    // Auto Layout the search field
     [ self.searchField autoPinEdgesToSuperviewEdgesWithInsets: NSEdgeInsetsMake( 30.f, 20.f, 0.f, 20.f )
                                                 excludingEdge: ALEdgeBottom ];
 
     [ self.searchField autoSetDimension: ALDimensionHeight toSize: 150.f relation: NSLayoutRelationEqual ];
+
+    // Auto Layout the Translate Into button
+    [ self.showTranslateIntoButton autoSetDimension: ALDimensionWidth toSize: NSWidth( self.showTranslateIntoButton.frame ) relation: NSLayoutRelationEqual ];
+    [ self.showTranslateIntoButton autoSetDimension: ALDimensionHeight toSize: NSHeight( self.showTranslateIntoButton.frame ) relation: NSLayoutRelationEqual ];
+    [ self.showTranslateIntoButton autoAlignAxis: ALAxisVertical toSameAxisOfView: self.searchField ];
+    [ self.showTranslateIntoButton autoPinEdgeToSuperviewEdge: ALEdgeBottom withInset: 10.f relation: NSLayoutRelationEqual ];
     }
 
 - ( void ) setRepresentedObject: ( id )_RepresentedObject
