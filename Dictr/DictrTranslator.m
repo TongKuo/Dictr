@@ -68,20 +68,21 @@ DictrTranslator static* sDefaultTranslator;
                              success:
         ^( NSURLSessionDataTask* _Nonnull _Task, id  _Nonnull _ResponseObject )
             {
-            NSLog( @"%@", _ResponseObject );
-
             NSError* error = nil;
             NSXMLDocument* xmlDoc =
                 [ [ NSXMLDocument alloc ] initWithXMLString: _ResponseObject[ @"entryContent" ] options: NSXMLDocumentXMLKind error: &error ];
 
-            NSLog( @"%@", xmlDoc );
+            if ( _SuccessBlock )
+                _SuccessBlock( xmlDoc );
 
             if ( error )
-                NSLog( @"%@", error );
+                if ( _FailureBlock )
+                    _FailureBlock( error );
             } failure:
                 ^( NSURLSessionDataTask* _Nonnull _Task, NSError* _Nonnull _Error )
                     {
-                    NSLog( @"%@", _Error );
+                    if ( _FailureBlock )
+                        _FailureBlock( _Error );
                     } ];
     }
 

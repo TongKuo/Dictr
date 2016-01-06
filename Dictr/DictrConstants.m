@@ -13,9 +13,11 @@ CGFloat const DictrMainWindowMinHeight = 520.f;
 
 // Notification Names
 NSString* const DictrTranslatorShouldBeginSearchingNotif = @"Dictr.TranslatorShouldBeginSearching.Notif";
+NSString* const DictrTranslatorDidFinishSearchingNotif = @"Dictr.TranslatorDidFinishSearching.Notif";
 NSString* const DictrTranslatorShouldStopSearchingNotif = @"Dictr.TranslatorShouldStopSearching.Notif";
 NSString* const DictrTranslatorShouldClearSearchResultNotif = @"Dictr.TranslatorShouldClearSearchResult.Notif";
 
 // Notification Keys
 NSString* const kSearchString = @"kSearchString";
 NSString* const kError = @"kError";
+NSString* const kEntry = @"kEntry";

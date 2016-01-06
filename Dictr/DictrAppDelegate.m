@@ -61,14 +61,15 @@
 
 - ( void ) __timerFireMethod: ( NSTimer* )_Timer
     {
-    NSString* searchString = _Timer.userInfo[ kSearchString ];
-    NSLog( @"Searching: %@…", searchString );
-
-    [ [ DictrTranslator defaultTranslator ] translateWordWithBestMatching: searchString
+    NSString* searchWord = _Timer.userInfo[ kSearchString ];
+    [ [ DictrTranslator defaultTranslator ] translateWordWithBestMatching: searchWord
                                                                   success:
-        ^( NSXMLElement* _XMLData )
+        ^( NSXMLNode* _XMLData )
             {
-
+            NSLog( @"%@", [ _XMLData XMLStringWithOptions: NSXMLNodePrettyPrint ] );
+            [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorDidFinishSearchingNotif
+                                                                   object: self
+                                                                 userInfo: @{ kEntry : _XMLData ?: [ NSNull null ] } ];
             } failure:
                 ^( NSError* _Error )
                     {
