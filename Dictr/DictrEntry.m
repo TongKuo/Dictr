@@ -10,4 +10,18 @@
 
 // DictrEntry class
 @implementation DictrEntry
+
+#pragma mark - Initializations
+
+// Designated Initializer
+- ( instancetype ) initWithJson: ( NSDictionary* )_JsonDict
+    {
+    if ( self = [ super initWithJson: _JsonDict ] )
+        {
+        
+        }
+
+    return self;
+    }
+
 @end // DictrEntry class

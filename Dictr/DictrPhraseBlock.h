@@ -1,5 +1,5 @@
 //
-//  DictrExample.h
+//  DictrPhraseBlock.h
 //  Dictr
 //
 //  Created by Tong G. on 1/7/16.
@@ -8,7 +8,7 @@
 
 #import "DictrJsonObject.h"
 
-// DictrExample class
-@interface DictrExample : DictrJsonObject
+// DictrPhraseBlock class
+@interface DictrPhraseBlock : DictrJsonObject
 
-@end // DictrExample class
+@end // DictrPhraseBlock class
