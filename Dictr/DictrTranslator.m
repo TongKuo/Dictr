@@ -72,9 +72,6 @@ DictrTranslator static* sDefaultTranslator;
             NSXMLDocument* xmlDoc =
                 [ [ NSXMLDocument alloc ] initWithXMLString: _ResponseObject[ @"entryContent" ] options: NSXMLDocumentXMLKind error: &error ];
 
-            NSLog( @"🍉%p", xmlDoc.rootElement );
-            NSLog( @"🍓%p", xmlDoc.rootDocument.rootElement );
-
             if ( _SuccessBlock )
                 _SuccessBlock( xmlDoc );
 
