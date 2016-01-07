@@ -140,6 +140,7 @@
 		83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrPhraseBlock.m; sourceTree = "<group>"; };
 		83B524F61C3E826700FA6D4E /* DictrJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrJsonObject.h; sourceTree = "<group>"; };
 		83B524F71C3E826700FA6D4E /* DictrJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrJsonObject.m; sourceTree = "<group>"; };
+		83B524F91C3E871C00FA6D4E /* CambridgeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CambridgeKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +301,7 @@
 				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
 				83B524D41C3D813000FA6D4E /* DictrBestMatchingCardsFactory.h */,
 				83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */,
+				83B524F91C3E871C00FA6D4E /* CambridgeKit.h */,
 				83B524F61C3E826700FA6D4E /* DictrJsonObject.h */,
 				83B524F71C3E826700FA6D4E /* DictrJsonObject.m */,
 				83B524EA1C3E7E2700FA6D4E /* DictrEntry.h */,

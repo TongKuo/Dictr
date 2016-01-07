@@ -26,3 +26,14 @@
     }
 
 @end // DictrJsonObject class
+
+// Utilities
+id DictrCocoaValueWhichHasBeenParsedOutOfJson( NSDictionary* _JsonObject, NSString* _JsonPropertyKey )
+    {
+    id cocoaValue = _JsonObject[ _JsonPropertyKey ];
+
+    if ( !cocoaValue || ( ( id )cocoaValue == [ NSNull null ] ) )
+        return nil;
+
+    return cocoaValue;
+    }

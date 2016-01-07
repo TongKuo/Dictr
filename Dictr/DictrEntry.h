@@ -14,13 +14,16 @@
 @interface DictrEntry : DictrJsonObject
 
 @property ( strong, readonly ) NSString* pos;
-
+@property ( strong, readonly ) NSString* ipa;
 @property ( strong, readonly ) NSURL* UKPronunciation;
 @property ( strong, readonly ) NSURL* USPronunciation;
 
-@property ( strong, readonly ) NSString* ipa;
-
 @property ( strong, readonly ) NSArray <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readonly ) NSArray <__kindof NSDictionary*>* topicDict;
 
+@property ( strong, readonly ) NSString* dictCode;
+@property ( strong, readonly ) NSString* label;
+@property ( strong, readonly ) NSURL* URL;
+@property ( strong, readonly ) NSString* ID;
 
 @end // DictrEntry class

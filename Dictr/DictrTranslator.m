@@ -68,6 +68,8 @@ DictrTranslator static* sDefaultTranslator;
                              success:
         ^( NSURLSessionDataTask* _Nonnull _Task, id  _Nonnull _ResponseObject )
             {
+            DictrEntry* entry = [ [ DictrEntry alloc ] initWithJson: _ResponseObject ];
+
             NSError* error = nil;
             NSXMLDocument* xmlDoc =
                 [ [ NSXMLDocument alloc ] initWithXMLString: _ResponseObject[ @"entryContent" ] options: NSXMLDocumentXMLKind error: &error ];

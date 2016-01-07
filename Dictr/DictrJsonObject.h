@@ -21,3 +21,6 @@
 - ( instancetype ) initWithJson: ( NSDictionary* )_JsonDict;
 
 @end // DictrJsonObject class
+
+// Utilities
+id DictrCocoaValueWhichHasBeenParsedOutOfJson( NSDictionary* _JsonObject, NSString* _JsonPropertyKey );

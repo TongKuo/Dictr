@@ -15,6 +15,7 @@
 // Third Party Modules
 #import "AFNetworking.h"
 #import "PureLayout.h"
+#import "CambridgeKit.h"
 
 // Frequently Used Headers
 #import "DictrConstants.h"
