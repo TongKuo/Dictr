@@ -7,8 +7,10 @@
 //
 
 #import "DictrJsonObject.h"
+#import "DictrXMLObject.h"
 
 #import "DictrEntry.h"
+#import "DictrSubEntry.h"
 #import "DictrPhraseBlock.h"
 #import "DictrDefBlock.h"
 #import "DictrExample.h"

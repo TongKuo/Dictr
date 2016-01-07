@@ -43,6 +43,8 @@
 		83B524F21C3E7FDE00FA6D4E /* DictrExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F11C3E7FDE00FA6D4E /* DictrExample.m */; settings = {ASSET_TAGS = (); }; };
 		83B524F51C3E823500FA6D4E /* DictrPhraseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */; settings = {ASSET_TAGS = (); }; };
 		83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F71C3E826700FA6D4E /* DictrJsonObject.m */; settings = {ASSET_TAGS = (); }; };
+		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
+		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,10 @@
 		83B524F61C3E826700FA6D4E /* DictrJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrJsonObject.h; sourceTree = "<group>"; };
 		83B524F71C3E826700FA6D4E /* DictrJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrJsonObject.m; sourceTree = "<group>"; };
 		83B524F91C3E871C00FA6D4E /* CambridgeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CambridgeKit.h; sourceTree = "<group>"; };
+		83B524FC1C3EB22900FA6D4E /* DictrSubEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSubEntry.h; sourceTree = "<group>"; };
+		83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSubEntry.m; sourceTree = "<group>"; };
+		83B524FF1C3EB23500FA6D4E /* DictrXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrXMLObject.h; sourceTree = "<group>"; };
+		83B525001C3EB23500FA6D4E /* DictrXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrXMLObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,8 +310,12 @@
 				83B524F91C3E871C00FA6D4E /* CambridgeKit.h */,
 				83B524F61C3E826700FA6D4E /* DictrJsonObject.h */,
 				83B524F71C3E826700FA6D4E /* DictrJsonObject.m */,
+				83B524FF1C3EB23500FA6D4E /* DictrXMLObject.h */,
+				83B525001C3EB23500FA6D4E /* DictrXMLObject.m */,
 				83B524EA1C3E7E2700FA6D4E /* DictrEntry.h */,
 				83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */,
+				83B524FC1C3EB22900FA6D4E /* DictrSubEntry.h */,
+				83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */,
 				83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */,
 				83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */,
 				83B524ED1C3E7FCC00FA6D4E /* DictrDefBlock.h */,
@@ -483,11 +493,13 @@
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,
 				83B524B91C3C082700FA6D4E /* AFHTTPRequestOperationManager.m in Sources */,
+				83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */,
 				83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */,
 				83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */,
 				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
 				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
 				83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */,
+				83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */,
 				83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */,
 				83B524EC1C3E7E2700FA6D4E /* DictrEntry.m in Sources */,
 				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
