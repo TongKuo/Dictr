@@ -8,7 +8,23 @@
 
 #import "DictrXMLObject.h"
 
+@class DictrDefBlock;
+
 // DictrSubEntry class
 @interface DictrSubEntry : DictrXMLObject
+
+@property ( strong, readonly ) NSString* title;
+
+@property ( strong, readonly ) NSString* pos;
+@property ( strong, readonly ) NSString* UKIpa;
+@property ( strong, readonly ) NSString* USIpa;
+@property ( strong, readonly ) NSURL* UKPronunciation;
+@property ( strong, readonly ) NSURL* USPronunciation;
+
+@property ( strong, readonly ) NSArray <__kindof DictrDefBlock*>* defBlocks;
+
+#pragma mark - Initializations
+
+- ( instancetype ) initWithTitle: ( NSString* )_Title xmlNode: ( NSXMLNode* )_XMLNode;
 
 @end // DictrSubEntry class

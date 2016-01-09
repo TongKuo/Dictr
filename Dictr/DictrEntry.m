@@ -12,12 +12,8 @@
 @interface DictrEntry ()
 
 // Public properties
-@property ( strong, readwrite ) NSString* pos;
-@property ( strong, readwrite ) NSString* ipa;
-@property ( strong, readwrite ) NSURL* UKPronunciation;
-@property ( strong, readwrite ) NSURL* USPronunciation;
+@property ( strong, readwrite ) NSArray <__kindof DictrSubEntry*>* subEntries;
 
-@property ( strong, readwrite ) NSArray <__kindof DictrDefBlock*>* defBlocks;
 @property ( strong, readwrite ) NSArray <__kindof NSDictionary*>* topicDict;
 
 @property ( strong, readwrite ) NSString* dictCode;
@@ -57,42 +53,23 @@
             if ( error )
                 NSLog( @"%@", error );
 
-            NSXMLNode* node = self.__entryContentXML.rootDocument.rootElement;
+            NSUInteger countOfPosBlock = 0;
+            NSXMLNode* node = self.__entryContentXML;
+            NSMutableArray <__kindof DictrSubEntry*>* tmpEntries = [ NSMutableArray array ];
             while ( ( node = [ node nextNode ] ) )
                 {
-                NSArray <__kindof NSXMLNode*>* attributes = nil;
-
-                if ( [ node isKindOfClass: [ NSXMLElement class ] ] )
-                    attributes = [ ( NSXMLElement* )node attributes ];
-
-                // Extracting the pronunciation in UK & US
-                //
-                // Sample:
-                //
-                // <audio type="pronunciation" region="uk">
-                //     <source type="audio/mpeg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/uk_pron/u/ukw/ukwom/ukwoman009.mp3"></source>
-                //     <source type="audio/ogg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/uk_pron_ogg/u/ukw/ukwom/ukwoman009.ogg"></source>
-                // </audio>
-                // <audio type="pronunciation" region="us">
-                //     <source type="audio/mpeg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/us_pron/w/won/wonde/wonderful.mp3"></source>
-                //     <source type="audio/ogg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/us_pron_ogg/w/won/wonde/wonderful.ogg"></source>
-                // </audio>
-                if ( [ node.name isEqualToString: @"audio" ]
-                        && [ attributes.firstObject.name isEqualToString: @"type" ]
-                        && [ attributes.firstObject.objectValue isEqualToString: @"pronunciation" ]
-                        && [ attributes.lastObject.name isEqualToString: @"region" ] )
+                if ( [ node.name isEqualToString: @"pos-block" ] )
                     {
-                    NSXMLElement* mpegNode = ( NSXMLElement* )( node.children /* <source> */.firstObject );
-                    NSArray <__kindof NSXMLNode*>* attrsOfMpegNode = mpegNode.attributes;
-
-                    NSURL* mpegSrc = [ NSURL URLWithString: attrsOfMpegNode.lastObject.objectValue ];
-
-                    if ( [ attributes.lastObject.objectValue isEqualToString: @"uk" ] )
-                        self.UKPronunciation = mpegSrc;
-                    else if ( [ attributes.lastObject.objectValue isEqualToString: @"us" ] )
-                        self.USPronunciation = mpegSrc;
+                    [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: node ] ];
+                    countOfPosBlock++;
                     }
                 }
+
+            NSLog( @"Count: %ld", countOfPosBlock );
+            if ( countOfPosBlock == 0 )
+                [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: self.__entryContentXML ] ];
+
+            self.subEntries = [ tmpEntries copy ];
             }
         }
 
