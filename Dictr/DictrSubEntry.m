@@ -15,14 +15,34 @@
 @property ( strong, readwrite ) NSString* title;
 
 @property ( strong, readwrite ) NSString* pos;
-@property ( strong, readwrite ) NSString* UKIpa;
-@property ( strong, readwrite ) NSString* USIpa;
+@property ( strong, readwrite ) NSArray <__kindof NSString*>* IPAs;
 @property ( strong, readwrite ) NSURL* UKPronunciation;
 @property ( strong, readwrite ) NSURL* USPronunciation;
 
 @property ( strong, readwrite ) NSArray <__kindof DictrDefBlock*>* defBlocks;
 
 @end // Private Interfaces
+
+static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
+                                            , NSXMLNodeKind _NodeKind
+                                            , BOOL _DoesRecurse )
+    {
+    NSUInteger count = 0;
+
+    if ( _ParentNode.childCount > 0 )
+        {
+        for ( NSXMLNode* _ChildNode in _ParentNode.children )
+            {
+            if ( _ChildNode.kind == _NodeKind )
+                count++;
+
+            if ( _DoesRecurse )
+                count += kCountOfSomeKindOfChildren( _ChildNode, _NodeKind, YES );
+            }
+        }
+
+    return count;
+    }
 
 // DictrSubEntry class
 @implementation DictrSubEntry
@@ -62,64 +82,27 @@
 
         // Extracting the IPA
         matchingNodes = [ self->__xmlNode nodesForXPath: @"//pron" error: nil ];
-//        matchingNodes = [ self->__xmlNode nodesForXPath: @"//pron/descendant-or-self::text()" error: nil ];
 
+        NSMutableArray* tmpIPAs = [ NSMutableArray array ];
         for ( NSXMLNode* _Node in matchingNodes )
             {
-            NSUInteger countOfTextNodes = 0;
-            NSUInteger count = _Node.childCount;
-            for ( NSXMLNode* subNode in _Node.children )
-                if ( subNode.kind == NSXMLTextKind )
-                    countOfTextNodes++;
-
-            NSLog( @"%ld", countOfTextNodes );
-
+            NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
             matchingNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
-//            NSLog( @"%@", matchingNodes );
+
+            NSString* ipaString = [ [ matchingNodes subarrayWithRange: NSMakeRange( 0, countOfTextNodes ) ] componentsJoinedByString: @"" ];
+            if ( ipaString )
+                [ tmpIPAs addObject: ipaString ];
             }
 
-        NSLog( @"%@", matchingNodes );
+        self.IPAs = [ tmpIPAs copy ];
 
-//        NSXMLNode* node = self->__xmlNode;
-//        while ( ( node = [ node nextNode ] ) )
-//            {
-//            NSArray <__kindof NSXMLNode*>* attributes = nil;
-//
-//            if ( [ node isKindOfClass: [ NSXMLElement class ] ] )
-//                attributes = [ ( NSXMLElement* )node attributes ];
-//
-//            if ( [ node.name isEqualToString: @"audio" ]
-//                    && [ attributes.firstObject.name isEqualToString: @"type" ]
-//                    && [ attributes.firstObject.objectValue isEqualToString: @"pronunciation" ]
-//                    && [ attributes.lastObject.name isEqualToString: @"region" ] )
-//                {
-//                NSXMLElement* mpegNode = ( NSXMLElement* )( node.children /* <source> */.firstObject );
-//                NSArray <__kindof NSXMLNode*>* attrsOfMpegNode = mpegNode.attributes;
-//
-//                NSURL* mpegSrc = [ NSURL URLWithString: attrsOfMpegNode.lastObject.objectValue ];
-//
-//                if ( [ attributes.lastObject.objectValue isEqualToString: @"uk" ] )
-//                    self.UKPronunciation = mpegSrc;
-//                else if ( [ attributes.lastObject.objectValue isEqualToString: @"us" ] )
-//                    self.USPronunciation = mpegSrc;
-//                }
-//
-//            NSMutableString* ipaString = [ NSMutableString string ];
-//            if ( [ node.name isEqualToString: @"pron" ] )
-//                {
-//                NSXMLNode* ipaNode = node;
-//                while ( ( ipaNode = [ ipaNode nextNode ] ) )
-//                    {
-//                    [ ipaString appendString: ipaNode.objectValue ];
-//
-//                    if ( ipaNode == node.nextSibling )
-//                        break;
-//                    }
-//                }
-//
-//            self.UKIpa = ipaString;
-//            NSLog( @"%@", self.UKIpa );
-//            }
+        #if 1 // DEBUG
+        NSLog( @"Count: %ld", self.IPAs.count );
+        for ( NSString* _IPA in self.IPAs )
+            NSLog( @"%@", _IPA );
+
+        NSLog( @"======" );
+        #endif
         }
 
     return self;

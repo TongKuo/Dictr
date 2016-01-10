@@ -65,7 +65,6 @@
                     }
                 }
 
-            NSLog( @"Count: %ld", countOfPosBlock );
             if ( countOfPosBlock == 0 )
                 [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: self.__entryContentXML ] ];
 
