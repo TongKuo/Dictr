@@ -14,6 +14,8 @@
 @property ( strong, readwrite ) NSString* level;
 @property ( strong, readwrite ) NSString* definition;
 
+@property ( strong, readwrite ) NSOrderedSet <__kindof DictrExample*>* examples;
+
 @end // Private Interfaces
 
 // DictrDefBlock class
@@ -29,11 +31,13 @@
 
         NSString* lvlXPathExpr = @"descendant-or-self::*/lvl";
         NSString* defXPathExpr = @"descendant-or-self::*/def";
+        NSString* exampXPathExpr = @"descendant-or-self::*/examp";
 
         // Extracting the definition information
         matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@", lvlXPathExpr, defXPathExpr ] error: nil ];
+            [ NSString stringWithFormat: @"%@ | %@ | %@", lvlXPathExpr, defXPathExpr, exampXPathExpr ] error: nil ];
 
+        NSMutableOrderedSet* tmpExamps = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {
             NSString* nodeName = _MatchingNode.name;
@@ -44,7 +48,12 @@
 
             else if ( [ nodeName isEqualToString: @"def" ] )
                 self.definition = nodeObjectValue;
+
+            else if ( [ nodeName isEqualToString: @"examp" ] )
+                [ tmpExamps addObject: [ [ DictrExample alloc ] initWithXML: _MatchingNode ] ];
             }
+
+        self.examples = [ tmpExamps copy ];
         }
 
     return self;

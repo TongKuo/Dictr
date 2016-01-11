@@ -11,4 +11,8 @@
 // DictrExample class
 @interface DictrExample : DictrXMLObject
 
+@property ( strong, readonly ) NSAttributedString* example;
+@property ( strong, readonly ) NSAttributedString* translationOfExample;
+@property ( strong, readonly ) NSString* language;
+
 @end // DictrExample class

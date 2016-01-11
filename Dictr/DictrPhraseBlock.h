@@ -8,7 +8,11 @@
 
 #import "DictrSenseBlock.h"
 
+@class DictrDefBlock;
+
 // DictrPhraseBlock class
 @interface DictrPhraseBlock : DictrSenseBlock
+
+@property ( strong, readonly ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
 
 @end // DictrPhraseBlock class
