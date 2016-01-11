@@ -15,7 +15,7 @@
 @property ( strong, readwrite ) NSString* title;
 
 @property ( strong, readwrite ) NSString* pos;
-@property ( strong, readwrite ) NSArray <__kindof NSString*>* IPAs;
+@property ( strong, readwrite ) NSOrderedSet <__kindof NSString*>* IPAs;
 @property ( strong, readwrite ) NSURL* UKPronunciation;
 @property ( strong, readwrite ) NSURL* USPronunciation;
 
@@ -83,13 +83,17 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         // Extracting the IPA
         matchingNodes = [ self->__xmlNode nodesForXPath: @"//pron" error: nil ];
 
-        NSMutableArray* tmpIPAs = [ NSMutableArray array ];
-        for ( NSXMLNode* _Node in matchingNodes )
+        NSOrderedSet* uniquedMatchingNodes = [ NSOrderedSet orderedSetWithArray: matchingNodes ];
+
+        NSMutableOrderedSet* tmpIPAs = [ NSMutableOrderedSet orderedSet ];
+        for ( NSXMLNode* _Node in uniquedMatchingNodes )
             {
             NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
-            matchingNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
+            NSArray <__kindof NSXMLNode*>* textNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
 
-            NSString* ipaString = [ [ matchingNodes subarrayWithRange: NSMakeRange( 0, countOfTextNodes ) ] componentsJoinedByString: @"" ];
+            NSString* ipaString =
+                [ [ textNodes subarrayWithRange: NSMakeRange( 0, countOfTextNodes ) ] componentsJoinedByString: @"" ];
+
             if ( ipaString )
                 [ tmpIPAs addObject: ipaString ];
             }
@@ -97,7 +101,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         self.IPAs = [ tmpIPAs copy ];
 
         #if 1 // DEBUG
-        NSLog( @"Count: %ld", self.IPAs.count );
+        NSLog( @"Count: %ld %@", self.IPAs.count, self );
         for ( NSString* _IPA in self.IPAs )
             NSLog( @"%@", _IPA );
 

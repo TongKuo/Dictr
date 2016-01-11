@@ -58,7 +58,7 @@ DictrTranslator static* sDefaultTranslator;
                                  success: ( DictrGeneralSuccessBlockType )_SuccessBlock
                                  failure: ( DictrGeneralFailureBlockType )_FailureBlock
     {
-    NSParameterAssert( ( _Word.length ) > ( 0 ) );
+    NSParameterAssert( ( _Word ) );
 
     [ self stopTranslating ];
     [ self->__httpSessionManager GET: [ NSString stringWithFormat: @"dictionaries/%@/search/first", self.__dictCode ]
