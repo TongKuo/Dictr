@@ -8,7 +8,7 @@
 
 #import "DictrXMLObject.h"
 
-@class DictrDefBlock;
+@class DictrSenseBlock;
 
 // DictrSubEntry class
 @interface DictrSubEntry : DictrXMLObject
@@ -22,7 +22,7 @@
 
 @property ( strong, readonly ) NSOrderedSet <__kindof NSString*>* IPAs;
 
-@property ( strong, readonly ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readonly ) NSOrderedSet <__kindof DictrSenseBlock*>* senseBlocks;
 
 #pragma mark - Initializations
 

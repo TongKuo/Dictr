@@ -6,9 +6,9 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrXMLObject.h"
+#import "DictrSenseBlock.h"
 
 // DictrPhraseBlock class
-@interface DictrPhraseBlock : DictrXMLObject
+@interface DictrPhraseBlock : DictrSenseBlock
 
 @end // DictrPhraseBlock class

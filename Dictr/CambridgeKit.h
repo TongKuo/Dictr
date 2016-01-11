@@ -11,6 +11,7 @@
 
 #import "DictrEntry.h"
 #import "DictrSubEntry.h"
+#import "DictrSenseBlock.h"
 #import "DictrPhraseBlock.h"
 #import "DictrDefBlock.h"
 #import "DictrExample.h"

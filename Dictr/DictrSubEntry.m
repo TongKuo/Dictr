@@ -21,7 +21,7 @@
 
 @property ( strong, readwrite ) NSOrderedSet <__kindof NSString*>* IPAs;
 
-@property ( strong, readwrite ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readwrite ) NSOrderedSet <__kindof DictrSenseBlock*>* senseBlocks;
 
 @end // Private Interfaces
 
@@ -102,7 +102,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
 
         self.IPAs = [ tmpIPAs copy ];
 
-        #if 1 // DEBUG
+        #if DEBUG // DEBUG
         NSLog( @"Count: %ld %@", self.IPAs.count, self );
         for ( NSString* _IPA in self.IPAs )
             NSLog( @"%@", _IPA );
@@ -111,12 +111,29 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         #endif
 
         // Extracting the def-block nodes
-        matchingNodes = [ self->__xmlNode nodesForXPath: @"descendant-or-self::*/def-block" error: nil ];
-//        NSLog( @"%@", matchingNodes );
 
-        NSMutableOrderedSet* tmpDefBlocks = [ NSMutableOrderedSet orderedSet ];
-        for ( NSXMLNode* _DefBlockNode in matchingNodes )
-            [ tmpDefBlocks addObject: [ [ DictrDefBlock alloc ] initWithXML: _DefBlockNode ] ];
+        // To obtain all the def-block nodes that are not descendants of nodes phrase-block
+        NSString* defBlockXPathExpr = @"descendant-or-self::def-block[not(ancestor::phrase-block)]";
+        // To obtain all the phrase-block nodes
+        NSString* phraseBlockXPathExpr = @"descendant-or-self::phrase-block";
+
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            [ NSString stringWithFormat: @"%@ | %@", defBlockXPathExpr, phraseBlockXPathExpr ] error: nil ];
+
+        NSMutableOrderedSet* tmpSenseBlocks = [ NSMutableOrderedSet orderedSet ];
+        for ( NSXMLNode* _SenseBlockNode in matchingNodes )
+            {
+            Class senseClass = nil;
+
+            if ( [ _SenseBlockNode.name isEqualToString: @"def-block" ] )
+                senseClass = [ DictrDefBlock class ];
+            else if ( [ _SenseBlockNode.name isEqualToString: @"phrase-block" ] )
+                senseClass = [ DictrPhraseBlock class ];
+
+            [ tmpSenseBlocks addObject: [ [ senseClass alloc ] initWithXML: _SenseBlockNode ] ];
+            }
+
+        self.senseBlocks = [ tmpSenseBlocks copy ];
         }
 
     return self;

@@ -6,10 +6,10 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrXMLObject.h"
+#import "DictrSenseBlock.h"
 
 // DictrDefBlock class
-@interface DictrDefBlock : DictrXMLObject
+@interface DictrDefBlock : DictrSenseBlock
 
 @property ( strong, readonly ) NSString* level;
 @property ( strong, readonly ) NSString* definition;
