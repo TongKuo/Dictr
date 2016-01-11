@@ -16,11 +16,13 @@
 @property ( strong, readonly ) NSString* title;
 
 @property ( strong, readonly ) NSString* pos;
-@property ( strong, readonly ) NSOrderedSet <__kindof NSString*>* IPAs;
+
 @property ( strong, readonly ) NSURL* UKPronunciation;
 @property ( strong, readonly ) NSURL* USPronunciation;
 
-@property ( strong, readonly ) NSArray <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readonly ) NSOrderedSet <__kindof NSString*>* IPAs;
+
+@property ( strong, readonly ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
 
 #pragma mark - Initializations
 

@@ -198,10 +198,10 @@
 				83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */,
 				83B524FC1C3EB22900FA6D4E /* DictrSubEntry.h */,
 				83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */,
-				83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */,
-				83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */,
 				83B524ED1C3E7FCC00FA6D4E /* DictrDefBlock.h */,
 				83B524EE1C3E7FCC00FA6D4E /* DictrDefBlock.m */,
+				83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */,
+				83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */,
 				83B524F01C3E7FDE00FA6D4E /* DictrExample.h */,
 				83B524F11C3E7FDE00FA6D4E /* DictrExample.m */,
 			);

@@ -15,11 +15,13 @@
 @property ( strong, readwrite ) NSString* title;
 
 @property ( strong, readwrite ) NSString* pos;
-@property ( strong, readwrite ) NSOrderedSet <__kindof NSString*>* IPAs;
+
 @property ( strong, readwrite ) NSURL* UKPronunciation;
 @property ( strong, readwrite ) NSURL* USPronunciation;
 
-@property ( strong, readwrite ) NSArray <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readwrite ) NSOrderedSet <__kindof NSString*>* IPAs;
+
+@property ( strong, readwrite ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
 
 @end // Private Interfaces
 
@@ -107,6 +109,14 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
 
         NSLog( @"======" );
         #endif
+
+        // Extracting the def-block nodes
+        matchingNodes = [ self->__xmlNode nodesForXPath: @"descendant-or-self::*/def-block" error: nil ];
+//        NSLog( @"%@", matchingNodes );
+
+        NSMutableOrderedSet* tmpDefBlocks = [ NSMutableOrderedSet orderedSet ];
+        for ( NSXMLNode* _DefBlockNode in matchingNodes )
+            [ tmpDefBlocks addObject: [ [ DictrDefBlock alloc ] initWithXML: _DefBlockNode ] ];
         }
 
     return self;

@@ -11,4 +11,7 @@
 // DictrDefBlock class
 @interface DictrDefBlock : DictrXMLObject
 
+@property ( strong, readonly ) NSString* level;
+@property ( strong, readonly ) NSString* definition;
+
 @end // DictrDefBlock class
