@@ -6,9 +6,9 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrJsonObject.h"
+#import "DictrXMLObject.h"
 
 // DictrExample class
-@interface DictrExample : DictrJsonObject
+@interface DictrExample : DictrXMLObject
 
 @end // DictrExample class

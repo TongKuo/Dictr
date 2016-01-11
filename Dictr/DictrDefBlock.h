@@ -6,9 +6,9 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrJsonObject.h"
+#import "DictrXMLObject.h"
 
 // DictrDefBlock class
-@interface DictrDefBlock : DictrJsonObject
+@interface DictrDefBlock : DictrXMLObject
 
 @end // DictrDefBlock class
