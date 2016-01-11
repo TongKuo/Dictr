@@ -36,6 +36,8 @@
     {
     if ( self = [ super initWithJson: _JsonDict ] )
         {
+        NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
+
         self.topicDict = DictrCocoaValueWhichHasBeenParsedOutOfJson( self->__jsonDict, @"topics" );
 
         self.dictCode = DictrCocoaValueWhichHasBeenParsedOutOfJson( self->__jsonDict, @"dictionaryCode" );
@@ -53,19 +55,16 @@
             if ( error )
                 NSLog( @"%@", error );
 
-            NSUInteger countOfPosBlock = 0;
-            NSXMLNode* node = self.__entryContentXML;
-            NSMutableArray <__kindof DictrSubEntry*>* tmpEntries = [ NSMutableArray array ];
-            while ( ( node = [ node nextNode ] ) )
-                {
-                if ( [ node.name isEqualToString: @"pos-block" ] )
-                    {
-                    [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: node ] ];
-                    countOfPosBlock++;
-                    }
-                }
+            // Extracting the pos-block nodes
+            matchingNodes = [ self.__entryContentXML nodesForXPath: @"//pos-block" error: nil ];
 
-            if ( countOfPosBlock == 0 )
+            NSMutableArray <__kindof DictrSubEntry*>* tmpEntries = [ NSMutableArray array ];
+            if ( matchingNodes.count > 0 )
+                {
+                for ( NSXMLNode* _PosBlockNode in matchingNodes )
+                    [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: _PosBlockNode ] ];
+                }
+            else
                 [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: self.__entryContentXML ] ];
 
             self.subEntries = [ tmpEntries copy ];

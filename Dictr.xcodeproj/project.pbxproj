@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831100E61C439F0800296314 /* NSXMLNode+DictrExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */; settings = {ASSET_TAGS = (); }; };
 		83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */; };
 		83B523771C3BDE2E00FA6D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523761C3BDE2E00FA6D4E /* main.m */; };
 		83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831100E41C439F0800296314 /* NSXMLNode+DictrExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLNode+DictrExtensions.h"; sourceTree = "<group>"; };
+		831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLNode+DictrExtensions.m"; sourceTree = "<group>"; };
 		83B5236F1C3BDE2E00FA6D4E /* Dictr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrAppDelegate.h; sourceTree = "<group>"; };
 		83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrAppDelegate.m; sourceTree = "<group>"; };
@@ -174,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831100E31C439EF000296314 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				831100E41C439F0800296314 /* NSXMLNode+DictrExtensions.h */,
+				831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		83B523661C3BDE2E00FA6D4E = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +211,7 @@
 		83B523711C3BDE2E00FA6D4E /* Dictr */ = {
 			isa = PBXGroup;
 			children = (
+				831100E31C439EF000296314 /* extensions */,
 				83B524C71C3D47D400FA6D4E /* ui */,
 				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
 				83B524C21C3D423C00FA6D4E /* DictrConstants.m */,
@@ -516,6 +529,7 @@
 				83B524CF1C3D7FE200FA6D4E /* DictrProjectorController.m in Sources */,
 				83B524B81C3C082700FA6D4E /* AFHTTPRequestOperation.m in Sources */,
 				83B524BA1C3C082700FA6D4E /* AFHTTPSessionManager.m in Sources */,
+				831100E61C439F0800296314 /* NSXMLNode+DictrExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +756,7 @@
 				83B5239B1C3BDE2E00FA6D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B5239C1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrTests" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +765,7 @@
 				83B5239E1C3BDE2E00FA6D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B5239F1C3BDE2E00FA6D4E /* Build configuration list for PBXNativeTarget "DictrUITests" */ = {
 			isa = XCConfigurationList;
@@ -758,6 +774,7 @@
 				83B523A11C3BDE2E00FA6D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
