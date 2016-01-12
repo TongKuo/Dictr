@@ -83,12 +83,10 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         self.USPronunciation = [ NSURL URLWithString: [ ( NSXMLElement* )( matchingNodes.firstObject ) attributeForName: @"src" ].objectValue ];
 
         // Extracting the IPA
-        matchingNodes = [ self->__xmlNode nodesForXPath: @"//pron" error: nil ];
-
-        NSOrderedSet* uniquedMatchingNodes = [ NSOrderedSet orderedSetWithArray: matchingNodes ];
+        matchingNodes = [ self->__xmlNode nodesForXPath: @"descendant-or-self::pron" error: nil ];
 
         NSMutableOrderedSet* tmpIPAs = [ NSMutableOrderedSet orderedSet ];
-        for ( NSXMLNode* _Node in uniquedMatchingNodes )
+        for ( NSXMLNode* _Node in matchingNodes )
             {
             NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
             NSArray <__kindof NSXMLNode*>* textNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
