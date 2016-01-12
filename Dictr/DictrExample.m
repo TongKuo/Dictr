@@ -28,24 +28,31 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* egXPathExpr = @"descendant-or-self::eg";
-        NSString* transXPathExpr = @"descendant-or-self::trans";
+        NSString* egXPathExpr = @"descendant-or-self::*/eg";
+        NSString* transXPathExpr = @"descendant-or-self::*/trans";
         matchingNodes = [ self->__xmlNode nodesForXPath:
             [ NSString stringWithFormat: @"%@ | %@", egXPathExpr, transXPathExpr ] error: nil ];
 
-        NSLog( @"%@", matchingNodes );
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {
             NSString* oldName = _MatchingNode.name;
-            _MatchingNode.name = @"span";
 
-            NSAttributedString* tmpAttrString = [ [ NSAttributedString alloc ] initWithHTML: [ _MatchingNode.XMLString dataUsingEncoding: NSUTF8StringEncoding ] documentAttributes: nil ];
+            NSXMLNode* nodeCopy = [ _MatchingNode copy ];
+            nodeCopy.name = @"span";
+
+            NSLog( @"%@", nodeCopy );
+
+            NSAttributedString* tmpAttrString = [ [ NSAttributedString alloc ] initWithHTML: [ nodeCopy.XMLString dataUsingEncoding: NSUTF8StringEncoding ] documentAttributes: nil ];
 
             if ( [ oldName isEqualToString: @"eg" ] )
                 self.example = tmpAttrString;
             else if ( [ oldName isEqualToString: @"trans" ] )
                 self.translationOfExample = tmpAttrString;
             }
+
+//        NSLog( @"%@", self.example );
+//        NSLog( @"%@", self.translationOfExample );
+//        NSLog( @"=======" );
         }
 
     return self;
