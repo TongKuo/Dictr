@@ -73,29 +73,56 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         //     <source type="audio/ogg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/us_pron_ogg/w/won/wonde/wonderful.ogg"></source>
         // </audio>
         NSString* pronAudiosXPathTemplate =
-            @"descendant-or-self::audio[@type='pronunciation' and @region='%@']"
-             "/descendant::source[@type=\"audio/mpeg\"]";
+            @"descendant-or-self::audio[@type='pronunciation' and @region='%@']";
 
-        matchingNodes = [ self->__xmlNode nodesForXPath: [ NSString stringWithFormat: pronAudiosXPathTemplate, @"uk" ] error: nil ];
-        self.UKPronunciation = [ NSURL URLWithString: [ ( NSXMLElement* )( matchingNodes.firstObject ) attributeForName: @"src" ].objectValue ];
+        NSString* posXPathExpr = @"descendant-or-self::info/posgram/pos";
+        NSString* pronXPathExpr = @"descendant-or-self::pron";
 
-        matchingNodes = [ self->__xmlNode nodesForXPath: [ NSString stringWithFormat: pronAudiosXPathTemplate, @"us" ] error: nil ];
-        self.USPronunciation = [ NSURL URLWithString: [ ( NSXMLElement* )( matchingNodes.firstObject ) attributeForName: @"src" ].objectValue ];
-
-        // Extracting the IPA
-        matchingNodes = [ self->__xmlNode nodesForXPath: @"descendant-or-self::pron" error: nil ];
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            [ NSString stringWithFormat: @"%@ | %@ | %@ | %@"
+                                       , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"uk" ]
+                                       , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"us" ]
+                                       , posXPathExpr
+                                       , pronXPathExpr
+                                       ] error: nil ];
 
         NSMutableOrderedSet* tmpIPAs = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _Node in matchingNodes )
             {
-            NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
-            NSArray <__kindof NSXMLNode*>* textNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
+            NSString* nodeName = _Node.name;
+            NSString* nodeObjectValue = _Node.objectValue;
 
-            NSString* ipaString =
-                [ [ textNodes subarrayWithRange: NSMakeRange( 0, countOfTextNodes ) ] componentsJoinedByString: @"" ];
+            // Extracting the word that refers to a person, place, idea, event or thing.
+            // (e.g. noun, verb)
+            if ( [ nodeName isEqualToString: @"pos" ] )
+                self.pos = nodeObjectValue;
 
-            if ( ipaString )
-                [ tmpIPAs addObject: ipaString ];
+            // Extracting the British/American English pronunciation
+            else if ( [ nodeName isEqualToString: @"audio" ] )
+                {
+                NSXMLElement* srcNode = [ _Node nodesForXPath: @"child::source[@type=\"audio/mpeg\"]" error: nil ].firstObject;
+                NSString* tmpPronSrc = [ srcNode attributeForName: @"src" ].objectValue;
+                NSURL* tmpPronURL = [ NSURL URLWithString: tmpPronSrc ];
+
+                NSString* region = [ ( NSXMLElement* )_Node attributeForName: @"region" ].objectValue;
+                if ( [ region isEqualToString: @"uk" ] )
+                    self.UKPronunciation = tmpPronURL;
+                else if ( [ region isEqualToString: @"us" ] )
+                    self.USPronunciation = tmpPronURL;
+                }
+
+            // Extracting the IPA
+            else if ( [ nodeName isEqualToString: @"pron" ] )
+                {
+                NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
+                NSArray <__kindof NSXMLNode*>* textNodes = [ _Node nodesForXPath: @"descendant-or-self::text()" error: nil ];
+
+                NSString* ipaString =
+                    [ [ textNodes subarrayWithRange: NSMakeRange( 0, countOfTextNodes ) ] componentsJoinedByString: @"" ];
+
+                if ( ipaString )
+                    [ tmpIPAs addObject: ipaString ];
+                }
             }
 
         self.IPAs = [ tmpIPAs copy ];
