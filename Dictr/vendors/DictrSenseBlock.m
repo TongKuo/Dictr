@@ -13,6 +13,8 @@
 
 @property ( strong, readwrite ) NSString* level;
 
+@property ( strong, readwrite ) NSString* guideWord;
+
 @end // Private Interfaces
 
 // DictrSenseBlock class
@@ -26,9 +28,11 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* lvlXPathExpr = @"child::definition/info/lvl";
-        matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@", lvlXPathExpr ] error: nil ];
+        NSArray* xPathExprs = @[ @"child::definition/info/lvl"
+                               , @"parent::sense-block/header/title"
+                               ];
+
+        matchingNodes = [ self->__xmlNode nodesForXPath: [ xPathExprs componentsJoinedByString: @"|" ] error: nil ];
 
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {
@@ -37,6 +41,9 @@
 
             if ( [ nodeName isEqualToString: @"lvl" ] )
                 self.level = nodeObjectValue;
+
+            else if ( [ nodeName isEqualToString: @"title" ] )
+                self.guideWord = _MatchingNode.objectValue;
             }
         }
 
