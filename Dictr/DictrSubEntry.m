@@ -72,8 +72,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         //     <source type="audio/mpeg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/us_pron/w/won/wonde/wonderful.mp3"></source>
         //     <source type="audio/ogg" src="https://dictionary.cambridge.org/media/english-chinese-simplified/us_pron_ogg/w/won/wonde/wonderful.ogg"></source>
         // </audio>
-        NSString* pronAudiosXPathTemplate =
-            @"descendant-or-self::audio[@type='pronunciation' and @region='%@']";
+        NSString* pronAudiosXPathTemplate = @"descendant-or-self::audio[@type='pronunciation' and @region='%@']";
 
         NSArray* xPathExprs = @[ @"descendant-or-self::info/posgram/pos"
                                , @"descendant-or-self::pron"
@@ -100,11 +99,11 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
             Class senseClass = nil;
 
             // Extracting the word that refers to a person, place, idea, event or thing.
-            // (e.g. noun, verb)
+            // ( e.g. noun, verb, adverb )
             if ( [ nodeName isEqualToString: @"pos" ] )
                 self.pos = nodeObjectValue;
 
-            // Extracting the British/American English pronunciation
+            // Extracting the British/American English pronunciations
             else if ( [ nodeName isEqualToString: @"audio" ] )
                 {
                 NSXMLElement* srcNode = [ _Node nodesForXPath: @"child::source[@type=\"audio/mpeg\"]" error: nil ].firstObject;
@@ -118,7 +117,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
                     self.USPronunciation = tmpPronURL;
                 }
 
-            // Extracting the IPA
+            // Extracting the IPAs
             else if ( [ nodeName isEqualToString: @"pron" ] )
                 {
                 NSUInteger countOfTextNodes = kCountOfSomeKindOfChildren( _Node, NSXMLTextKind, YES );
@@ -139,9 +138,10 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
             else if ( [ nodeName isEqualToString: @"phrase-block" ] )
                 senseClass = [ DictrPhraseBlock class ];
 
-            // senseClass is nil by default.
-            // If the node name is equal to either "def-block" or "phrase-block",
+            // The local variable senseClass is nil by default.
             // senseClass will be assigned to a valid value
+            // if the node name is equal to either "def-block" or "phrase-block".
+            // Then we'll be able to construct the instances of senseClass.
             if ( senseClass )
                 [ tmpSenseBlocks addObject: [ [ senseClass alloc ] initWithXML: _Node ] ];
             }
