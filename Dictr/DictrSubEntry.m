@@ -75,22 +75,29 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
         NSString* pronAudiosXPathTemplate =
             @"descendant-or-self::audio[@type='pronunciation' and @region='%@']";
 
-        NSString* posXPathExpr = @"descendant-or-self::info/posgram/pos";
-        NSString* pronXPathExpr = @"descendant-or-self::pron";
+        NSArray* xPathExprs = @[ @"descendant-or-self::info/posgram/pos"
+                               , @"descendant-or-self::pron"
 
-        matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@ | %@ | %@"
-                                       , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"uk" ]
-                                       , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"us" ]
-                                       , posXPathExpr
-                                       , pronXPathExpr
-                                       ] error: nil ];
+                               , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"uk" ]
+                               , [ NSString stringWithFormat: pronAudiosXPathTemplate, @"us" ]
+
+                               // To obtain all the def-block nodes that are not descendants of nodes phrase-block
+                               , @"descendant-or-self::def-block[not(ancestor::phrase-block)]"
+
+                               // To obtain all the phrase-block nodes
+                               , @"descendant-or-self::phrase-block"
+                               ];
+
+        matchingNodes = [ self->__xmlNode nodesForXPath: [ xPathExprs componentsJoinedByString: @"|" ] error: nil ];
 
         NSMutableOrderedSet* tmpIPAs = [ NSMutableOrderedSet orderedSet ];
+        NSMutableOrderedSet* tmpSenseBlocks = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _Node in matchingNodes )
             {
             NSString* nodeName = _Node.name;
             NSString* nodeObjectValue = _Node.objectValue;
+
+            Class senseClass = nil;
 
             // Extracting the word that refers to a person, place, idea, event or thing.
             // (e.g. noun, verb)
@@ -123,9 +130,24 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
                 if ( ipaString )
                     [ tmpIPAs addObject: ipaString ];
                 }
+
+            // Extracting the def-block nodes
+            else if ( [ nodeName isEqualToString: @"def-block" ] )
+                senseClass = [ DictrDefBlock class ];
+
+            // Extracting the phrase-block nodes
+            else if ( [ nodeName isEqualToString: @"phrase-block" ] )
+                senseClass = [ DictrPhraseBlock class ];
+
+            // senseClass is nil by default.
+            // If the node name is equal to either "def-block" or "phrase-block",
+            // senseClass will be assigned to a valid value
+            if ( senseClass )
+                [ tmpSenseBlocks addObject: [ [ senseClass alloc ] initWithXML: _Node ] ];
             }
 
         self.IPAs = [ tmpIPAs copy ];
+        self.senseBlocks = [ tmpSenseBlocks copy ];
 
         #if DEBUG // DEBUG
         NSLog( @"Count: %ld %@", self.IPAs.count, self );
@@ -134,31 +156,6 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
 
         NSLog( @"======" );
         #endif
-
-        // Extracting the def-block nodes
-
-        // To obtain all the def-block nodes that are not descendants of nodes phrase-block
-        NSString* defBlockXPathExpr = @"descendant-or-self::def-block[not(ancestor::phrase-block)]";
-        // To obtain all the phrase-block nodes
-        NSString* phraseBlockXPathExpr = @"descendant-or-self::phrase-block";
-
-        matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@", defBlockXPathExpr, phraseBlockXPathExpr ] error: nil ];
-
-        NSMutableOrderedSet* tmpSenseBlocks = [ NSMutableOrderedSet orderedSet ];
-        for ( NSXMLNode* _SenseBlockNode in matchingNodes )
-            {
-            Class senseClass = nil;
-
-            if ( [ _SenseBlockNode.name isEqualToString: @"def-block" ] )
-                senseClass = [ DictrDefBlock class ];
-            else if ( [ _SenseBlockNode.name isEqualToString: @"phrase-block" ] )
-                senseClass = [ DictrPhraseBlock class ];
-
-            [ tmpSenseBlocks addObject: [ [ senseClass alloc ] initWithXML: _SenseBlockNode ] ];
-            }
-
-        self.senseBlocks = [ tmpSenseBlocks copy ];
         }
 
     return self;
