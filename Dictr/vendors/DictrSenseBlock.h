@@ -18,16 +18,16 @@ typedef NS_ENUM( NSInteger, DictrSenseBlockKind )
 // DictrSenseBlock class
 @interface DictrSenseBlock : DictrXMLObject
 
-/** The kind of sense block
+/** The kind of sense block.
   */
 @property ( assign, readonly ) DictrSenseBlockKind kind;
 
 /** A string represeting the English Vocabulary Profile symbols A1-C2 show
-    which words and phrases learners know at each level
+    which words and phrases learners know at each level.
   */
 @property ( strong, readonly ) NSString* level;
 
-/** The word that helps you find the right meaning when a word has more than one meaning 
+/** The word that helps you find the right meaning when a word has more than one meaning .
   */
 @property ( strong, readonly ) NSString* guideWord;
 
