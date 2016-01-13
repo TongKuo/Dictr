@@ -13,7 +13,6 @@
 // DictrDefBlock class
 @interface DictrDefBlock : DictrSenseBlock
 
-@property ( strong, readonly ) NSString* level;
 @property ( strong, readonly ) NSString* definition;
 
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrExample*>* examples;

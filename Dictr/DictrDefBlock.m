@@ -11,7 +11,6 @@
 // Private Interfaces
 @interface DictrDefBlock ()
 
-@property ( strong, readwrite ) NSString* level;
 @property ( strong, readwrite ) NSString* definition;
 
 @property ( strong, readwrite ) NSOrderedSet <__kindof DictrExample*>* examples;
@@ -29,24 +28,20 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* lvlXPathExpr = @"descendant-or-self::definition/info/lvl";
-        NSString* defXPathExpr = @"descendant-or-self::definition/info/def";
+        NSString* defXPathExpr = @"child::definition/def";
         NSString* exampXPathExpr = @"child::examp";
 
         // Extracting the definition information
         matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@ | %@", lvlXPathExpr, defXPathExpr, exampXPathExpr ] error: nil ];
+            [ NSString stringWithFormat: @"%@ | %@", defXPathExpr, exampXPathExpr ] error: nil ];
 
         NSMutableOrderedSet* tmpExamps = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {
             NSString* nodeName = _MatchingNode.name;
-            NSString* nodeObjectValue = _MatchingNode.objectValue;
+            id nodeObjectValue = _MatchingNode.objectValue;
 
-            if ( [ nodeName isEqualToString: @"lvl" ] )
-                self.level = nodeObjectValue;
-
-            else if ( [ nodeName isEqualToString: @"def" ] )
+            if ( [ nodeName isEqualToString: @"def" ] )
                 self.definition = nodeObjectValue;
 
             else if ( [ nodeName isEqualToString: @"examp" ] )
