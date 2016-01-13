@@ -29,9 +29,9 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* lvlXPathExpr = @"descendant-or-self::*/lvl";
-        NSString* defXPathExpr = @"descendant-or-self::*/def";
-        NSString* exampXPathExpr = @"descendant-or-self::*/examp";
+        NSString* lvlXPathExpr = @"descendant-or-self::definition/info/lvl";
+        NSString* defXPathExpr = @"descendant-or-self::definition/info/def";
+        NSString* exampXPathExpr = @"child::examp";
 
         // Extracting the definition information
         matchingNodes = [ self->__xmlNode nodesForXPath:
