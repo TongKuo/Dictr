@@ -13,6 +13,8 @@
 // DictrPhraseBlock class
 @interface DictrPhraseBlock : DictrSenseBlock
 
+@property ( strong, readonly ) NSAttributedString* title;
+@property ( strong, readonly ) NSXMLNode* lab;
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
 
 @end // DictrPhraseBlock class

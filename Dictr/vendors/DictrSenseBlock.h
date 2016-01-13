@@ -19,5 +19,6 @@ typedef NS_ENUM( NSInteger, DictrSenseBlockKind )
 @interface DictrSenseBlock : DictrXMLObject
 
 @property ( assign, readonly ) DictrSenseBlockKind kind;
+@property ( strong, readonly ) NSString* level;
 
 @end // DictrSenseBlock class

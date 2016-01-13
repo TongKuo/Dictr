@@ -9,8 +9,10 @@
 #import "DictrPhraseBlock.h"
 
 // Private Interfaces
-@interface DictrDefBlock ()
+@interface DictrPhraseBlock ()
 
+@property ( strong, readwrite ) NSAttributedString* title;
+@property ( strong, readwrite ) NSXMLNode* lab;
 @property ( strong, readwrite ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
 
 @end // Private Interfaces
@@ -26,12 +28,33 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
+        NSString* titleXPathExpr = @"child::header/title";
+        NSString* labXPathExpr = @"child::header/info/lab";
+        NSString* defBlockXPathExpr = @"child::def-block";
+
         // Extracting the def-block nodes
-        matchingNodes = [ self->__xmlNode nodesForXPath: @"descendant-or-self::def-block" error: nil ];
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            [ NSString stringWithFormat: @"%@ | %@ | %@", titleXPathExpr, labXPathExpr, defBlockXPathExpr ] error: nil ];
 
         NSMutableOrderedSet* tmpDefBlocks = [ NSMutableOrderedSet orderedSet ];
-        for ( NSXMLNode* _DefBlockNodes in matchingNodes )
-            [ tmpDefBlocks addObject: [ [ DictrDefBlock alloc ] initWithXML: _DefBlockNodes ] ];
+        for ( NSXMLNode* _MatchingNodes in matchingNodes )
+            {
+            NSString* nodeName = _MatchingNodes.name;
+            NSXMLNode* nodeCopy = [ _MatchingNodes copy ];
+            if ( [ nodeName isEqualToString: @"title" ] )
+                {
+                nodeCopy.name = @"span";
+                self.title = [ [ NSAttributedString alloc ] initWithHTML: [ nodeCopy.XMLString dataUsingEncoding: NSUTF8StringEncoding ] documentAttributes: nil ];
+                }
+
+            else if ( [ nodeName isEqualToString: @"lab" ] )
+                self.lab = nodeCopy;
+
+            else if ( [ nodeName isEqualToString: @"def-block" ] )
+                [ tmpDefBlocks addObject: [ [ DictrDefBlock alloc ] initWithXML: _MatchingNodes ] ];
+            }
+
+        self.defBlocks = [ tmpDefBlocks copy ];
         }
 
     return self;
