@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		831100E61C439F0800296314 /* NSXMLNode+DictrExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */; settings = {ASSET_TAGS = (); }; };
-		831100EA1C43AFEB00296314 /* DictrSenseSubBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 831100E91C43AFEB00296314 /* DictrSenseSubBlock.m */; settings = {ASSET_TAGS = (); }; };
 		83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */; };
 		83B523771C3BDE2E00FA6D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523761C3BDE2E00FA6D4E /* main.m */; };
 		83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */; };
@@ -47,6 +46,8 @@
 		83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F71C3E826700FA6D4E /* DictrJsonObject.m */; settings = {ASSET_TAGS = (); }; };
 		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
+		83DD54171C47ABB70091B8DC /* DictrSenseSubBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54161C47ABB70091B8DC /* DictrSenseSubBlock.m */; settings = {ASSET_TAGS = (); }; };
+		83DD541A1C47ABC40091B8DC /* DictrSenseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54191C47ABC40091B8DC /* DictrSenseBlock.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +70,6 @@
 /* Begin PBXFileReference section */
 		831100E41C439F0800296314 /* NSXMLNode+DictrExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLNode+DictrExtensions.h"; sourceTree = "<group>"; };
 		831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLNode+DictrExtensions.m"; sourceTree = "<group>"; };
-		831100E81C43AFEB00296314 /* DictrSenseSubBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSenseSubBlock.h; sourceTree = "<group>"; };
-		831100E91C43AFEB00296314 /* DictrSenseSubBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSenseSubBlock.m; sourceTree = "<group>"; };
 		83B5236F1C3BDE2E00FA6D4E /* Dictr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DictrAppDelegate.h; sourceTree = "<group>"; };
 		83B523731C3BDE2E00FA6D4E /* DictrAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DictrAppDelegate.m; sourceTree = "<group>"; };
@@ -153,6 +152,10 @@
 		83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSubEntry.m; path = ../DictrSubEntry.m; sourceTree = "<group>"; };
 		83B524FF1C3EB23500FA6D4E /* DictrXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrXMLObject.h; path = ../DictrXMLObject.h; sourceTree = "<group>"; };
 		83B525001C3EB23500FA6D4E /* DictrXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrXMLObject.m; path = ../DictrXMLObject.m; sourceTree = "<group>"; };
+		83DD54151C47ABB70091B8DC /* DictrSenseSubBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrSenseSubBlock.h; path = Dictr/DictrSenseSubBlock.h; sourceTree = SOURCE_ROOT; };
+		83DD54161C47ABB70091B8DC /* DictrSenseSubBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSenseSubBlock.m; path = Dictr/DictrSenseSubBlock.m; sourceTree = SOURCE_ROOT; };
+		83DD54181C47ABC40091B8DC /* DictrSenseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSenseBlock.h; sourceTree = "<group>"; };
+		83DD54191C47ABC40091B8DC /* DictrSenseBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSenseBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +204,10 @@
 				83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */,
 				83B524FC1C3EB22900FA6D4E /* DictrSubEntry.h */,
 				83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */,
-				831100E81C43AFEB00296314 /* DictrSenseSubBlock.h */,
-				831100E91C43AFEB00296314 /* DictrSenseSubBlock.m */,
+				83DD54181C47ABC40091B8DC /* DictrSenseBlock.h */,
+				83DD54191C47ABC40091B8DC /* DictrSenseBlock.m */,
+				83DD54151C47ABB70091B8DC /* DictrSenseSubBlock.h */,
+				83DD54161C47ABB70091B8DC /* DictrSenseSubBlock.m */,
 				83B524ED1C3E7FCC00FA6D4E /* DictrDefBlock.h */,
 				83B524EE1C3E7FCC00FA6D4E /* DictrDefBlock.m */,
 				83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */,
@@ -510,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83DD54171C47ABB70091B8DC /* DictrSenseSubBlock.m in Sources */,
 				83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */,
 				83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
@@ -525,9 +531,9 @@
 				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
 				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
 				83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */,
-				831100EA1C43AFEB00296314 /* DictrSenseSubBlock.m in Sources */,
 				83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */,
 				83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */,
+				83DD541A1C47ABC40091B8DC /* DictrSenseBlock.m in Sources */,
 				83B524EC1C3E7E2700FA6D4E /* DictrEntry.m in Sources */,
 				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
 				83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */,
