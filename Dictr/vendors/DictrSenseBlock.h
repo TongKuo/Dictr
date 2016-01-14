@@ -11,4 +11,12 @@
 // DictrSenseBlock class
 @interface DictrSenseBlock : DictrXMLObject
 
+/** The word that helps you find the right meaning when a word has more than one meaning .
+  */
+@property ( strong, readonly ) NSString* guideWord;
+
+/** An set of senses
+  */
+@property ( strong, readonly ) NSOrderedSet <__kindof DictrSense*>* senses;
+
 @end // DictrSenseBlock class
