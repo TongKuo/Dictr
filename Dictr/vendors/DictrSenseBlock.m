@@ -83,6 +83,8 @@
             if ( senseClass )
                 [ tmpSenseBlocks addObject: [ [ senseClass alloc ] initWithXML: _MatchingNode ] ];
             }
+
+        self.senses = [ tmpSenseBlocks copy ];
         }
 
     return self;

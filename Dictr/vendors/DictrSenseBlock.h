@@ -8,6 +8,8 @@
 
 #import "DictrXMLObject.h"
 
+@class DictrSense;
+
 // DictrSenseBlock class
 @interface DictrSenseBlock : DictrXMLObject
 
