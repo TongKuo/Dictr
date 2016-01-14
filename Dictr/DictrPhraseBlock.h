@@ -8,13 +8,13 @@
 
 #import "DictrSense.h"
 
-@class DictrDefBlock;
+@class DictrGeneralDef;
 
 // DictrPhraseBlock class
 @interface DictrPhraseBlock : DictrSense
 
 @property ( strong, readonly ) NSAttributedString* title;
 @property ( strong, readonly ) NSXMLNode* lab;
-@property ( strong, readonly ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readonly ) NSOrderedSet <__kindof DictrGeneralDef*>* defBlocks;
 
 @end // DictrPhraseBlock class

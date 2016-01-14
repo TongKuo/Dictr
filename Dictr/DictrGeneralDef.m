@@ -1,15 +1,15 @@
 //
-//  DictrDefBlock.m
+//  DictrGeneralDef.m
 //  Dictr
 //
 //  Created by Tong G. on 1/7/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrDefBlock.h"
+#import "DictrGeneralDef.h"
 
 // Private Interfaces
-@interface DictrDefBlock ()
+@interface DictrGeneralDef ()
 
 @property ( strong, readwrite ) NSString* definition;
 
@@ -17,8 +17,8 @@
 
 @end // Private Interfaces
 
-// DictrDefBlock class
-@implementation DictrDefBlock
+// DictrGeneralDef class
+@implementation DictrGeneralDef
 
 #pragma mark - Initializations
 
@@ -54,4 +54,4 @@
     return self;
     }
 
-@end // DictrDefBlock class
+@end // DictrGeneralDef class

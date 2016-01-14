@@ -132,7 +132,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
 
             // Extracting the def-block nodes
             else if ( [ nodeName isEqualToString: @"def-block" ] )
-                senseClass = [ DictrDefBlock class ];
+                senseClass = [ DictrGeneralDef class ];
 
             // Extracting the phrase-block nodes
             else if ( [ nodeName isEqualToString: @"phrase-block" ] )

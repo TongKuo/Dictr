@@ -13,7 +13,7 @@
 
 @property ( strong, readwrite ) NSAttributedString* title;
 @property ( strong, readwrite ) NSXMLNode* lab;
-@property ( strong, readwrite ) NSOrderedSet <__kindof DictrDefBlock*>* defBlocks;
+@property ( strong, readwrite ) NSOrderedSet <__kindof DictrGeneralDef*>* defBlocks;
 
 @end // Private Interfaces
 
@@ -51,7 +51,7 @@
                 self.lab = nodeCopy;
 
             else if ( [ nodeName isEqualToString: @"def-block" ] )
-                [ tmpDefBlocks addObject: [ [ DictrDefBlock alloc ] initWithXML: _MatchingNodes ] ];
+                [ tmpDefBlocks addObject: [ [ DictrGeneralDef alloc ] initWithXML: _MatchingNodes ] ];
             }
 
         self.defBlocks = [ tmpDefBlocks copy ];
