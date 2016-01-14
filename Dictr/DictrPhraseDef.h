@@ -1,5 +1,5 @@
 //
-//  DictrPhraseBlock.h
+//  DictrPhraseDef.h
 //  Dictr
 //
 //  Created by Tong G. on 1/7/16.
@@ -10,11 +10,11 @@
 
 @class DictrGeneralDef;
 
-// DictrPhraseBlock class
-@interface DictrPhraseBlock : DictrSense
+// DictrPhraseDef class
+@interface DictrPhraseDef : DictrSense
 
 @property ( strong, readonly ) NSAttributedString* title;
 @property ( strong, readonly ) NSXMLNode* lab;
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrGeneralDef*>* defBlocks;
 
-@end // DictrPhraseBlock class
+@end // DictrPhraseDef class

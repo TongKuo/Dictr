@@ -1,15 +1,15 @@
 //
-//  DictrPhraseBlock.m
+//  DictrPhraseDef.m
 //  Dictr
 //
 //  Created by Tong G. on 1/7/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrPhraseBlock.h"
+#import "DictrPhraseDef.h"
 
 // Private Interfaces
-@interface DictrPhraseBlock ()
+@interface DictrPhraseDef ()
 
 @property ( strong, readwrite ) NSAttributedString* title;
 @property ( strong, readwrite ) NSXMLNode* lab;
@@ -17,8 +17,8 @@
 
 @end // Private Interfaces
 
-// DictrPhraseBlock class
-@implementation DictrPhraseBlock
+// DictrPhraseDef class
+@implementation DictrPhraseDef
 
 #pragma mark - Initializations
 
@@ -60,4 +60,4 @@
     return self;
     }
 
-@end // DictrPhraseBlock class
+@end // DictrPhraseDef class

@@ -42,7 +42,7 @@
 		83B524EC1C3E7E2700FA6D4E /* DictrEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B524EF1C3E7FCC00FA6D4E /* DictrGeneralDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524EE1C3E7FCC00FA6D4E /* DictrGeneralDef.m */; settings = {ASSET_TAGS = (); }; };
 		83B524F21C3E7FDE00FA6D4E /* DictrExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F11C3E7FDE00FA6D4E /* DictrExample.m */; settings = {ASSET_TAGS = (); }; };
-		83B524F51C3E823500FA6D4E /* DictrPhraseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */; settings = {ASSET_TAGS = (); }; };
+		83B524F51C3E823500FA6D4E /* DictrPhraseDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F41C3E823500FA6D4E /* DictrPhraseDef.m */; settings = {ASSET_TAGS = (); }; };
 		83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F71C3E826700FA6D4E /* DictrJsonObject.m */; settings = {ASSET_TAGS = (); }; };
 		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
@@ -143,8 +143,8 @@
 		83B524EE1C3E7FCC00FA6D4E /* DictrGeneralDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrGeneralDef.m; path = ../DictrGeneralDef.m; sourceTree = "<group>"; };
 		83B524F01C3E7FDE00FA6D4E /* DictrExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrExample.h; path = ../DictrExample.h; sourceTree = "<group>"; };
 		83B524F11C3E7FDE00FA6D4E /* DictrExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrExample.m; path = ../DictrExample.m; sourceTree = "<group>"; };
-		83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrPhraseBlock.h; path = ../DictrPhraseBlock.h; sourceTree = "<group>"; };
-		83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrPhraseBlock.m; path = ../DictrPhraseBlock.m; sourceTree = "<group>"; };
+		83B524F31C3E823500FA6D4E /* DictrPhraseDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrPhraseDef.h; path = ../DictrPhraseDef.h; sourceTree = "<group>"; };
+		83B524F41C3E823500FA6D4E /* DictrPhraseDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrPhraseDef.m; path = ../DictrPhraseDef.m; sourceTree = "<group>"; };
 		83B524F61C3E826700FA6D4E /* DictrJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrJsonObject.h; path = ../DictrJsonObject.h; sourceTree = "<group>"; };
 		83B524F71C3E826700FA6D4E /* DictrJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrJsonObject.m; path = ../DictrJsonObject.m; sourceTree = "<group>"; };
 		83B524F91C3E871C00FA6D4E /* CambridgeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CambridgeKit.h; path = ../CambridgeKit.h; sourceTree = "<group>"; };
@@ -210,8 +210,8 @@
 				83DD54161C47ABB70091B8DC /* DictrSense.m */,
 				83B524ED1C3E7FCC00FA6D4E /* DictrGeneralDef.h */,
 				83B524EE1C3E7FCC00FA6D4E /* DictrGeneralDef.m */,
-				83B524F31C3E823500FA6D4E /* DictrPhraseBlock.h */,
-				83B524F41C3E823500FA6D4E /* DictrPhraseBlock.m */,
+				83B524F31C3E823500FA6D4E /* DictrPhraseDef.h */,
+				83B524F41C3E823500FA6D4E /* DictrPhraseDef.m */,
 				83B524F01C3E7FDE00FA6D4E /* DictrExample.h */,
 				83B524F11C3E7FDE00FA6D4E /* DictrExample.m */,
 			);
@@ -520,7 +520,7 @@
 				83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
-				83B524F51C3E823500FA6D4E /* DictrPhraseBlock.m in Sources */,
+				83B524F51C3E823500FA6D4E /* DictrPhraseDef.m in Sources */,
 				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,

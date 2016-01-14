@@ -136,7 +136,7 @@ static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
 
             // Extracting the phrase-block nodes
             else if ( [ nodeName isEqualToString: @"phrase-block" ] )
-                senseClass = [ DictrPhraseBlock class ];
+                senseClass = [ DictrPhraseDef class ];
 
             // The local variable senseClass is nil by default.
             // senseClass will be assigned to a valid value
