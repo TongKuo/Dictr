@@ -26,15 +26,18 @@
     {
     NSXMLNode* selfXMLNode = nil;
 
+    // To obtain all the def-block nodes that are not children of nodes phrase-block
+    NSString* defBlockRelativeXPath = @"def-block[not(parent::phrase-block)]";
+
+    // To obtain all the phrase-block nodes
+    NSString* phraseBlockRelativeXPath = @"phrase-block";
+
     if ( [ _XMLNode.name isEqualToString: @"sense-block" ] )
         selfXMLNode = _XMLNode;
     else
         {
-        NSArray* xPathsOfSenseSubBlocks = @[ // To obtain all the def-block nodes that are not descendants of nodes phrase-block
-                                             @"descendant-or-self::def-block[not(ancestor::phrase-block)]"
-
-                                             // To obtain all the phrase-block nodes
-                                           , @"descendant-or-self::phrase-block"
+        NSArray* xPathsOfSenseSubBlocks = @[ [ @"descendant-or-self::" stringByAppendingString: defBlockRelativeXPath ]
+                                           , [ @"descendant-or-self::" stringByAppendingString: phraseBlockRelativeXPath ]
                                            ];
 
         NSArray <__kindof NSXMLNode*>* senseSubBlocks =
@@ -49,11 +52,8 @@
 
         NSArray* xPathExprs = @[ @"child::header/title"
 
-                               // To obtain all the def-block nodes that are not descendants of nodes phrase-block
-                               , @"child::def-block[not(ancestor::phrase-block)]"
-
-                               // To obtain all the phrase-block nodes
-                               , @"child::phrase-block"
+                               , [ @"child::" stringByAppendingString: defBlockRelativeXPath ]
+                               , [ @"child::" stringByAppendingString: phraseBlockRelativeXPath ]
                                ];
 
         matchingNodes = [ self->__xmlNode nodesForXPath: [ xPathExprs componentsJoinedByString: @"|" ] error: nil ];
