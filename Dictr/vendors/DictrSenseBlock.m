@@ -36,12 +36,10 @@
         selfXMLNode = _XMLNode;
     else
         {
-        NSArray* xPathsOfSenseSubBlocks = @[ [ @"descendant-or-self::" stringByAppendingString: defBlockRelativeXPath ]
-                                           , [ @"descendant-or-self::" stringByAppendingString: phraseBlockRelativeXPath ]
-                                           ];
-
         NSArray <__kindof NSXMLNode*>* senseSubBlocks =
-            [ _XMLNode nodesForXPath: [ xPathsOfSenseSubBlocks componentsJoinedByString: @"|" ] error: nil ];
+            [ _XMLNode nodesForXPath: @[ [ @"descendant-or-self::" stringByAppendingString: defBlockRelativeXPath ]
+                                       , [ @"descendant-or-self::" stringByAppendingString: phraseBlockRelativeXPath ]
+                                       ].combinationOfXPathExpressions error: nil ];
 
         selfXMLNode = [ NSXMLElement elementWithName: @"sense-block" children: senseSubBlocks attributes: nil ];
         }

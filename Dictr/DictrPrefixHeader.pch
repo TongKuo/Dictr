@@ -21,5 +21,6 @@
 #import "DictrConstants.h"
 #import "DictrTranslator.h"
 #import "NSXMLNode+DictrExtensions.h"
+#import "NSArray+DictrExtensions.h"
 
 #endif /* DictrPrefixHeader_pch */
