@@ -6,12 +6,12 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrSenseSubBlock.h"
+#import "DictrSense.h"
 
 @class DictrExample;
 
 // DictrDefBlock class
-@interface DictrDefBlock : DictrSenseSubBlock
+@interface DictrDefBlock : DictrSense
 
 @property ( strong, readonly ) NSString* definition;
 

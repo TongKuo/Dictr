@@ -1,15 +1,15 @@
 //
-//  DictrSenseSubBlock.m
+//  DictrSense.m
 //  Dictr
 //
 //  Created by Tong G. on 1/11/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrSenseSubBlock.h"
+#import "DictrSense.h"
 
 // Private Interfaces
-@interface DictrSenseSubBlock ()
+@interface DictrSense ()
 
 @property ( strong, readwrite ) NSString* level;
 
@@ -17,8 +17,8 @@
 
 @end // Private Interfaces
 
-// DictrSenseSubBlock class
-@implementation DictrSenseSubBlock
+// DictrSense class
+@implementation DictrSense
 
 #pragma mark - Initializations
 
@@ -54,19 +54,19 @@
 
 @dynamic kind;
 
-- ( DictrSenseSubBlockKind ) kind
+- ( DictrSenseKind ) kind
     {
-    DictrSenseSubBlockKind kind = DictrSenseSubBlockUnknownKind;
+    DictrSenseKind kind = DictrSenseUnknownKind;
 
     if ( self->__xmlNode )
         {
         if ( [ self->__xmlNode.name isEqualToString: @"def-block" ] )
-            kind = DictrSenseSubBlockDefKind;
+            kind = DictrSenseDefKind;
         else if ( [ self->__xmlNode.name isEqualToString: @"phrase-block" ] )
-            kind = DictrSenseSubBlockPhraseKind;
+            kind = DictrSensePhraseKind;
         }
 
     return kind;
     }
 
-@end // DictrSenseSubBlock class
+@end // DictrSense class

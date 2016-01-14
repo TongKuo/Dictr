@@ -6,12 +6,12 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrSenseSubBlock.h"
+#import "DictrSense.h"
 
 @class DictrDefBlock;
 
 // DictrPhraseBlock class
-@interface DictrPhraseBlock : DictrSenseSubBlock
+@interface DictrPhraseBlock : DictrSense
 
 @property ( strong, readonly ) NSAttributedString* title;
 @property ( strong, readonly ) NSXMLNode* lab;
