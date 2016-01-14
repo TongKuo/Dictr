@@ -28,13 +28,12 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* titleXPathExpr = @"child::header/title";
-        NSString* labXPathExpr = @"child::header/info/lab";
-        NSString* defBlockXPathExpr = @"child::def-block";
-
         // Extracting the def-block nodes
         matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@ | %@", titleXPathExpr, labXPathExpr, defBlockXPathExpr ] error: nil ];
+            @[ @"child::header/title"
+             , @"child::header/info/lab"
+             , @"child::def-block"
+             ].combinationOfXPathExpressions error: nil ];
 
         NSMutableOrderedSet* tmpDefBlocks = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _MatchingNodes in matchingNodes )

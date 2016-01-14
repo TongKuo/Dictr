@@ -28,10 +28,10 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* egXPathExpr = @"child::eg";
-        NSString* transXPathExpr = @"child::trans";
         matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@", egXPathExpr, transXPathExpr ] error: nil ];
+            @[ @"child::eg"
+             , @"child::trans"
+             ].combinationOfXPathExpressions error: nil ];
 
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {

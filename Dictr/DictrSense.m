@@ -28,11 +28,10 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSArray* xPathExprs = @[ @"child::definition/info/lvl"
-                               , @"parent::sense-block/header/title"
-                               ];
-
-        matchingNodes = [ self->__xmlNode nodesForXPath: [ xPathExprs componentsJoinedByString: @"|" ] error: nil ];
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            @[ @"child::definition/info/lvl"
+             , @"parent::sense-block/header/title"
+             ].combinationOfXPathExpressions error: nil ];
 
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {

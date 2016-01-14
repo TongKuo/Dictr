@@ -48,13 +48,11 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSArray* xPathExprs = @[ @"child::header/title"
-
-                               , [ @"child::" stringByAppendingString: defBlockRelativeXPath ]
-                               , [ @"child::" stringByAppendingString: phraseBlockRelativeXPath ]
-                               ];
-
-        matchingNodes = [ self->__xmlNode nodesForXPath: [ xPathExprs componentsJoinedByString: @"|" ] error: nil ];
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            @[ @"child::header/title"
+             , [ @"child::" stringByAppendingString: defBlockRelativeXPath ]
+             , [ @"child::" stringByAppendingString: phraseBlockRelativeXPath ]
+             ].combinationOfXPathExpressions error: nil ];
 
         NSMutableOrderedSet* tmpSenseBlocks = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _MatchingNode in matchingNodes )

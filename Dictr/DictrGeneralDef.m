@@ -28,12 +28,11 @@
         {
         NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
 
-        NSString* defXPathExpr = @"child::definition/def";
-        NSString* exampXPathExpr = @"child::examp";
-
         // Extracting the definition information
         matchingNodes = [ self->__xmlNode nodesForXPath:
-            [ NSString stringWithFormat: @"%@ | %@", defXPathExpr, exampXPathExpr ] error: nil ];
+            @[ @"child::definition/def"
+             , @"child::examp"
+             ].combinationOfXPathExpressions error: nil ];
 
         NSMutableOrderedSet* tmpExamps = [ NSMutableOrderedSet orderedSet ];
         for ( NSXMLNode* _MatchingNode in matchingNodes )

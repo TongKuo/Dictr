@@ -11,7 +11,7 @@
 // NSArray + DictrExtensions
 @implementation NSArray ( DictrExtensions )
 
-#pragma mark - NSXML Additions
+#pragma mark - Dictr Additions
 
 @dynamic combinationOfXPathExpressions;
 
