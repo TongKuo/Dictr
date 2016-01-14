@@ -1,5 +1,5 @@
 //
-//  DictrSenseBlock.h
+//  DictrSenseSubBlock.h
 //  Dictr
 //
 //  Created by Tong G. on 1/11/16.
@@ -8,19 +8,19 @@
 
 #import "DictrXMLObject.h"
 
-typedef NS_ENUM( NSInteger, DictrSenseBlockKind )
-    { DictrSenseBlockDefKind        = 0
-    , DictrSenseBlockPhraseKind
+typedef NS_ENUM( NSInteger, DictrSenseSubBlockKind )
+    { DictrSenseSubBlockDefKind        = 0
+    , DictrSenseSubBlockPhraseKind
 
-    , DictrSenseBlockUnknownKind    = -1
+    , DictrSenseSubBlockUnknownKind    = -1
     };
 
-// DictrSenseBlock class
-@interface DictrSenseBlock : DictrXMLObject
+// DictrSenseSubBlock class
+@interface DictrSenseSubBlock : DictrXMLObject
 
 /** The kind of sense block.
   */
-@property ( assign, readonly ) DictrSenseBlockKind kind;
+@property ( assign, readonly ) DictrSenseSubBlockKind kind;
 
 /** A string represeting the English Vocabulary Profile symbols A1-C2 show
     which words and phrases learners know at each level.
@@ -31,4 +31,4 @@ typedef NS_ENUM( NSInteger, DictrSenseBlockKind )
   */
 @property ( strong, readonly ) NSString* guideWord;
 
-@end // DictrSenseBlock class
+@end // DictrSenseSubBlock class

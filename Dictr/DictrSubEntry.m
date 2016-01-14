@@ -21,7 +21,7 @@
 
 @property ( strong, readwrite ) NSOrderedSet <__kindof NSString*>* IPAs;
 
-@property ( strong, readwrite ) NSOrderedSet <__kindof DictrSenseBlock*>* senseBlocks;
+@property ( strong, readwrite ) NSOrderedSet <__kindof DictrSenseSubBlock*>* senseBlocks;
 
 @end // Private Interfaces
 
