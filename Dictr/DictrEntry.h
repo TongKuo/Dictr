@@ -18,6 +18,7 @@
 @property ( strong, readonly ) NSArray <__kindof NSDictionary*>* topicDict;
 
 @property ( strong, readonly ) NSString* dictCode;
+@property ( strong, readonly ) NSString* title;
 @property ( strong, readonly ) NSString* label;
 @property ( strong, readonly ) NSURL* URL;
 @property ( strong, readonly ) NSString* ID;

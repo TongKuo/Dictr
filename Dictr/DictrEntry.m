@@ -17,6 +17,7 @@
 @property ( strong, readwrite ) NSArray <__kindof NSDictionary*>* topicDict;
 
 @property ( strong, readwrite ) NSString* dictCode;
+@property ( strong, readwrite ) NSString* title;
 @property ( strong, readwrite ) NSString* label;
 @property ( strong, readwrite ) NSURL* URL;
 @property ( strong, readwrite ) NSString* ID;
@@ -55,6 +56,10 @@
             if ( error )
                 NSLog( @"%@", error );
 
+            // Extranting the title
+            NSXMLNode* titleNode = [ self.__entryContentXML nodesForXPath: @"child::di/header/title" error: nil ].firstObject;
+            self.title = titleNode.objectValue;
+
             // Extracting the pos-block nodes
             matchingNodes = [ self.__entryContentXML nodesForXPath: @"//pos-block" error: nil ];
 
@@ -62,10 +67,10 @@
             if ( matchingNodes.count > 0 )
                 {
                 for ( NSXMLNode* _PosBlockNode in matchingNodes )
-                    [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: _PosBlockNode ] ];
+                    [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.title xmlNode: _PosBlockNode ] ];
                 }
             else
-                [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.label xmlNode: self.__entryContentXML ] ];
+                [ tmpEntries addObject: [ [ DictrSubEntry alloc ] initWithTitle: self.title xmlNode: self.__entryContentXML ] ];
 
             self.subEntries = [ tmpEntries copy ];
             }
