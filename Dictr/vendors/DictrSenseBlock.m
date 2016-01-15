@@ -41,7 +41,9 @@
                                        , [ @"descendant-or-self::" stringByAppendingString: phraseBlockRelativeXPath ]
                                        ].combinationOfXPathExpressions error: nil ];
 
-        selfXMLNode = [ NSXMLElement elementWithName: @"sense-block" children: senseSubBlocks attributes: nil ];
+        selfXMLNode = [ NSXMLElement elementWithName: @"sense-block"
+                                            children: [ [ NSArray alloc ] initWithArray: senseSubBlocks copyItems: YES ]
+                                          attributes: nil ];
         }
 
     if ( self = [ super initWithXML: selfXMLNode ] )

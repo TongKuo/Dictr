@@ -36,23 +36,23 @@
         for ( NSXMLNode* _MatchingNode in matchingNodes )
             {
             NSString* oldName = _MatchingNode.name;
-
             NSXMLNode* nodeCopy = [ _MatchingNode copy ];
             nodeCopy.name = @"span";
 
+            #if DEBUG // DEBUG
             NSLog( @"%@", nodeCopy );
+            #endif
 
-            NSAttributedString* tmpAttrString = [ [ NSAttributedString alloc ] initWithHTML: [ nodeCopy.XMLString dataUsingEncoding: NSUTF8StringEncoding ] documentAttributes: nil ];
+            NSAttributedString* tmpAttrString =
+                [ [ NSAttributedString alloc ] initWithHTML: [ nodeCopy.XMLString dataUsingEncoding: NSUTF8StringEncoding ]
+                                                    options: @{ NSCharacterEncodingDocumentOption: @( NSUTF8StringEncoding ) }
+                                         documentAttributes: nil ];
 
             if ( [ oldName isEqualToString: @"eg" ] )
                 self.example = tmpAttrString;
             else if ( [ oldName isEqualToString: @"trans" ] )
                 self.translationOfExample = tmpAttrString;
             }
-
-//        NSLog( @"%@", self.example );
-//        NSLog( @"%@", self.translationOfExample );
-//        NSLog( @"=======" );
         }
 
     return self;

@@ -104,7 +104,7 @@ DictrTranslator static* sDefaultTranslator;
     switch ( self.translatorType )
         {
         // Cambridge Advanced Learner's Dictionary
-        case DictrCambridgeEnglish2English: dictCode = @"british"; break;
+        case DictrCambridgeEnglish2English: dictCode = @"english-chinese-simplified"; break;
 
         // English-Arabic Dictionary
         case DictrCambridgeEnglish2Arabic: dictCode = @"english-arabic"; break;
