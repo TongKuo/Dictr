@@ -12,6 +12,8 @@
 @interface DictrGeneralDef ()
 
 @property ( strong, readwrite ) NSString* definition;
+@property ( strong, readwrite ) NSString* translationOfDefinition;
+@property ( strong, readwrite ) NSString* languageOfTranslationOfDefinition;
 
 @property ( strong, readwrite ) NSOrderedSet <__kindof DictrExample*>* examples;
 
@@ -31,6 +33,7 @@
         // Extracting the definition information
         matchingNodes = [ self->__xmlNode nodesForXPath:
             @[ @"child::definition/def"
+             , @"child::definition/trans"
              , @"child::examp"
              ].combinationOfXPathExpressions error: nil ];
 
@@ -42,6 +45,12 @@
 
             if ( [ nodeName isEqualToString: @"def" ] )
                 self.definition = nodeObjectValue;
+
+            else if ( [ nodeName isEqualToString: @"trans" ] )
+                {
+                self.translationOfDefinition = nodeObjectValue;
+                self.languageOfTranslationOfDefinition = [ ( NSXMLElement* )_MatchingNode attributeForName: @"lang" ].objectValue;
+                }
 
             else if ( [ nodeName isEqualToString: @"examp" ] )
                 [ tmpExamps addObject: [ [ DictrExample alloc ] initWithXML: _MatchingNode ] ];

@@ -13,6 +13,6 @@
 
 @property ( strong, readonly ) NSAttributedString* example;
 @property ( strong, readonly ) NSAttributedString* translationOfExample;
-@property ( strong, readonly ) NSString* language;
+@property ( strong, readonly ) NSString* languageOfTranslation;
 
 @end // DictrExample class

@@ -14,6 +14,8 @@
 @interface DictrGeneralDef : DictrSense
 
 @property ( strong, readonly ) NSString* definition;
+@property ( strong, readonly ) NSString* translationOfDefinition;
+@property ( strong, readonly ) NSString* languageOfTranslationOfDefinition;
 
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrExample*>* examples;
 

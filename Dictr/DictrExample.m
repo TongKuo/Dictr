@@ -13,7 +13,7 @@
 
 @property ( strong, readwrite ) NSAttributedString* example;
 @property ( strong, readwrite ) NSAttributedString* translationOfExample;
-@property ( strong, readwrite ) NSString* language;
+@property ( strong, readwrite ) NSString* languageOfTranslation;
 
 @end // Private Interfaces
 
@@ -50,8 +50,12 @@
 
             if ( [ oldName isEqualToString: @"eg" ] )
                 self.example = tmpAttrString;
+
             else if ( [ oldName isEqualToString: @"trans" ] )
+                {
                 self.translationOfExample = tmpAttrString;
+                self.languageOfTranslation = [ ( NSXMLElement* )_MatchingNode attributeForName: @"lang" ].objectValue;
+                }
             }
         }
 
