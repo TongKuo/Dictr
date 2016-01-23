@@ -17,6 +17,8 @@
 @property ( strong, readonly ) NSString* translationOfDefinition;
 @property ( strong, readonly ) NSString* languageOfTranslationOfDefinition;
 
+@property ( strong, readonly ) NSString* label;
+
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrExample*>* examples;
 
 @end // DictrGeneralDef class
