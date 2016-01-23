@@ -46,6 +46,7 @@
 		83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F71C3E826700FA6D4E /* DictrJsonObject.m */; settings = {ASSET_TAGS = (); }; };
 		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
+		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		83DD54171C47ABB70091B8DC /* DictrSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54161C47ABB70091B8DC /* DictrSense.m */; settings = {ASSET_TAGS = (); }; };
 		83DD541A1C47ABC40091B8DC /* DictrSenseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54191C47ABC40091B8DC /* DictrSenseBlock.m */; settings = {ASSET_TAGS = (); }; };
 		83DD541D1C47E3CF0091B8DC /* NSArray+DictrExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD541C1C47E3CF0091B8DC /* NSArray+DictrExtensions.m */; settings = {ASSET_TAGS = (); }; };
@@ -153,6 +154,8 @@
 		83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSubEntry.m; path = ../DictrSubEntry.m; sourceTree = "<group>"; };
 		83B524FF1C3EB23500FA6D4E /* DictrXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrXMLObject.h; path = ../DictrXMLObject.h; sourceTree = "<group>"; };
 		83B525001C3EB23500FA6D4E /* DictrXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrXMLObject.m; path = ../DictrXMLObject.m; sourceTree = "<group>"; };
+		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
+		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
 		83DD54151C47ABB70091B8DC /* DictrSense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrSense.h; path = Dictr/DictrSense.h; sourceTree = SOURCE_ROOT; };
 		83DD54161C47ABB70091B8DC /* DictrSense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSense.m; path = Dictr/DictrSense.m; sourceTree = SOURCE_ROOT; };
 		83DD54181C47ABC40091B8DC /* DictrSenseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSenseBlock.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				83B524C71C3D47D400FA6D4E /* ui */,
 				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
 				83B524C21C3D423C00FA6D4E /* DictrConstants.m */,
+				83D087AF1C53A10C008ED2BD /* DictrUtilities.h */,
+				83D087B01C53A10C008ED2BD /* DictrUtilities.m */,
 				83B524C91C3D489000FA6D4E /* DictrTranslator.h */,
 				83B524CA1C3D489000FA6D4E /* DictrTranslator.m */,
 				83B523721C3BDE2E00FA6D4E /* DictrAppDelegate.h */,
@@ -526,6 +531,7 @@
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
 				83B524F51C3E823500FA6D4E /* DictrPhraseDef.m in Sources */,
+				83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */,
 				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,

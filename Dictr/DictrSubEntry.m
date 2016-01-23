@@ -25,9 +25,9 @@
 
 @end // Private Interfaces
 
-static NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
-                                            , NSXMLNodeKind _NodeKind
-                                            , BOOL _DoesRecurse )
+NSUInteger kCountOfSomeKindOfChildren( NSXMLNode* _ParentNode
+                                     , NSXMLNodeKind _NodeKind
+                                     , BOOL _DoesRecurse )
     {
     NSUInteger count = 0;
 

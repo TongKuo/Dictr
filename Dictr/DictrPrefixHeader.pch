@@ -20,6 +20,7 @@
 // Frequently Used Headers
 #import "DictrConstants.h"
 #import "DictrTranslator.h"
+#import "DictrUtilities.h"
 #import "NSXMLNode+DictrExtensions.h"
 #import "NSArray+DictrExtensions.h"
 

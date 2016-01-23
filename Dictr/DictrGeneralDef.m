@@ -21,7 +21,7 @@
 
 @end // Private Interfaces
 
-static NSArray* kAllLeafNodeObjectValues( NSXMLNode* _ParentNode )
+NSArray* kAllLeafNodeObjectValues( NSXMLNode* _ParentNode )
     {
     NSMutableArray <__kindof NSString*>* leafValues = [ NSMutableArray array ];
 
