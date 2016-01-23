@@ -47,6 +47,8 @@
 		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
 		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
+		83D087B91C53AAD4008ED2BD /* spare:cambridge:help:codes.html in Resources */ = {isa = PBXBuildFile; fileRef = 83D087B81C53AAD4008ED2BD /* spare:cambridge:help:codes.html */; settings = {ASSET_TAGS = (); }; };
+		83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */; settings = {ASSET_TAGS = (); }; };
 		83DD54171C47ABB70091B8DC /* DictrSense.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54161C47ABB70091B8DC /* DictrSense.m */; settings = {ASSET_TAGS = (); }; };
 		83DD541A1C47ABC40091B8DC /* DictrSenseBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD54191C47ABC40091B8DC /* DictrSenseBlock.m */; settings = {ASSET_TAGS = (); }; };
 		83DD541D1C47E3CF0091B8DC /* NSArray+DictrExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DD541C1C47E3CF0091B8DC /* NSArray+DictrExtensions.m */; settings = {ASSET_TAGS = (); }; };
@@ -156,6 +158,9 @@
 		83B525001C3EB23500FA6D4E /* DictrXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrXMLObject.m; path = ../DictrXMLObject.m; sourceTree = "<group>"; };
 		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
 		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
+		83D087B81C53AAD4008ED2BD /* spare:cambridge:help:codes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "spare:cambridge:help:codes.html"; sourceTree = "<group>"; };
+		83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrDefLabel.h; path = Dictr/DictrDefLabel.h; sourceTree = SOURCE_ROOT; };
+		83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrDefLabel.m; path = Dictr/DictrDefLabel.m; sourceTree = SOURCE_ROOT; };
 		83DD54151C47ABB70091B8DC /* DictrSense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrSense.h; path = Dictr/DictrSense.h; sourceTree = SOURCE_ROOT; };
 		83DD54161C47ABB70091B8DC /* DictrSense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSense.m; path = Dictr/DictrSense.m; sourceTree = SOURCE_ROOT; };
 		83DD54181C47ABC40091B8DC /* DictrSenseBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSenseBlock.h; sourceTree = "<group>"; };
@@ -222,6 +227,8 @@
 				83B524F41C3E823500FA6D4E /* DictrPhraseDef.m */,
 				83B524F01C3E7FDE00FA6D4E /* DictrExample.h */,
 				83B524F11C3E7FDE00FA6D4E /* DictrExample.m */,
+				83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */,
+				83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */,
 			);
 			name = CambridgeKit;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 		83B523711C3BDE2E00FA6D4E /* Dictr */ = {
 			isa = PBXGroup;
 			children = (
+				83D087B81C53AAD4008ED2BD /* spare:cambridge:help:codes.html */,
 				831100E31C439EF000296314 /* extensions */,
 				83B524C71C3D47D400FA6D4E /* ui */,
 				83B524C11C3D423C00FA6D4E /* DictrConstants.h */,
@@ -498,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B524D01C3D7FE200FA6D4E /* DictrProjectorController.xib in Resources */,
+				83D087B91C53AAD4008ED2BD /* spare:cambridge:help:codes.html in Resources */,
 				83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */,
 				83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */,
 				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
@@ -526,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83DD54171C47ABB70091B8DC /* DictrSense.m in Sources */,
+				83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */,
 				83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */,
 				83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,

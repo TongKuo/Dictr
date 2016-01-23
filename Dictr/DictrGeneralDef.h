@@ -9,6 +9,7 @@
 #import "DictrSense.h"
 
 @class DictrExample;
+@class DictrDefLabel;
 
 // DictrGeneralDef class
 @interface DictrGeneralDef : DictrSense
@@ -17,7 +18,7 @@
 @property ( strong, readonly ) NSString* translationOfDefinition;
 @property ( strong, readonly ) NSString* languageOfTranslationOfDefinition;
 
-@property ( strong, readonly ) NSString* label;
+@property ( strong, readonly ) DictrDefLabel* label;
 
 @property ( strong, readonly ) NSOrderedSet <__kindof DictrExample*>* examples;
 

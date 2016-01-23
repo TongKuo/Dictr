@@ -16,3 +16,4 @@
 #import "DictrPhraseDef.h"
 #import "DictrGeneralDef.h"
 #import "DictrExample.h"
+#import "DictrDefLabel.h"

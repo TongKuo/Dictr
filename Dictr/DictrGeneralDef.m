@@ -15,7 +15,7 @@
 @property ( strong, readwrite ) NSString* translationOfDefinition;
 @property ( strong, readwrite ) NSString* languageOfTranslationOfDefinition;
 
-@property ( strong, readwrite ) NSString* label;
+@property ( strong, readwrite ) DictrDefLabel* label;
 
 @property ( strong, readwrite ) NSOrderedSet <__kindof DictrExample*>* examples;
 
@@ -74,11 +74,7 @@ NSArray* kAllLeafNodeObjectValues( NSXMLNode* _ParentNode )
                 [ tmpExamps addObject: [ [ DictrExample alloc ] initWithXML: _MatchingNode ] ];
 
             else if ( [ nodeName isEqualToString: @"gram" ] )
-                {
-                NSArray* leafValues = kAllLeafNodeObjectValues( _MatchingNode );
-                if ( leafValues.count > 0 )
-                    self.label = [ leafValues componentsJoinedByString: @"" ];
-                }
+                self.label = [ [ DictrDefLabel alloc ] initWithXML: _MatchingNode ];
             }
 
         self.examples = [ tmpExamps copy ];
