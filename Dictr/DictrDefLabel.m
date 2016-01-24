@@ -12,6 +12,7 @@
 @interface DictrDefLabel ()
 
 @property ( strong, readwrite ) NSString* name;
+@property ( strong, readwrite ) NSString* repName;
 @property ( strong, readwrite ) NSString* briefDescription;
 
 @end // Private Interfaces
@@ -241,7 +242,11 @@ NSDictionary static* sLabelsDict;
         NSArray* leafValues = kAllLeafNodeObjectValues( self->__xmlNode );
 
         if ( leafValues.count > 0 )
+            {
             self.name = [ leafValues componentsJoinedByString: @"" ];
+            self.repName = [ sLabelsDict[ self.name ] firstObject ];
+            self.briefDescription = [ sLabelsDict[ self.name ] lastObject ];
+            }
         }
 
     return self;

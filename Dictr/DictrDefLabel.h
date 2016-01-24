@@ -12,6 +12,7 @@
 @interface DictrDefLabel : DictrXMLObject
 
 @property ( strong, readonly ) NSString* name;
+@property ( strong, readonly ) NSString* repName;
 @property ( strong, readonly ) NSString* briefDescription;
 
 @end // DictrDefLabel class
