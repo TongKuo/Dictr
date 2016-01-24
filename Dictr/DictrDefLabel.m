@@ -11,9 +11,10 @@
 // Private Interfaces
 @interface DictrDefLabel ()
 
-@property ( strong, readwrite ) NSString* name;
-@property ( strong, readwrite ) NSString* repName;
-@property ( strong, readwrite ) NSString* briefDescription;
+@property ( strong, readwrite ) NSArray <__kindof NSString*>* names;
+@property ( strong, readwrite ) NSArray <__kindof NSString*>* briefDescriptions;
+
+@property ( strong, readwrite ) NSString* representation;
 
 @end // Private Interfaces
 
@@ -33,16 +34,16 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<i>adjective</i>"
                            , @"A word that describes a noun or pronoun." ]
 
-                   , @"[after noun]"
-                        : @[ @"[after noun]"
+                   , @"after noun"
+                        : @[ @"after noun"
                            , @"An adjective that only follows a noun." ]
 
-                   , @"[after verb]"
-                        : @[ @"[after verb]"
+                   , @"after verb"
+                        : @[ @"after verb"
                            , @"An adjective that only follows a verb." ]
 
-                   , @"[before noun]"
-                        : @[ @"[before noun]"
+                   , @"before noun"
+                        : @[ @"before noun"
                            , @"An adjective that only goes before a noun." ]
 
                    , @"comparative"
@@ -53,8 +54,8 @@ NSDictionary static* sLabelsDict;
                         : @[ @"superlative"
                            , @"The form of an adjective or adverb that expresses that the thing or person being described has more of the particular quality than anything or anyone else of the same type." ]
 
-                   , @"[not gradable]"
-                        : @[ @"[not gradable]"
+                   , @"not gradable"
+                        : @[ @"not gradable"
                            , @"An adjective that has no comparative or superlative form." ]
 
                      // Nouns
@@ -62,16 +63,16 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<i>noun</i>"
                            , @"A word that refers to a person, place or thing." ]
 
-                   , @"[C]"
-                        : @[ @"[C]"
+                   , @"C"
+                        : @[ @"C"
                            , @"Countable noun: a noun that has a plural." ]
 
-                   , @"[U]"
-                        : @[ @"[U]"
+                   , @"U"
+                        : @[ @"U"
                            , @"Uncountable or singular noun: a noun that has no plural." ]
 
-                   , @"[S]"
-                        : @[ @"[S]"
+                   , @"S"
+                        : @[ @"S"
                            , @"A singular noun." ]
 
                    , @"plural"
@@ -82,16 +83,16 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<span><i>noun</i> [plural]</span>"
                            , @"A noun that can only be used in the plural." ]
 
-                   , @"[usually plural]"
-                        : @[ @"[usually plural]"
+                   , @"usually plural"
+                        : @[ @"usually plural"
                            , @"A noun usually used in the plural." ]
 
-                   , @"[usually singular]"
-                        : @[ @"[usually singular]"
+                   , @"usually singular"
+                        : @[ @"usually singular"
                            , @"A countable noun usually used in the singular." ]
 
-                   , @"[+ sing/pl verb]"
-                        : @[ @"[+ sing/pl verb]"
+                   , @"+ sing/pl verb"
+                        : @[ @"+ sing/pl verb"
                            , @"A noun that refers to a group of people acting collectively. When used in the singular it can be followed by either a singular or a plural verb in British English. In American English a singular verb is preferred." ]
 
                      // Verbs
@@ -99,12 +100,12 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<i>verb</i>"
                            , @"A word that describes an action, state or experience." ]
 
-                   , @"[T]"
-                        : @[ @"[T]"
+                   , @"T"
+                        : @[ @"T"
                            , @"Transitive verb: a verb that has an object." ]
 
-                   , @"[I]"
-                        : @[ @"[I]"
+                   , @"I"
+                        : @[ @"I"
                            , @"Intransitive verb: a verb that has no object." ]
 
                    , @"auxiliary verb"
@@ -131,104 +132,104 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<i>phrasal verb</i>"
                            , @"A verb followed by an adverb or a preposition." ]
 
-                   , @"[L]"
-                        : @[ @"[L]"
+                   , @"L"
+                        : @[ @"L"
                            , @"Linking verb: an intransitive verb that is followed by a noun or adjective that refers back to the subject of the sentence." ]
 
-                   , @"[L only + adjective]"
-                        : @[ @"[L only + adjective]"
+                   , @"L only + adjective"
+                        : @[ @"L only + adjective"
                            , @"A linking verb only followed by an adjective." ]
 
-                   , @"[L only + noun]"
-                        : @[ @"[L only + noun]"
+                   , @"L only + noun"
+                        : @[ @"L only + noun"
                            , @"A linking verb only followed by a noun." ]
 
-                   , @"[+ adv/prep]"
-                        : @[ @"[+ adv/prep]"
+                   , @"+ adv/prep"
+                        : @[ @"+ adv/prep"
                            , @"A verb that must be followed by an adverb or preposition." ]
 
-                   , @"[+ that clause]"
+                   , @"+ that clause"
                         : @[ @"<span>[+ <i>that</i> clause]</span>"
                            , @"<span>A verb followed by a clause beginning with <i>that</i>.</span>" ]
 
-                   , @"[+ question word]"
-                        : @[ @"[+ question word]"
+                   , @"+ question word"
+                        : @[ @"+ question word"
                            , @"A verb followed by a question word." ]
 
-                   , @"[+ speech]"
-                        : @[ @"[+ speech]"
+                   , @"+ speech"
+                        : @[ @"+ speech"
                            , @"A verb used with direct speech." ]
 
-                   , @"[+ to infinitive]"
+                   , @"+ to infinitive"
                         : @[ @"<span>[+ <i>to</i> infinitive]</span>"
                            , @"<span>A verb followed by the infinitive with <i>to</i>.</span>" ]
 
-                   , @"[+ infinitive without to]"
+                   , @"+ infinitive without to"
                         : @[ @"<span>[+ infinitive without <i>to</i>]</span>"
                            , @"<span>A verb followed by the infinitive without <i>to</i>.</span>" ]
 
-                   , @"[+ -ing] verb"
+                   , @"+ -ing verb"
                         : @[ @"<span>[+ <i>-ing</i>] verb</span>"
                            , @"A verb followed by the -ing form of the verb." ]
 
-                   , @"[+ not or so]"
+                   , @"+ not or so"
                         : @[ @"<span>[+ <i>not</i> or <i>so</i>]</span>"
                            , @"<span>A verb followed immediately by <i>not</i> or <i>so</i> where these replace a clause.</span>" ]
 
-                   , @"[+ two objects]"
-                        : @[ @"[+ two objects]"
+                   , @"+ two objects"
+                        : @[ @"+ two objects"
                            , @"A verb that has a direct and indirect object." ]
 
-                   , @"[+ obj + adjective]"
-                        : @[ @"[+ obj + adjective]"
+                   , @"+ obj + adjective"
+                        : @[ @"+ obj + adjective"
                            , @"A verb with an object followed by an adjective." ]
 
-                   , @"[+ obj + noun]"
-                        : @[ @"[+ obj + noun]"
+                   , @"+ obj + noun"
+                        : @[ @"+ obj + noun"
                            , @"A verb with an object followed by a noun." ]
 
-                   , @"[+ obj + noun or adjective]"
-                        : @[ @"[+ obj + noun or adjective]"
+                   , @"+ obj + noun or adjective"
+                        : @[ @"+ obj + noun or adjective"
                            , @"A verb with an object followed by a noun or adjective." ]
 
-                   , @"[+ obj + as noun or adjective]"
+                   , @"+ obj + as noun or adjective"
                         : @[ @"<span>[+ obj + <i>as</i> noun or adjective]</span>"
                            , @"<span>A verb with an object followed by <i>as</i> and a noun or an adjective.</span>" ]
 
-                   , @"[+ obj + to be noun or adjective]"
+                   , @"+ obj + to be noun or adjective"
                         : @[ @"<span>[+ obj + <i>to be</i> noun or adjective]</span>"
                            , @"<span>A verb with an object followed by <i>to be</i> and a noun or an adjective.</span>" ]
 
-                   , @"[+ obj + that clause]"
+                   , @"+ obj + that clause"
                         : @[ @"<span>[+ obj + <i>that</i> clause]</span>"
                            , @"<span>A verb with an object followed by a <i>that</i> clause.</span>" ]
 
-                   , @"[+ obj + to infinitive]"
+                   , @"+ obj + to infinitive"
                         : @[ @"<span>[+ obj + <i>to</i> infinitive]</span>"
                            , @"<span>A verb with an object followed by an infinitive with <i>to</i>.</span>" ]
 
-                   , @"[+ obj + infinitive without to]"
-                        : @[ @"<span>[+ obj + infinitive without <i>to</i></span>]"
+                   , @"+ obj + infinitive without to"
+                        : @[ @"<span>[+ obj + infinitive without <i>to</i></span>"
                            , @"<span>A verb with an object followed by an infinitive without <i>to</i>.</span>" ]
 
-                   , @"[+ obj + past participle]"
-                        : @[ @"[+ obj + past participle]"
+                   , @"+ obj + past participle"
+                        : @[ @"+ obj + past participle"
                            , @"A verb with an object followed by a past participle." ]
 
-                   , @"[+ obj + ing verb]"
+                   , @"+ obj + ing verb"
                         : @[ @"<span>[+ obj + <i>ing</i> verb]</span>"
                            , @"<span>A verb with an object followed by the <i>-ing</i> form of a verb.</span>" ]
 
-                   , @"[+ obj + question word]"
-                        : @[ @"[+ obj + question word]"
+                   , @"+ obj + question word"
+                        : @[ @"+ obj + question word"
                            , @"A verb with an object followed by a question word." ]
 
-                   , @"[usually passive]"
-                        : @[ @"[usually passive]"
+                   , @"usually passive"
+                        : @[ @"usually passive"
                            , @"A verb usually used in the passive." ]
 
-                   , @"[not continuous]"
-                        : @[ @"[not continuous]"
+                   , @"not continuous"
+                        : @[ @"not continuous"
                            , @"A verb not used in the continuous form." ]
 
                      // Other labels
@@ -276,24 +277,24 @@ NSDictionary static* sLabelsDict;
                         : @[ @"<i>exclamation</i>"
                            , @"<span>A word or expression such as <color>damn!</color> or <color>oh dear!</color> used to express strong feelings.</span>" ]
 
-                   , @"[+ ing verb]"
+                   , @"+ ing verb"
                         : @[ @"<span>[+ <i>ing</i> verb]</span>"
                            , @"<span>A word or phrase followed by the <i>-ing</i> form of the verb.</span>" ]
 
-                   , @"[+ to infinitive]"
+                   , @"+ to infinitive"
                         : @[ @"<span>[+ <i>to</i> infinitive]</span>"
                            , @"<span>A word or phrase followed by the infinitive with to.</span>" ]
 
-                   , @"[+ that]"
+                   , @"+ that"
                         : @[ @"<span>[+ <i>that</i>]</span>"
                            , @"<span>A word or phrase followed by a clause beginning with <i>that</i>.</span>" ]
 
-                   , @"[+ question word]"
-                        : @[ @"[+ question word]"
+                   , @"+ question word"
+                        : @[ @"+ question word"
                            , @"A word or phrase followed by a question word." ]
 
-                   , @"[as form of address]"
-                        : @[ @"[as form of address]"
+                   , @"as form of address"
+                        : @[ @"as form of address"
                            , @"<span>A word or phrase such as <color>Mr</color> or <color>dear</color> used to address someone.</span>" ]
                    };
     }
@@ -305,13 +306,35 @@ NSDictionary static* sLabelsDict;
 
     if ( self = [ super initWithXML: _XMLNode ] )
         {
-        NSArray* leafValues = kAllLeafNodeObjectValues( self->__xmlNode );
+        NSArray <__kindof NSXMLNode*>* matchingNodes = nil;
+        matchingNodes = [ self->__xmlNode nodesForXPath:
+            @[ @"descendant::gc" ].combinationOfXPathExpressions error: nil ];
+
+        NSMutableArray* gcs = [ NSMutableArray array ];
+        NSMutableArray* briefDescriptions = [ NSMutableArray array ];
+        for ( NSXMLNode* _MatchingNode in matchingNodes )
+            {
+            NSString* nodeObjectValue = _MatchingNode.objectValue;
+
+            [ gcs addObject: nodeObjectValue ];
+
+            NSArray* labelVals = sLabelsDict[ nodeObjectValue ];
+            [ briefDescriptions addObject: labelVals ? [ labelVals lastObject ] : [ NSNull null ] ];
+            }
+
+        self.names = [ gcs copy ];
+        self.briefDescriptions = [ briefDescriptions copy ];
+
+        NSArray* tmpLeaves = kAllLeafNodeObjectValues( self->__xmlNode );
+        NSMutableArray* leafValues = [ tmpLeaves mutableCopy ];
 
         if ( leafValues.count > 0 )
             {
-            self.name = [ leafValues componentsJoinedByString: @"" ];
-            self.repName = [ sLabelsDict[ self.name ] firstObject ];
-            self.briefDescription = [ sLabelsDict[ self.name ] lastObject ];
+            if ( leafValues.count > 3 && ![ leafValues containsObject: @" or " ] )
+                for ( int _Index = 2; _Index < leafValues.count - 1; ( _Index += 2 ) )
+                    [ leafValues insertObject: @" " atIndex: _Index ];
+
+            self.representation = [ leafValues componentsJoinedByString: @"" ];
             }
         }
 
