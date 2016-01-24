@@ -136,7 +136,7 @@ NSDictionary static* sLabelsDict;
                                          , @"A verb followed by the -ing form of the verb." ]
 
                    , @"[+ not or so]" : @[ @"<span>[+ <i>not</i> or <i>so</i>]</span>"
-                                         , @"A verb followed immediately by not or so where these replace a clause." ]
+                                         , @"<span>A verb followed immediately by <i>not</i> or <i>so</i> where these replace a clause.</span>" ]
 
                    , @"[+ two objects]" : @[ @"[+ two objects]"
                                            , @"A verb that has a direct and indirect object." ]
@@ -157,7 +157,7 @@ NSDictionary static* sLabelsDict;
                                                             , @"<span>A verb with an object followed by <i>to be</i> and a noun or an adjective.</span>" ]
 
                    , @"[+ obj + that clause]" : @[ @"<span>[+ obj + <i>that</i> clause]</span>"
-                                                 , @"<span>A verb with an object followed by <i>a that</i> clause.</span>" ]
+                                                 , @"<span>A verb with an object followed by a <i>that</i> clause.</span>" ]
 
                    , @"[+ obj + to infinitive]" : @[ @"<span>[+ obj + <i>to</i> infinitive]</span>"
                                                    , @"<span>A verb with an object followed by an infinitive with <i>to</i>.</span>" ]
@@ -177,12 +177,15 @@ NSDictionary static* sLabelsDict;
                    , @"[usually passive]" : @[ @"[usually passive]"
                                              , @"A verb usually used in the passive." ]
 
+                   , @"[not continuous]" : @[ @"[not continuous]"
+                                            , @"A verb not used in the continuous form." ]
+
                      // Other labels
                    , @"adverb" : @[ @"<i>adverb</i>"
                                   , @"A word that gives information about a verb, adjective, another adverb, or a sentence." ]
 
                    , @"conjunction" : @[ @"<i>conjunction</i>"
-                                  , @"<span>A word such as <color>and</color> or <color>although</color> used to link two parts of a sentence</span>" ]
+                                       , @"<span>A word such as <color>and</color> or <color>although</color> used to link two parts of a sentence</span>" ]
 
                    , @"determiner" : @[ @"<span><i>determiner</i></span>"
                                       , @"<span>A word such as <color>the</color> or <color>this</color> used before a noun to show which particular example of a noun is being referred to.</span>" ]
@@ -209,7 +212,7 @@ NSDictionary static* sLabelsDict;
                                   , @"<span>A letter or group of letters such as <color>-less</color> or <color>-ment</color> added to the end of a word to make a new word.</span>" ]
 
                    , @"exclamation" : @[ @"<i>exclamation</i>"
-                                  , @"<span>A word or expression such as <color>damn!</color> or <color>oh dear!</color> used to express strong feelings.</span>" ]
+                                       , @"<span>A word or expression such as <color>damn!</color> or <color>oh dear!</color> used to express strong feelings.</span>" ]
 
                    , @"[+ ing verb]" : @[ @"<span>[+ <i>ing</i> verb]</span>"
                                         , @"<span>A word or phrase followed by the <i>-ing</i> form of the verb.</span>" ]
@@ -224,7 +227,7 @@ NSDictionary static* sLabelsDict;
                                              , @"A word or phrase followed by a question word." ]
 
                    , @"[as form of address]" : @[ @"[as form of address]"
-                                                , @"A word or phrase such as <color>Mr</color> or <color>dear</color> used to address someone." ]
+                                                , @"<span>A word or phrase such as <color>Mr</color> or <color>dear</color> used to address someone.</span>" ]
                    };
     }
 
