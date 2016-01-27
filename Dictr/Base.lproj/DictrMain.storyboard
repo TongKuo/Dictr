@@ -654,7 +654,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="405" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="499" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -670,14 +670,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="DictrMainContentViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl" customClass="DictrMainContentView">
-                        <rect key="frame" x="0.0" y="0.0" width="455" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="670" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </view>
                     <connections>
                         <outlet property="moreRelatedEntriesScrollView" destination="6eF-D3-hzs" id="Chc-KA-Kjq"/>
                         <outlet property="searchField" destination="8dy-8k-YRB" id="jZT-lU-h40"/>
-                        <outlet property="showTranslateIntoButton" destination="T1q-c4-3dj" id="mmn-YV-1gd"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -700,7 +699,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="automatic" viewBased="YES" id="Ubx-k5-rYu">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="133"/>
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -759,17 +758,8 @@
                         <animations/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" id="T1q-c4-3dj">
-                    <rect key="frame" x="0.0" y="0.0" width="36" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <animations/>
-                    <buttonCell key="cell" type="square" title="Into" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xP9-aS-kTF">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
             </objects>
-            <point key="canvasLocation" x="75.5" y="925.5"/>
+            <point key="canvasLocation" x="187.5" y="941"/>
         </scene>
     </scenes>
 </document>

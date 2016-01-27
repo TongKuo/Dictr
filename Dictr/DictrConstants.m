@@ -9,7 +9,10 @@
 #import "DictrConstants.h"
 
 // UI Constants
-CGFloat const DictrMainWindowMinHeight = 520.f;
+CGFloat const DictrMainWindowMinHeight = 480.f;
+
+CGFloat const DictrSearchFieldFixedHeight = 80.f;
+CGFloat const DictrGapBetweenSearchFieldAndTop = 0.f;
 
 // Notification Names
 NSString* const DictrTranslatorShouldBeginSearchingNotif = @"Dictr.TranslatorShouldBeginSearching.Notif";

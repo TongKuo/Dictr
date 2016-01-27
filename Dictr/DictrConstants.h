@@ -10,6 +10,8 @@
 
 // UI Constants
 extern CGFloat const DictrMainWindowMinHeight;
+extern CGFloat const DictrSearchFieldFixedHeight;
+extern CGFloat const DictrGapBetweenSearchFieldAndTop;
 
 // Notification Names
 extern NSString* const DictrTranslatorShouldBeginSearchingNotif;

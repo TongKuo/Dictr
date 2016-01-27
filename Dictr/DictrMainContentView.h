@@ -11,4 +11,7 @@
 // DictrMainContentView class
 @interface DictrMainContentView : NSVisualEffectView
 
+@property ( strong, readonly ) NSLayoutConstraint* selfWidthConstraint;
+@property ( strong, readonly ) NSLayoutConstraint* selfHeightConstraint;
+
 @end // DictrMainContentView class

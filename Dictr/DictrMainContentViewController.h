@@ -17,7 +17,6 @@
 
 @property ( weak ) IBOutlet DictrSearchField* searchField;
 @property ( weak ) IBOutlet NSScrollView* moreRelatedEntriesScrollView;
-@property ( weak ) IBOutlet NSButton* showTranslateIntoButton;
 
 @end // DictrMainContentViewController class
 
