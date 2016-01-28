@@ -22,7 +22,6 @@ typedef NS_ENUM( NSUInteger, DictrCambridgeTranslatorType )
     , DictrCambridgeEnglish2TranditionalChinese
     };
 
-typedef void ( ^DictrGeneralSuccessBlockType )( NSXMLNode* _XMLData );
 typedef void ( ^DictrGeneralFailureBlockType )( NSError* _Error );
 
 // DictrTranslator class
@@ -49,7 +48,7 @@ typedef void ( ^DictrGeneralFailureBlockType )( NSError* _Error );
                  failure: ( DictrGeneralFailureBlockType )_FailureBlock;
 
 - ( void ) translateWordWithBestMatching: ( NSString* )_Word
-                                 success: ( DictrGeneralSuccessBlockType )_SuccessBlock
+                                 success: ( void (^)( DictrEntry* _Entry ) )_SuccessBlock
                                  failure: ( DictrGeneralFailureBlockType )_FailureBlock;
 
 - ( void ) stopTranslating;

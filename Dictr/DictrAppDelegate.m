@@ -89,12 +89,11 @@
             NSArray <__kindof NSDictionary*>* results = _MatchesJSON[ @"results" ];
 
             [ [ NSNotificationCenter defaultCenter ]
-                postNotificationName: DictrTranslatorDidBestMatchingNotif
+                postNotificationName: DictrTranslatorDidFinishSearchingNotif
                               object: self
                             userInfo: @{ kResults : results ?: @[]
                                        , kOperation : kReplaceOperation
                                        } ];
-
             } failure:
                 ^( NSError* _Error )
                     {

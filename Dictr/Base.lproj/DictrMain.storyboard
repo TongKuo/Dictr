@@ -691,14 +691,14 @@
                     </textFieldCell>
                 </textField>
                 <customObject id="5Hh-VO-e8c" customClass="DictrProjectorController"/>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6eF-D3-hzs">
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6eF-D3-hzs" customClass="DictrMoreRelatedScrollView">
                     <rect key="frame" x="0.0" y="0.0" width="362" height="135"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" id="Y63-gT-XjS">
                         <rect key="frame" x="1" y="1" width="360" height="133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="automatic" viewBased="YES" id="Ubx-k5-rYu">
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="automatic" viewBased="YES" id="Ubx-k5-rYu" customClass="DictrMoreRelatedTableView">
                                 <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
@@ -741,6 +741,10 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="6eF-D3-hzs" id="KaV-h5-wnu"/>
+                                    <outlet property="delegate" destination="6eF-D3-hzs" id="dRJ-qI-9tT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>

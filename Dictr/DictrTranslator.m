@@ -82,7 +82,7 @@ DictrTranslator static* sDefaultTranslator;
     }
 
 - ( void ) translateWordWithBestMatching: ( NSString* )_Word
-                                 success: ( DictrGeneralSuccessBlockType )_SuccessBlock
+                                 success: ( void (^)( DictrEntry* _Entry ) )_SuccessBlock
                                  failure: ( DictrGeneralFailureBlockType )_FailureBlock
     {
     NSParameterAssert( ( _Word ) );
@@ -95,18 +95,8 @@ DictrTranslator static* sDefaultTranslator;
                              success:
         ^( NSURLSessionDataTask* _Nonnull _Task, id  _Nonnull _ResponseObject )
             {
-            DictrEntry* entry = [ [ DictrEntry alloc ] initWithJson: _ResponseObject ];
-
-            NSError* error = nil;
-            NSXMLDocument* xmlDoc =
-                [ [ NSXMLDocument alloc ] initWithXMLString: _ResponseObject[ @"entryContent" ] options: NSXMLDocumentXMLKind error: &error ];
-
             if ( _SuccessBlock )
-                _SuccessBlock( xmlDoc );
-
-            if ( error )
-                if ( _FailureBlock )
-                    _FailureBlock( error );
+                _SuccessBlock( [ [ DictrEntry alloc ] initWithJson: _ResponseObject ] );
             } failure:
                 ^( NSURLSessionDataTask* _Nonnull _Task, NSError* _Nonnull _Error )
                     {
