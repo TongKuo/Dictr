@@ -54,6 +54,33 @@ DictrTranslator static* sDefaultTranslator;
 
 #pragma mark - Dictionary Actions
 
+- ( void ) translateWord: ( NSString* )_Word
+                  cursor: ( NSUInteger )_Cursor
+                 success: ( void (^)( NSDictionary* _MatchedJSON ) )_SuccessBlock
+                 failure: ( DictrGeneralFailureBlockType )_FailureBlock
+    {
+    NSParameterAssert( ( _Word ) );
+
+    [ self stopTranslating ];
+    [ self->__httpSessionManager GET: [ NSString stringWithFormat: @"dictionaries/%@/search/", self.__dictCode ]
+                          parameters: @{ @"format" : @"xml"
+                                       , @"q" : _Word
+                                       , @"pagesize" : @( 30 )
+                                       , @"pageindex" : @( _Cursor )
+                                       }
+                             success:
+        ^( NSURLSessionDataTask* _Nonnull _Task, id  _Nonnull _ResponseObject )
+            {
+            if ( _SuccessBlock )
+                _SuccessBlock( _ResponseObject );
+            } failure:
+                ^( NSURLSessionDataTask* _Nonnull _Task, NSError* _Nonnull _Error )
+                    {
+                    if ( _FailureBlock )
+                        _FailureBlock( _Error );
+                    } ];
+    }
+
 - ( void ) translateWordWithBestMatching: ( NSString* )_Word
                                  success: ( DictrGeneralSuccessBlockType )_SuccessBlock
                                  failure: ( DictrGeneralFailureBlockType )_FailureBlock

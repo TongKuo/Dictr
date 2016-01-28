@@ -43,6 +43,11 @@ typedef void ( ^DictrGeneralFailureBlockType )( NSError* _Error );
 
 #pragma mark - Dictionary Actions
 
+- ( void ) translateWord: ( NSString* )_Word
+                  cursor: ( NSUInteger )_Cursor
+                 success: ( void (^)( NSDictionary* _MatchedJSON ) )_SuccessBlock
+                 failure: ( DictrGeneralFailureBlockType )_FailureBlock;
+
 - ( void ) translateWordWithBestMatching: ( NSString* )_Word
                                  success: ( DictrGeneralSuccessBlockType )_SuccessBlock
                                  failure: ( DictrGeneralFailureBlockType )_FailureBlock;

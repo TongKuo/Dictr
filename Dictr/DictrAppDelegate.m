@@ -52,9 +52,10 @@
     // if user emptied the search field
     else if ( searchValue.length == 0 )
         {
-        [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorShouldClearSearchResultNotif
-                                                               object: self
-                                                             userInfo: nil ];
+        [ [ NSNotificationCenter defaultCenter ]
+            postNotificationName: DictrTranslatorShouldClearSearchResultNotif
+                          object: self
+                        userInfo: nil ];
         }
     }
 
@@ -63,15 +64,37 @@
 - ( void ) __timerFireMethod: ( NSTimer* )_Timer
     {
     NSString* searchWord = _Timer.userInfo[ kSearchString ];
-    [ [ DictrTranslator defaultTranslator ] translateWordWithBestMatching: searchWord
-                                                                  success:
-        ^( NSXMLNode* _XMLData )
+//    [ [ DictrTranslator defaultTranslator ] translateWordWithBestMatching: searchWord
+//                                                                  success:
+//        ^( NSXMLNode* _XMLData )
+//            {
+//            [ DictrBestMatchingCardsFactory makeCardsWithMaterial: _XMLData ];
+////            NSLog( @"%@", [ _XMLData XMLStringWithOptions: NSXMLNodePrettyPrint ] );
+//            [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorDidBestMatchingNotif
+//                                                                   object: self
+//                                                                 userInfo: @{ kEntry : _XMLData ?: [ NSNull null ] } ];
+//            } failure:
+//                ^( NSError* _Error )
+//                    {
+//                    NSLog( @"%@", _Error );
+//                    } ];
+
+    [ [ DictrTranslator defaultTranslator ] translateWord: searchWord
+                                                   cursor: 1
+                                                  success:
+        ^( NSDictionary* _MatchesJSON )
             {
-            [ DictrBestMatchingCardsFactory makeCardsWithMaterial: _XMLData ];
-//            NSLog( @"%@", [ _XMLData XMLStringWithOptions: NSXMLNodePrettyPrint ] );
-            [ [ NSNotificationCenter defaultCenter ] postNotificationName: DictrTranslatorDidFinishSearchingNotif
-                                                                   object: self
-                                                                 userInfo: @{ kEntry : _XMLData ?: [ NSNull null ] } ];
+//            NSLog( @"%@", _MatchesJSON );
+
+            NSArray <__kindof NSDictionary*>* results = _MatchesJSON[ @"results" ];
+
+            [ [ NSNotificationCenter defaultCenter ]
+                postNotificationName: DictrTranslatorDidBestMatchingNotif
+                              object: self
+                            userInfo: @{ kResults : results ?: @[]
+                                       , kOperation : kReplaceOperation
+                                       } ];
+
             } failure:
                 ^( NSError* _Error )
                     {

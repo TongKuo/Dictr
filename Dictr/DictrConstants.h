@@ -16,6 +16,7 @@ extern CGFloat const DictrGapBetweenSearchFieldAndTop;
 // Notification Names
 extern NSString* const DictrTranslatorShouldBeginSearchingNotif;
 extern NSString* const DictrTranslatorDidFinishSearchingNotif;
+extern NSString* const DictrTranslatorDidBestMatchingNotif;
 extern NSString* const DictrTranslatorShouldStopSearchingNotif;
 extern NSString* const DictrTranslatorShouldClearSearchResultNotif;
 
@@ -23,3 +24,9 @@ extern NSString* const DictrTranslatorShouldClearSearchResultNotif;
 extern NSString* const kSearchString;
 extern NSString* const kError;
 extern NSString* const kEntry;
+extern NSString* const kResults;
+extern NSString* const kOperation;
+
+// Operations
+extern NSString* const kReplaceOperation;
+extern NSString* const kAppendOperation;
