@@ -7,6 +7,15 @@
 //
 
 #import "DictrMoreRelatedScrollView.h"
+#import "DictrMoreRelatedTableView.h"
+
+// Private Interfaces
+@interface DictrMoreRelatedScrollView ()
+
+// Notification Sel
+- ( void ) __didFinishSearching: ( NSNotification* )_Notif;
+
+@end // Private Interfaces
 
 // DictrMoreRelatedScrollView class
 @implementation DictrMoreRelatedScrollView
@@ -20,22 +29,6 @@
            selector: @selector( __didFinishSearching: )
                name: DictrTranslatorDidFinishSearchingNotif
              object: nil ];
-    }
-
-- ( void ) __didFinishSearching: ( NSNotification* )_Notif
-    {
-    if ( !self->__results )
-        self->__results = [ NSMutableOrderedSet orderedSet ];
-
-    NSArray* resultsArr = _Notif.userInfo[ kResults ];
-    NSString* operation = _Notif.userInfo[ kOperation ];
-
-    if ( [ operation isEqualToString: kReplaceOperation ] )
-        if ( self->__results.count > 0 )
-            [ self->__results removeAllObjects ];
-
-    if ( resultsArr.count > 0 )
-        [ self->__results addObjectsFromArray: resultsArr ];
     }
 
 #pragma mark - Drawing
@@ -73,6 +66,27 @@
     [ resultView.textField setStringValue: data[ @"entryLabel" ] ];
 
     return resultView;
+    }
+
+#pragma mark - Private Interfaces
+
+// Notification Sel
+- ( void ) __didFinishSearching: ( NSNotification* )_Notif
+    {
+    if ( !self->__results )
+        self->__results = [ NSMutableOrderedSet orderedSet ];
+
+    NSArray* resultsArr = _Notif.userInfo[ kResults ];
+    NSString* operation = _Notif.userInfo[ kOperation ];
+
+    if ( [ operation isEqualToString: kReplaceOperation ] )
+        if ( self->__results.count > 0 )
+            [ self->__results removeAllObjects ];
+
+    if ( resultsArr.count > 0 )
+        [ self->__results addObjectsFromArray: resultsArr ];
+
+    [ self.moreRelatedTableView reloadData ];
     }
 
 @end // DictrMoreRelatedScrollView class

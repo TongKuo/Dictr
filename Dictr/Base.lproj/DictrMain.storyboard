@@ -761,6 +761,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </scroller>
+                    <connections>
+                        <outlet property="moreRelatedTableVie" destination="Ubx-k5-rYu" id="XPe-X1-Ci1"/>
+                    </connections>
                 </scrollView>
             </objects>
             <point key="canvasLocation" x="187.5" y="941"/>
