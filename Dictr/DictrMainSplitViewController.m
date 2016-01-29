@@ -16,4 +16,11 @@
 // DictrMainSplitViewController class
 @implementation DictrMainSplitViewController
 
+- ( void ) viewDidLoad
+    {
+    [ super viewDidLoad ];
+
+    
+    }
+
 @end // DictrMainSplitViewController class

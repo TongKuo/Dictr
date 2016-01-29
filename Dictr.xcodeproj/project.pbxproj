@@ -47,6 +47,8 @@
 		83C7C7731C5B43E800AF4171 /* DictrMainSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7711C5B43E800AF4171 /* DictrMainSplitViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		83C7C7771C5B45EF00AF4171 /* DictrMoreRelatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7751C5B45EF00AF4171 /* DictrMoreRelatedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83C7C7781C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		83C7C77C1C5B4AD000AF4171 /* DictrSenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C77A1C5B4AD000AF4171 /* DictrSenseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C77D1C5B4AD000AF4171 /* DictrSenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C77B1C5B4AD000AF4171 /* DictrSenseViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */ = {isa = PBXBuildFile; fileRef = 83D087BD1C53B696008ED2BD /* spare:cambridge:help:labels.html */; settings = {ASSET_TAGS = (); }; };
@@ -158,6 +160,9 @@
 		83C7C7741C5B45EF00AF4171 /* DictrMoreRelatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMoreRelatedViewController.h; sourceTree = "<group>"; };
 		83C7C7751C5B45EF00AF4171 /* DictrMoreRelatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMoreRelatedViewController.m; sourceTree = "<group>"; };
 		83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrMoreRelatedViewController.xib; sourceTree = "<group>"; };
+		83C7C7791C5B4AD000AF4171 /* DictrSenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSenseViewController.h; sourceTree = "<group>"; };
+		83C7C77A1C5B4AD000AF4171 /* DictrSenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSenseViewController.m; sourceTree = "<group>"; };
+		83C7C77B1C5B4AD000AF4171 /* DictrSenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrSenseViewController.xib; sourceTree = "<group>"; };
 		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
 		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
 		83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrDefLabel.h; path = Dictr/DictrDefLabel.h; sourceTree = SOURCE_ROOT; };
@@ -381,6 +386,8 @@
 				8322403D1C5A2982009C936B /* DictrMoreRelatedTableView.m */,
 				8322403F1C5A29F0009C936B /* DictrMoreRelatedScrollView.h */,
 				832240401C5A29F0009C936B /* DictrMoreRelatedScrollView.m */,
+				83C7C7791C5B4AD000AF4171 /* DictrSenseViewController.h */,
+				83C7C77A1C5B4AD000AF4171 /* DictrSenseViewController.m */,
 				83B524C41C3D474C00FA6D4E /* DictrSearchField.h */,
 				83B524C51C3D474C00FA6D4E /* DictrSearchField.m */,
 			);
@@ -394,6 +401,7 @@
 				83C7C76D1C5B423200AF4171 /* DictrSearchFieldController.xib */,
 				83C7C7711C5B43E800AF4171 /* DictrMainSplitViewController.xib */,
 				83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */,
+				83C7C77B1C5B4AD000AF4171 /* DictrSenseViewController.xib */,
 			);
 			name = wysiwyg;
 			sourceTree = "<group>";
@@ -514,6 +522,7 @@
 				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
 				83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */,
 				83C7C7731C5B43E800AF4171 /* DictrMainSplitViewController.xib in Resources */,
+				83C7C77D1C5B4AD000AF4171 /* DictrSenseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +572,7 @@
 				83B524BF1C3C082700FA6D4E /* AFURLResponseSerialization.m in Sources */,
 				83B523771C3BDE2E00FA6D4E /* main.m in Sources */,
 				83B524981C3BF5E500FA6D4E /* NSArray+PureLayout.m in Sources */,
+				83C7C77C1C5B4AD000AF4171 /* DictrSenseViewController.m in Sources */,
 				83DD541D1C47E3CF0091B8DC /* NSArray+DictrExtensions.m in Sources */,
 				8322403E1C5A2982009C936B /* DictrMoreRelatedTableView.m in Sources */,
 				83C7C76C1C5B40E100AF4171 /* DictrSearchFieldController.m in Sources */,

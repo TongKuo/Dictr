@@ -8,7 +8,13 @@
 
 @import Cocoa;
 
+@class DictrSearchFieldController;
+@class DictrMoreRelatedViewController;
+
 // DictrMainSplitViewController class
 @interface DictrMainSplitViewController : NSSplitViewController
+    {
+@private
+    }
 
 @end // DictrMainSplitViewController class
