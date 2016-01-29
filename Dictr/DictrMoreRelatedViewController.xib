@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DictrMoreRelatedViewController">
             <connections>
+                <outlet property="moreRelatedTableView" destination="RoV-T6-9lr" id="dxr-hF-Fsm"/>
                 <outlet property="view" destination="dYc-Se-lSK" id="G3i-il-zlZ"/>
             </connections>
         </customObject>
@@ -63,8 +64,8 @@
                             </tableColumn>
                         </tableColumns>
                         <connections>
-                            <outlet property="dataSource" destination="dYc-Se-lSK" id="wE4-PS-4Ub"/>
-                            <outlet property="delegate" destination="dYc-Se-lSK" id="JHu-EN-yZZ"/>
+                            <outlet property="dataSource" destination="-2" id="lzt-ZD-QOy"/>
+                            <outlet property="delegate" destination="-2" id="Aij-zP-hW8"/>
                         </connections>
                     </tableView>
                 </subviews>

@@ -6,9 +6,16 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-@import Cocoa;
+@class DictrMoreRelatedTableView;
 
 // DictrMoreRelatedViewController class
 @interface DictrMoreRelatedViewController : NSViewController
+    <NSTableViewDataSource, NSTableViewDelegate>
+    {
+@private
+    NSMutableOrderedSet <__kindof NSDictionary*>* __results;
+    }
+
+@property ( weak ) IBOutlet DictrMoreRelatedTableView* moreRelatedTableView;
 
 @end // DictrMoreRelatedViewController class

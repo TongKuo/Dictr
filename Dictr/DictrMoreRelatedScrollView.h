@@ -8,16 +8,7 @@
 
 @import Cocoa;
 
-@class DictrMoreRelatedTableView;
-
 // DictrMoreRelatedScrollView class
 @interface DictrMoreRelatedScrollView : NSScrollView
-    <NSTableViewDataSource, NSTableViewDelegate>
-    {
-@private
-    NSMutableOrderedSet <__kindof NSDictionary*>* __results;
-    }
-
-@property ( weak ) IBOutlet DictrMoreRelatedTableView* moreRelatedTableView;
 
 @end // DictrMoreRelatedScrollView class
