@@ -26,7 +26,10 @@
     [ self configureForAutoLayout ];
 
     self.selfWidthConstraint = [ self autoSetDimension: ALDimensionWidth toSize: NSWidth( self.frame ) relation: NSLayoutRelationEqual ];
-    self.selfHeightConstraint = [ self autoSetDimension: ALDimensionHeight toSize: DictrSearchFieldFixedHeight + DictrGapBetweenSearchFieldAndTop relation: NSLayoutRelationEqual ];
+//    self.selfHeightConstraint = [ self autoSetDimension: ALDimensionHeight toSize: DictrSearchFieldFixedHeight + DictrGapBetweenSearchFieldAndTop relation: NSLayoutRelationEqual ];
+    self.selfHeightConstraint = [ self autoSetDimension: ALDimensionHeight toSize: NSHeight( self.frame ) relation: NSLayoutRelationGreaterThanOrEqual ];
+
+    self.state = NSVisualEffectStateActive;
     }
 
 #pragma mark - Drawing

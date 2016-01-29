@@ -19,7 +19,9 @@
     {
     [ super viewDidLoad ];
 
-    NSLog( @"%@", self.mainSplitViewController.splitView );
+//    NSLog( @"%@", self.mainSplitViewController.splitView );
+    [ self.view addSubview: self.mainSplitViewController.view ];
+    [ self.mainSplitViewController.view autoPinEdgesToSuperviewEdges ];
     }
 
 - ( void ) setRepresentedObject: ( id )_RepresentedObject

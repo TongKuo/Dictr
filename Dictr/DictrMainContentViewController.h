@@ -12,15 +12,10 @@
 
 // DictrMainContentViewController class
 @interface DictrMainContentViewController : NSViewController
-    {
-@private
-
-    }
 
 #pragma mark - Outlets
 
 @property ( weak ) IBOutlet DictrMainSplitViewController* mainSplitViewController;
-@property ( weak ) IBOutlet NSScrollView* moreRelatedEntriesScrollView;
 
 @end // DictrMainContentViewController class
 

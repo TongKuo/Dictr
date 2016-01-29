@@ -670,7 +670,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="DictrMainContentViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl" customClass="DictrMainContentView">
-                        <rect key="frame" x="0.0" y="0.0" width="670" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="680" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </view>

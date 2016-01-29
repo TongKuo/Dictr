@@ -8,6 +8,9 @@
 
 #import "DictrMainSplitViewController.h"
 
+#import "DictrSearchFieldController.h"
+#import "DictrResultsSplitViewController.h"
+
 // Private Interfaces
 @interface DictrMainSplitViewController ()
 
@@ -18,9 +21,16 @@
 
 - ( void ) viewDidLoad
     {
+    self.splitView.vertical = NO;
+
     [ super viewDidLoad ];
 
-    
+    self->__searchFieldController = [ [ DictrSearchFieldController alloc ] initWithNibName: nil bundle: nil ];
+    self->__resultSplitViewController = [ [ DictrResultsSplitViewController alloc ] initWithNibName: nil bundle: nil ];
+
+    NSSplitViewItem* searchFieldSplitViewItem = [ NSSplitViewItem splitViewItemWithViewController: self->__searchFieldController ];
+    [ self addSplitViewItem: searchFieldSplitViewItem ];
+    [ self addChildViewController: self->__resultSplitViewController ];
     }
 
 @end // DictrMainSplitViewController class
