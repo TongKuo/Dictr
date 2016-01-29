@@ -6,13 +6,13 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-@import Cocoa;
+#import "DictrSplitViewController.h"
 
 @class DictrMoreRelatedViewController;
 @class DictrSenseViewController;
 
 // DictrResultsSplitViewController class
-@interface DictrResultsSplitViewController : NSSplitViewController
+@interface DictrResultsSplitViewController : DictrSplitViewController
     {
 @private
     DictrMoreRelatedViewController __strong* __moreRelatedViewController;

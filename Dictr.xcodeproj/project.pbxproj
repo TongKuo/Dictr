@@ -51,6 +51,7 @@
 		83C7C77D1C5B4AD000AF4171 /* DictrSenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C77B1C5B4AD000AF4171 /* DictrSenseViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		83C7C7811C5B4E3000AF4171 /* DictrResultsSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C77F1C5B4E3000AF4171 /* DictrResultsSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83C7C7821C5B4E3000AF4171 /* DictrResultsSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7801C5B4E3000AF4171 /* DictrResultsSplitViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		83C7C7851C5B58E300AF4171 /* DictrSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7841C5B58E300AF4171 /* DictrSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */ = {isa = PBXBuildFile; fileRef = 83D087BD1C53B696008ED2BD /* spare:cambridge:help:labels.html */; settings = {ASSET_TAGS = (); }; };
@@ -168,6 +169,8 @@
 		83C7C77E1C5B4E3000AF4171 /* DictrResultsSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrResultsSplitViewController.h; sourceTree = "<group>"; };
 		83C7C77F1C5B4E3000AF4171 /* DictrResultsSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrResultsSplitViewController.m; sourceTree = "<group>"; };
 		83C7C7801C5B4E3000AF4171 /* DictrResultsSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrResultsSplitViewController.xib; sourceTree = "<group>"; };
+		83C7C7831C5B58E300AF4171 /* DictrSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSplitViewController.h; sourceTree = "<group>"; };
+		83C7C7841C5B58E300AF4171 /* DictrSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSplitViewController.m; sourceTree = "<group>"; };
 		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
 		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
 		83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrDefLabel.h; path = Dictr/DictrDefLabel.h; sourceTree = SOURCE_ROOT; };
@@ -381,6 +384,8 @@
 				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
 				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
 				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
+				83C7C7831C5B58E300AF4171 /* DictrSplitViewController.h */,
+				83C7C7841C5B58E300AF4171 /* DictrSplitViewController.m */,
 				83C7C76F1C5B43E800AF4171 /* DictrMainSplitViewController.h */,
 				83C7C7701C5B43E800AF4171 /* DictrMainSplitViewController.m */,
 				83C7C77E1C5B4E3000AF4171 /* DictrResultsSplitViewController.h */,
@@ -592,6 +597,7 @@
 				83C7C7771C5B45EF00AF4171 /* DictrMoreRelatedViewController.m in Sources */,
 				83B524EF1C3E7FCC00FA6D4E /* DictrGeneralDef.m in Sources */,
 				83B524F21C3E7FDE00FA6D4E /* DictrExample.m in Sources */,
+				83C7C7851C5B58E300AF4171 /* DictrSplitViewController.m in Sources */,
 				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,
 				83B524B81C3C082700FA6D4E /* AFHTTPRequestOperation.m in Sources */,
 				83B524BA1C3C082700FA6D4E /* AFHTTPSessionManager.m in Sources */,

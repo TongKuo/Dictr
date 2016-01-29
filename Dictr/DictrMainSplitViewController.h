@@ -6,13 +6,13 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-@import Cocoa;
+#import "DictrSplitViewController.h"
 
 @class DictrSearchFieldController;
 @class DictrResultsSplitViewController;
 
 // DictrMainSplitViewController class
-@interface DictrMainSplitViewController : NSSplitViewController
+@interface DictrMainSplitViewController : DictrSplitViewController
     {
 @private
     DictrSearchFieldController __strong* __searchFieldController;

@@ -19,6 +19,8 @@
 // DictrResultsSplitViewController class
 @implementation DictrResultsSplitViewController
 
+#pragma mark - Initializations
+
 - ( void ) viewDidLoad
     {
     self.splitView.vertical = YES;
@@ -31,6 +33,9 @@
 
     NSSplitViewItem* moreRelatedSplitViewItem = [ NSSplitViewItem splitViewItemWithViewController: self->__moreRelatedViewController ];
     NSSplitViewItem* senseSplitViewItem = [ NSSplitViewItem splitViewItemWithViewController: self->__senseViewController ];
+
+    [ moreRelatedSplitViewItem setMaximumThickness: 250.f ];
+    [ moreRelatedSplitViewItem setMinimumThickness: 250.f ];
 
     [ self addSplitViewItem: moreRelatedSplitViewItem ];
     [ self addSplitViewItem: senseSplitViewItem ];

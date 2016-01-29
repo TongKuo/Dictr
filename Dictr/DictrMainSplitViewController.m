@@ -19,6 +19,8 @@
 // DictrMainSplitViewController class
 @implementation DictrMainSplitViewController
 
+#pragma mark - Initializations
+
 - ( void ) viewDidLoad
     {
     self.splitView.vertical = NO;
