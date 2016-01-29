@@ -18,9 +18,7 @@
 		83B5238A1C3BDE2E00FA6D4E /* DictrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523891C3BDE2E00FA6D4E /* DictrTests.m */; };
 		83B523951C3BDE2E00FA6D4E /* DictrUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523941C3BDE2E00FA6D4E /* DictrUITests.m */; };
 		83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */; settings = {ASSET_TAGS = (); }; };
-		83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */; settings = {ASSET_TAGS = (); }; };
 		83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */; settings = {ASSET_TAGS = (); }; };
 		83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B5248F1C3BF5E500FA6D4E /* ALView+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
 		83B524981C3BF5E500FA6D4E /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524911C3BF5E500FA6D4E /* NSArray+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
@@ -40,7 +38,6 @@
 		83B524CF1C3D7FE200FA6D4E /* DictrProjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524CD1C3D7FE200FA6D4E /* DictrProjectorController.m */; settings = {ASSET_TAGS = (); }; };
 		83B524D01C3D7FE200FA6D4E /* DictrProjectorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B524CE1C3D7FE200FA6D4E /* DictrProjectorController.xib */; settings = {ASSET_TAGS = (); }; };
 		83B524D31C3D80A400FA6D4E /* DictrProjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524D21C3D80A400FA6D4E /* DictrProjector.m */; settings = {ASSET_TAGS = (); }; };
-		83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */; settings = {ASSET_TAGS = (); }; };
 		83B524EC1C3E7E2700FA6D4E /* DictrEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B524EF1C3E7FCC00FA6D4E /* DictrGeneralDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524EE1C3E7FCC00FA6D4E /* DictrGeneralDef.m */; settings = {ASSET_TAGS = (); }; };
 		83B524F21C3E7FDE00FA6D4E /* DictrExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F11C3E7FDE00FA6D4E /* DictrExample.m */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +45,12 @@
 		83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524F71C3E826700FA6D4E /* DictrJsonObject.m */; settings = {ASSET_TAGS = (); }; };
 		83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */; settings = {ASSET_TAGS = (); }; };
 		83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B525001C3EB23500FA6D4E /* DictrXMLObject.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C76C1C5B40E100AF4171 /* DictrSearchFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C76B1C5B40E100AF4171 /* DictrSearchFieldController.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C76E1C5B423200AF4171 /* DictrSearchFieldController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C76D1C5B423200AF4171 /* DictrSearchFieldController.xib */; settings = {ASSET_TAGS = (); }; };
+		83C7C7721C5B43E800AF4171 /* DictrMainSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7701C5B43E800AF4171 /* DictrMainSplitViewController.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C7731C5B43E800AF4171 /* DictrMainSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7711C5B43E800AF4171 /* DictrMainSplitViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		83C7C7771C5B45EF00AF4171 /* DictrMoreRelatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7751C5B45EF00AF4171 /* DictrMoreRelatedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C7781C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */ = {isa = PBXBuildFile; fileRef = 83D087BD1C53B696008ED2BD /* spare:cambridge:help:labels.html */; settings = {ASSET_TAGS = (); }; };
@@ -98,11 +101,7 @@
 		83B523A21C3BE0C300FA6D4E /* Dictr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dictr.entitlements; sourceTree = "<group>"; };
 		83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMainWindowController.h; sourceTree = "<group>"; };
 		83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMainWindowController.m; sourceTree = "<group>"; };
-		83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardViewController.h; sourceTree = "<group>"; };
-		83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardViewController.m; sourceTree = "<group>"; };
 		83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrBestMatchingCardViewController.xib; sourceTree = "<group>"; };
-		83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardView.h; sourceTree = "<group>"; };
-		83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardView.m; sourceTree = "<group>"; };
 		83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMainContentView.h; sourceTree = "<group>"; };
 		83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMainContentView.m; sourceTree = "<group>"; };
 		83B5248E1C3BF5E500FA6D4E /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
@@ -145,8 +144,6 @@
 		83B524CE1C3D7FE200FA6D4E /* DictrProjectorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrProjectorController.xib; sourceTree = "<group>"; };
 		83B524D11C3D80A400FA6D4E /* DictrProjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrProjector.h; sourceTree = "<group>"; };
 		83B524D21C3D80A400FA6D4E /* DictrProjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrProjector.m; sourceTree = "<group>"; };
-		83B524D41C3D813000FA6D4E /* DictrBestMatchingCardsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrBestMatchingCardsFactory.h; sourceTree = "<group>"; };
-		83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrBestMatchingCardsFactory.m; sourceTree = "<group>"; };
 		83B524EA1C3E7E2700FA6D4E /* DictrEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrEntry.h; path = ../DictrEntry.h; sourceTree = "<group>"; };
 		83B524EB1C3E7E2700FA6D4E /* DictrEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrEntry.m; path = ../DictrEntry.m; sourceTree = "<group>"; };
 		83B524ED1C3E7FCC00FA6D4E /* DictrGeneralDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrGeneralDef.h; path = ../DictrGeneralDef.h; sourceTree = "<group>"; };
@@ -162,6 +159,15 @@
 		83B524FD1C3EB22900FA6D4E /* DictrSubEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrSubEntry.m; path = ../DictrSubEntry.m; sourceTree = "<group>"; };
 		83B524FF1C3EB23500FA6D4E /* DictrXMLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrXMLObject.h; path = ../DictrXMLObject.h; sourceTree = "<group>"; };
 		83B525001C3EB23500FA6D4E /* DictrXMLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DictrXMLObject.m; path = ../DictrXMLObject.m; sourceTree = "<group>"; };
+		83C7C76A1C5B40E100AF4171 /* DictrSearchFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSearchFieldController.h; sourceTree = "<group>"; };
+		83C7C76B1C5B40E100AF4171 /* DictrSearchFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSearchFieldController.m; sourceTree = "<group>"; };
+		83C7C76D1C5B423200AF4171 /* DictrSearchFieldController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrSearchFieldController.xib; sourceTree = "<group>"; };
+		83C7C76F1C5B43E800AF4171 /* DictrMainSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMainSplitViewController.h; sourceTree = "<group>"; };
+		83C7C7701C5B43E800AF4171 /* DictrMainSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMainSplitViewController.m; sourceTree = "<group>"; };
+		83C7C7711C5B43E800AF4171 /* DictrMainSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrMainSplitViewController.xib; sourceTree = "<group>"; };
+		83C7C7741C5B45EF00AF4171 /* DictrMoreRelatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrMoreRelatedViewController.h; sourceTree = "<group>"; };
+		83C7C7751C5B45EF00AF4171 /* DictrMoreRelatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrMoreRelatedViewController.m; sourceTree = "<group>"; };
+		83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictrMoreRelatedViewController.xib; sourceTree = "<group>"; };
 		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
 		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
 		83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrDefLabel.h; path = Dictr/DictrDefLabel.h; sourceTree = SOURCE_ROOT; };
@@ -375,12 +381,12 @@
 				83B523791C3BDE2E00FA6D4E /* DictrMainContentViewController.m */,
 				83B523AE1C3BF4B500FA6D4E /* DictrMainContentView.h */,
 				83B523AF1C3BF4B500FA6D4E /* DictrMainContentView.m */,
-				83B524D41C3D813000FA6D4E /* DictrBestMatchingCardsFactory.h */,
-				83B524D51C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m */,
-				83B523A61C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.h */,
-				83B523A71C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m */,
-				83B523AB1C3BF29600FA6D4E /* DictrBestMatchingCardView.h */,
-				83B523AC1C3BF29600FA6D4E /* DictrBestMatchingCardView.m */,
+				83C7C76F1C5B43E800AF4171 /* DictrMainSplitViewController.h */,
+				83C7C7701C5B43E800AF4171 /* DictrMainSplitViewController.m */,
+				83C7C76A1C5B40E100AF4171 /* DictrSearchFieldController.h */,
+				83C7C76B1C5B40E100AF4171 /* DictrSearchFieldController.m */,
+				83C7C7741C5B45EF00AF4171 /* DictrMoreRelatedViewController.h */,
+				83C7C7751C5B45EF00AF4171 /* DictrMoreRelatedViewController.m */,
 				8322403C1C5A2982009C936B /* DictrMoreRelatedTableView.h */,
 				8322403D1C5A2982009C936B /* DictrMoreRelatedTableView.m */,
 				8322403F1C5A29F0009C936B /* DictrMoreRelatedScrollView.h */,
@@ -401,6 +407,9 @@
 				83B523A81C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib */,
 				83B524CE1C3D7FE200FA6D4E /* DictrProjectorController.xib */,
 				83B5237D1C3BDE2E00FA6D4E /* DictrMain.storyboard */,
+				83C7C76D1C5B423200AF4171 /* DictrSearchFieldController.xib */,
+				83C7C7711C5B43E800AF4171 /* DictrMainSplitViewController.xib */,
+				83C7C7761C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib */,
 			);
 			name = wysiwyg;
 			sourceTree = "<group>";
@@ -516,10 +525,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B524D01C3D7FE200FA6D4E /* DictrProjectorController.xib in Resources */,
+				83C7C76E1C5B423200AF4171 /* DictrSearchFieldController.xib in Resources */,
 				83B523AA1C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.xib in Resources */,
 				83B5237C1C3BDE2E00FA6D4E /* Assets.xcassets in Resources */,
+				83C7C7781C5B45EF00AF4171 /* DictrMoreRelatedViewController.xib in Resources */,
 				83B5237F1C3BDE2E00FA6D4E /* DictrMain.storyboard in Resources */,
 				83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */,
+				83C7C7731C5B43E800AF4171 /* DictrMainSplitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +559,6 @@
 				83DD54171C47ABB70091B8DC /* DictrSense.m in Sources */,
 				83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */,
 				83B524CB1C3D489000FA6D4E /* DictrTranslator.m in Sources */,
-				83B524D61C3D813000FA6D4E /* DictrBestMatchingCardsFactory.m in Sources */,
 				83B524BD1C3C082700FA6D4E /* AFURLConnectionOperation.m in Sources */,
 				83B5237A1C3BDE2E00FA6D4E /* DictrMainContentViewController.m in Sources */,
 				83B524F51C3E823500FA6D4E /* DictrPhraseDef.m in Sources */,
@@ -561,13 +572,11 @@
 				83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */,
 				83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */,
 				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
-				83B523AD1C3BF29600FA6D4E /* DictrBestMatchingCardView.m in Sources */,
 				83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */,
 				83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */,
 				83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */,
 				83DD541A1C47ABC40091B8DC /* DictrSenseBlock.m in Sources */,
 				83B524EC1C3E7E2700FA6D4E /* DictrEntry.m in Sources */,
-				83B523A91C3BF1AD00FA6D4E /* DictrBestMatchingCardViewController.m in Sources */,
 				83B524C01C3C082700FA6D4E /* AFURLSessionManager.m in Sources */,
 				83B524BF1C3C082700FA6D4E /* AFURLResponseSerialization.m in Sources */,
 				83B523771C3BDE2E00FA6D4E /* main.m in Sources */,
@@ -575,8 +584,11 @@
 				83DD541D1C47E3CF0091B8DC /* NSArray+DictrExtensions.m in Sources */,
 				8322403E1C5A2982009C936B /* DictrMoreRelatedTableView.m in Sources */,
 				83B524D31C3D80A400FA6D4E /* DictrProjector.m in Sources */,
+				83C7C76C1C5B40E100AF4171 /* DictrSearchFieldController.m in Sources */,
 				83B524BE1C3C082700FA6D4E /* AFURLRequestSerialization.m in Sources */,
+				83C7C7721C5B43E800AF4171 /* DictrMainSplitViewController.m in Sources */,
 				83B524BB1C3C082700FA6D4E /* AFNetworkReachabilityManager.m in Sources */,
+				83C7C7771C5B45EF00AF4171 /* DictrMoreRelatedViewController.m in Sources */,
 				83B524EF1C3E7FCC00FA6D4E /* DictrGeneralDef.m in Sources */,
 				83B524F21C3E7FDE00FA6D4E /* DictrExample.m in Sources */,
 				83B523741C3BDE2E00FA6D4E /* DictrAppDelegate.m in Sources */,

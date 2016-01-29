@@ -8,14 +8,18 @@
 
 @import Cocoa;
 
-@class DictrSearchField;
+@class DictrMainSplitViewController;
 
 // DictrMainContentViewController class
 @interface DictrMainContentViewController : NSViewController
+    {
+@private
+
+    }
 
 #pragma mark - Outlets
 
-@property ( weak ) IBOutlet DictrSearchField* searchField;
+@property ( weak ) IBOutlet DictrMainSplitViewController* mainSplitViewController;
 @property ( weak ) IBOutlet NSScrollView* moreRelatedEntriesScrollView;
 
 @end // DictrMainContentViewController class

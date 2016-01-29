@@ -7,7 +7,7 @@
 //
 
 #import "DictrMainContentViewController.h"
-#import "DictrSearchField.h"
+#import "DictrMainSplitViewController.h"
 #import "DictrMainContentView.h"
 
 // DictrMainContentViewController class
@@ -19,16 +19,7 @@
     {
     [ super viewDidLoad ];
 
-    // Do any additional setup after loading the view.
-    [ self.searchField configureForAutoLayout ];
-    [ self.moreRelatedEntriesScrollView configureForAutoLayout ];
-    [ self.view setSubviews: @[ self.searchField, self.moreRelatedEntriesScrollView ] ];
-
-    // Auto Layout the search field
-    [ self.searchField autoPinEdgesToSuperviewEdgesWithInsets: NSEdgeInsetsMake( DictrGapBetweenSearchFieldAndTop, 0.f, 0.f, 0.f )
-                                                excludingEdge: ALEdgeBottom ];
-
-    [ self.searchField autoSetDimension: ALDimensionHeight toSize: DictrSearchFieldFixedHeight relation: NSLayoutRelationEqual ];
+    NSLog( @"%@", self.mainSplitViewController.splitView );
     }
 
 - ( void ) setRepresentedObject: ( id )_RepresentedObject

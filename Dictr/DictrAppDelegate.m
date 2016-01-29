@@ -7,7 +7,6 @@
 //
 
 #import "DictrAppDelegate.h"
-#import "DictrBestMatchingCardsFactory.h"
 
 // Private Interfaces
 @interface DictrAppDelegate ()

@@ -675,98 +675,13 @@
                         <animations/>
                     </view>
                     <connections>
-                        <outlet property="moreRelatedEntriesScrollView" destination="6eF-D3-hzs" id="Chc-KA-Kjq"/>
-                        <outlet property="searchField" destination="8dy-8k-YRB" id="jZT-lU-h40"/>
+                        <outlet property="mainSplitViewController" destination="oiB-lP-8g0" id="OSp-xM-Ul1"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <textField verticalHuggingPriority="750" id="8dy-8k-YRB" customClass="DictrSearchField">
-                    <rect key="frame" x="0.0" y="0.0" width="419" height="139"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <animations/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" id="1tA-sw-5H6">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                    </textFieldCell>
-                </textField>
-                <customObject id="5Hh-VO-e8c" customClass="DictrProjectorController"/>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6eF-D3-hzs" customClass="DictrMoreRelatedScrollView">
-                    <rect key="frame" x="0.0" y="0.0" width="362" height="135"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" id="Y63-gT-XjS">
-                        <rect key="frame" x="1" y="1" width="360" height="133"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="automatic" viewBased="YES" id="Ubx-k5-rYu" customClass="DictrMoreRelatedTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="359" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <animations/>
-                                <size key="intercellSpacing" width="3" height="2"/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
-                                <tableColumns>
-                                    <tableColumn width="356" minWidth="40" maxWidth="1000" id="e55-ub-srX">
-                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                            <font key="font" metaFont="smallSystem"/>
-                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                        </tableHeaderCell>
-                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="LWi-lL-rh5">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                        <prototypeCellViews>
-                                            <tableCellView id="e14-BS-hqd">
-                                                <rect key="frame" x="1" y="1" width="356" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tp-hl-4vX">
-                                                        <rect key="frame" x="0.0" y="3" width="355" height="33"/>
-                                                        <animations/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="cIz-02-WPb">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                </subviews>
-                                                <animations/>
-                                                <connections>
-                                                    <outlet property="textField" destination="1Tp-hl-4vX" id="zFU-cv-LG1"/>
-                                                </connections>
-                                            </tableCellView>
-                                        </prototypeCellViews>
-                                    </tableColumn>
-                                </tableColumns>
-                                <connections>
-                                    <outlet property="dataSource" destination="6eF-D3-hzs" id="KaV-h5-wnu"/>
-                                    <outlet property="delegate" destination="6eF-D3-hzs" id="dRJ-qI-9tT"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </clipView>
-                    <animations/>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Mz3-qJ-v2U">
-                        <rect key="frame" x="1" y="119" width="223" height="15"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="HMR-wY-Xx4">
-                        <rect key="frame" x="224" y="17" width="15" height="102"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </scroller>
-                    <connections>
-                        <outlet property="moreRelatedTableVie" destination="Ubx-k5-rYu" id="XPe-X1-Ci1"/>
-                    </connections>
-                </scrollView>
+                <customObject id="oiB-lP-8g0" customClass="DictrMainSplitViewController"/>
             </objects>
-            <point key="canvasLocation" x="187.5" y="941"/>
+            <point key="canvasLocation" x="75" y="750"/>
         </scene>
     </scenes>
 </document>
