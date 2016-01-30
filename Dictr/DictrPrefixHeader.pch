@@ -25,5 +25,7 @@
 #import "NSXMLNode+DictrExtensions.h"
 #import "NSArray+DictrExtensions.h"
 #import "NSColor+DictrExtensions.h"
+#import "NSAffineTransform+DictrExtensions.h"
+#import "NSBezierPath+DictrExtensions.h"
 
 #endif /* DictrPrefixHeader_pch */

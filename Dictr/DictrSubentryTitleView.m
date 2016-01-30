@@ -25,6 +25,8 @@
     {
     if ( self = [ super initWithFrame: _FrameRect ] )
         {
+        [ self configureForAutoLayout ];
+
         [ self setFont: [ NSFont fontWithName: @"Helvetica Neue Light" size: 30.f ] ];
         [ self setTextColor: [ NSColor colorWithHTMLColor: @"494848" ] ];
 

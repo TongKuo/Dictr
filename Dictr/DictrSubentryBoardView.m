@@ -8,13 +8,13 @@
 
 #import "DictrSubentryBoardView.h"
 #import "DictrSubentryTitleView.h"
+#import "DictrBadgeView.h"
 
 // Private Interfaces
 @interface DictrSubentryBoardView ()
 
 @property ( strong, readwrite ) DictrSubentryTitleView* subEntryTitleView;
-
-- ( void ) __relayout;
+@property ( strong, readwrite ) DictrBadgeView* describesWordBadgeView;
 
 @end // Private Interfaces
 
@@ -27,11 +27,16 @@
     {
     if ( self = [ super initWithFrame: NSZeroRect ] )
         {
+        [ self configureForAutoLayout ];
+        __cachedConstraints = [ NSMutableArray array ];
+
         [ self setDictSubEntry: _DictrSubEntry ];
 
         self.subEntryTitleView = [ [ DictrSubentryTitleView alloc ] initWithDictrSubEntry: self.dictSubEntry ];
-
-        [ self setSubviews: @[ self.subEntryTitleView ] ];
+        self.describesWordBadgeView = [ [ DictrBadgeView alloc ] initWithText: _DictrSubEntry.pos
+                                                                  controlSize: NSRegularControlSize ];
+        [ self setSubviews: @[ self.subEntryTitleView
+                             , self.describesWordBadgeView ] ];
         }
 
     return self;
@@ -44,11 +49,29 @@
     return YES;
     }
 
-#pragma mark - Private Interfaces
+#pragma mark - Auto Layout
 
-- ( void ) __relayout
+#define kTopAndBottomInset 10
+#define kLeadingAndTrailingInset 20
+
+- ( void ) layout
     {
-    [ self.subEntryTitleView setFrameOrigin: NSMakePoint( 0, 0 ) ];
+    [ self removeConstraints: __cachedConstraints ];
+    [ __cachedConstraints removeAllObjects ];
+
+    [ __cachedConstraints addObject:
+        [ self.subEntryTitleView autoPinEdgeToSuperviewEdge: ALEdgeTop withInset: kTopAndBottomInset ] ];
+    [ __cachedConstraints addObject:
+        [ self.subEntryTitleView autoPinEdgeToSuperviewEdge: ALEdgeLeading withInset: kLeadingAndTrailingInset ] ];
+
+    [ __cachedConstraints addObject:
+        [ self.describesWordBadgeView autoPinEdgeToSuperviewEdge: ALEdgeTop withInset: 22.f ] ];
+    [ __cachedConstraints addObject:
+        [ self.describesWordBadgeView autoPinEdgeToSuperviewEdge: ALEdgeTrailing withInset: kLeadingAndTrailingInset relation: NSLayoutRelationGreaterThanOrEqual ] ];
+    [ __cachedConstraints addObject:
+        [ self.describesWordBadgeView autoPinEdge: ALEdgeLeading toEdge: ALEdgeTrailing ofView: self.subEntryTitleView withOffset: 8.f ] ];
+
+    [ super layout ];
     }
 
 #pragma mark - Dynamic Properties
