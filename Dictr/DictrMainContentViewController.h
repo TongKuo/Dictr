@@ -18,4 +18,3 @@
 @property ( weak ) IBOutlet DictrMainSplitViewController* mainSplitViewController;
 
 @end // DictrMainContentViewController class
-

@@ -7,8 +7,11 @@
 //
 
 #import "DebugPlaygroundController.h"
+#import "DictrSubentryBoardView.h"
 
 @interface DebugPlaygroundController ()
+
+@property ( strong, readwrite ) DictrSubentryBoardView* subEntryBoardView;
 
 @end
 
@@ -17,9 +20,6 @@
 - ( void ) viewDidLoad
     {
     [ super viewDidLoad ];
-
-//    NSURL* url = [ NSURL URLWithString: @"file:///EsquireTongG/tmp/do-entry.xml" ];
-//    NSXMLDocument* doEntry = [ [ NSXMLDocument alloc ] initWithContentsOfURL: url options: NSXMLDocumentXMLKind error: nil ];
 
     NSError* err = nil;
     NSData* doEntryJsonData = [ NSData dataWithContentsOfFile: @"/Users/EsquireTongG/tmp/do-entry.json" options: 0 error: &err ];
@@ -30,7 +30,16 @@
 
 - ( void ) setRepresentedObject: ( id )_RepresentedObject
     {
-    
+    DictrSubEntry* subEntry = self.entry.subEntries.firstObject;
+
+    if ( !self.subEntryBoardView )
+        {
+        self.subEntryBoardView = [ [ DictrSubentryBoardView alloc ] initWithDictrSubEntry: subEntry ];
+        [ self.view addSubview: self.subEntryBoardView ];
+        [ self.subEntryBoardView autoPinEdgesToSuperviewEdges ];
+        }
+
+    [ self.subEntryBoardView setDictSubEntry: subEntry ];
     }
 
 @dynamic entry;

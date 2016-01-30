@@ -651,7 +651,7 @@
         <scene sceneID="MJQ-2c-cdO">
             <objects>
                 <viewController id="OPE-ED-u0U" customClass="DebugContentViewController" sceneMemberID="viewController">
-                    <view key="view" id="4fp-gK-VB9" customClass="NSVisualEffectView">
+                    <view key="view" id="4fp-gK-VB9" customClass="DebugPlayground">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>

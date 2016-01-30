@@ -55,6 +55,10 @@
 		83C7C78F1C5CAAD100AF4171 /* DebugContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C78E1C5CAAD100AF4171 /* DebugContentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83C7C7931C5CAB1500AF4171 /* DebugPlaygroundController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7911C5CAB1500AF4171 /* DebugPlaygroundController.m */; settings = {ASSET_TAGS = (); }; };
 		83C7C7941C5CAB1500AF4171 /* DebugPlaygroundController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C7C7921C5CAB1500AF4171 /* DebugPlaygroundController.xib */; settings = {ASSET_TAGS = (); }; };
+		83C7C7971C5CB35500AF4171 /* DictrSubentryTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7961C5CB35500AF4171 /* DictrSubentryTitleView.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C7D61C5CB68A00AF4171 /* NSColor+DictrExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7D51C5CB68A00AF4171 /* NSColor+DictrExtensions.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C7D91C5CB75600AF4171 /* DictrSubentryBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7D81C5CB75600AF4171 /* DictrSubentryBoardView.m */; settings = {ASSET_TAGS = (); }; };
+		83C7C7DF1C5CC19000AF4171 /* DebugPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7C7DE1C5CC19000AF4171 /* DebugPlayground.m */; settings = {ASSET_TAGS = (); }; };
 		83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087B01C53A10C008ED2BD /* DictrUtilities.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BC1C53AC99008ED2BD /* DictrDefLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D087BB1C53AC99008ED2BD /* DictrDefLabel.m */; settings = {ASSET_TAGS = (); }; };
 		83D087BE1C53B696008ED2BD /* spare:cambridge:help:labels.html in Resources */ = {isa = PBXBuildFile; fileRef = 83D087BD1C53B696008ED2BD /* spare:cambridge:help:labels.html */; settings = {ASSET_TAGS = (); }; };
@@ -179,6 +183,15 @@
 		83C7C7901C5CAB1500AF4171 /* DebugPlaygroundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPlaygroundController.h; sourceTree = "<group>"; };
 		83C7C7911C5CAB1500AF4171 /* DebugPlaygroundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPlaygroundController.m; sourceTree = "<group>"; };
 		83C7C7921C5CAB1500AF4171 /* DebugPlaygroundController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugPlaygroundController.xib; sourceTree = "<group>"; };
+		83C7C7951C5CB35500AF4171 /* DictrSubentryTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSubentryTitleView.h; sourceTree = "<group>"; };
+		83C7C7961C5CB35500AF4171 /* DictrSubentryTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSubentryTitleView.m; sourceTree = "<group>"; };
+		83C7C7D41C5CB68A00AF4171 /* NSColor+DictrExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+DictrExtensions.h"; sourceTree = "<group>"; };
+		83C7C7D51C5CB68A00AF4171 /* NSColor+DictrExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+DictrExtensions.m"; sourceTree = "<group>"; };
+		83C7C7D71C5CB75600AF4171 /* DictrSubentryBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrSubentryBoardView.h; sourceTree = "<group>"; };
+		83C7C7D81C5CB75600AF4171 /* DictrSubentryBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrSubentryBoardView.m; sourceTree = "<group>"; };
+		83C7C7DA1C5CB86100AF4171 /* DictrProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrProtocols.h; sourceTree = "<group>"; };
+		83C7C7DD1C5CC19000AF4171 /* DebugPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugPlayground.h; sourceTree = "<group>"; };
+		83C7C7DE1C5CC19000AF4171 /* DebugPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugPlayground.m; sourceTree = "<group>"; };
 		83D087AF1C53A10C008ED2BD /* DictrUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictrUtilities.h; sourceTree = "<group>"; };
 		83D087B01C53A10C008ED2BD /* DictrUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictrUtilities.m; sourceTree = "<group>"; };
 		83D087BA1C53AC99008ED2BD /* DictrDefLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictrDefLabel.h; path = Dictr/DictrDefLabel.h; sourceTree = SOURCE_ROOT; };
@@ -224,6 +237,8 @@
 				831100E51C439F0800296314 /* NSXMLNode+DictrExtensions.m */,
 				83DD541B1C47E3CF0091B8DC /* NSArray+DictrExtensions.h */,
 				83DD541C1C47E3CF0091B8DC /* NSArray+DictrExtensions.m */,
+				83C7C7D41C5CB68A00AF4171 /* NSColor+DictrExtensions.h */,
+				83C7C7D51C5CB68A00AF4171 /* NSColor+DictrExtensions.m */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -386,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				83B524C81C3D47F000FA6D4E /* wysiwyg */,
+				83C7C7DA1C5CB86100AF4171 /* DictrProtocols.h */,
 				83B523A31C3BE74600FA6D4E /* DictrMainWindowController.h */,
 				83B523A41C3BE74600FA6D4E /* DictrMainWindowController.m */,
 				83B523781C3BDE2E00FA6D4E /* DictrMainContentViewController.h */,
@@ -414,6 +430,12 @@
 				83C7C78E1C5CAAD100AF4171 /* DebugContentViewController.m */,
 				83C7C7901C5CAB1500AF4171 /* DebugPlaygroundController.h */,
 				83C7C7911C5CAB1500AF4171 /* DebugPlaygroundController.m */,
+				83C7C7DD1C5CC19000AF4171 /* DebugPlayground.h */,
+				83C7C7DE1C5CC19000AF4171 /* DebugPlayground.m */,
+				83C7C7D71C5CB75600AF4171 /* DictrSubentryBoardView.h */,
+				83C7C7D81C5CB75600AF4171 /* DictrSubentryBoardView.m */,
+				83C7C7951C5CB35500AF4171 /* DictrSubentryTitleView.h */,
+				83C7C7961C5CB35500AF4171 /* DictrSubentryTitleView.m */,
 				83C7C7921C5CAB1500AF4171 /* DebugPlaygroundController.xib */,
 			);
 			name = ui;
@@ -583,6 +605,7 @@
 				83C7C7811C5B4E3000AF4171 /* DictrResultsSplitViewController.m in Sources */,
 				83B524F51C3E823500FA6D4E /* DictrPhraseDef.m in Sources */,
 				83D087B11C53A10C008ED2BD /* DictrUtilities.m in Sources */,
+				83C7C7DF1C5CC19000AF4171 /* DebugPlayground.m in Sources */,
 				83B524C31C3D423C00FA6D4E /* DictrConstants.m in Sources */,
 				83B524BC1C3C082700FA6D4E /* AFSecurityPolicy.m in Sources */,
 				83B524991C3BF5E500FA6D4E /* NSLayoutConstraint+PureLayout.m in Sources */,
@@ -591,8 +614,11 @@
 				83B525011C3EB23500FA6D4E /* DictrXMLObject.m in Sources */,
 				83B523A51C3BE74600FA6D4E /* DictrMainWindowController.m in Sources */,
 				83B523B01C3BF4B500FA6D4E /* DictrMainContentView.m in Sources */,
+				83C7C7D91C5CB75600AF4171 /* DictrSubentryBoardView.m in Sources */,
 				83B524971C3BF5E500FA6D4E /* ALView+PureLayout.m in Sources */,
 				83B524F81C3E826700FA6D4E /* DictrJsonObject.m in Sources */,
+				83C7C7D61C5CB68A00AF4171 /* NSColor+DictrExtensions.m in Sources */,
+				83C7C7971C5CB35500AF4171 /* DictrSubentryTitleView.m in Sources */,
 				83C7C78F1C5CAAD100AF4171 /* DebugContentViewController.m in Sources */,
 				83B524FE1C3EB22900FA6D4E /* DictrSubEntry.m in Sources */,
 				83B524C61C3D474C00FA6D4E /* DictrSearchField.m in Sources */,
