@@ -1,15 +1,15 @@
 //
-//  DictrSubentryTitleView.m
+//  DictrSubEntryTitleView.m
 //  Dictr
 //
 //  Created by Tong G. on 1/30/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrSubentryTitleView.h"
+#import "DictrSubEntryTitleView.h"
 
-// DictrSubentryTitleView class
-@implementation DictrSubentryTitleView
+// DictrSubEntryTitleView class
+@implementation DictrSubEntryTitleView
 
 #pragma mark - Initializations
 
@@ -54,4 +54,4 @@
     return self->__dicSubEntry;
     }
 
-@end // DictrSubentryTitleView class
+@end // DictrSubEntryTitleView class

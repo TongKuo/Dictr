@@ -7,13 +7,13 @@
 //
 
 #import "DictrSubEntryView.h"
-#import "DictrSubentryTitleView.h"
+#import "DictrSubEntryTitleView.h"
 #import "DictrBadgeView.h"
 
 // Private Interfaces
 @interface DictrSubEntryView ()
 
-@property ( strong, readwrite ) DictrSubentryTitleView* subEntryTitleView;
+@property ( strong, readwrite ) DictrSubEntryTitleView* subEntryTitleView;
 @property ( strong, readwrite ) DictrBadgeView* describesWordBadgeView;
 
 @end // Private Interfaces
@@ -32,7 +32,7 @@
 
         [ self setDictSubEntry: _DictrSubEntry ];
 
-        self.subEntryTitleView = [ [ DictrSubentryTitleView alloc ] initWithDictrSubEntry: self.dictSubEntry ];
+        self.subEntryTitleView = [ [ DictrSubEntryTitleView alloc ] initWithDictrSubEntry: self.dictSubEntry ];
         self.describesWordBadgeView = [ [ DictrBadgeView alloc ] initWithText: _DictrSubEntry.pos
                                                                   controlSize: NSRegularControlSize ];
         [ self setSubviews: @[ self.subEntryTitleView

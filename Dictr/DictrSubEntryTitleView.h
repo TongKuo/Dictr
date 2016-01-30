@@ -1,5 +1,5 @@
 //
-//  DictrSubentryTitleView.h
+//  DictrSubEntryTitleView.h
 //  Dictr
 //
 //  Created by Tong G. on 1/30/16.
@@ -8,11 +8,11 @@
 
 @import Cocoa;
 
-// DictrSubentryTitleView class
-@interface DictrSubentryTitleView : NSTextField <DictrSubEntryWrapper>
+// DictrSubEntryTitleView class
+@interface DictrSubEntryTitleView : NSTextField <DictrSubEntryWrapper>
     {
 @private
     DictrSubEntry __strong* __dicSubEntry;
     }
 
-@end // DictrSubentryTitleView class
+@end // DictrSubEntryTitleView class

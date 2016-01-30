@@ -6,7 +6,7 @@
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-@class DictrSubentryTitleView;
+@class DictrSubEntryTitleView;
 @class DictrBadgeView;
 
 // DictrSubEntryView class
@@ -18,7 +18,7 @@
     DictrSubEntry __strong* __dicSubEntry;
     }
 
-@property ( strong, readonly ) DictrSubentryTitleView* subEntryTitleView;
+@property ( strong, readonly ) DictrSubEntryTitleView* subEntryTitleView;
 @property ( strong, readonly ) DictrBadgeView* describesWordBadgeView;
 
 @end // DictrSubEntryView class
