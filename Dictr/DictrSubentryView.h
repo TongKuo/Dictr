@@ -1,5 +1,5 @@
 //
-//  DictrSubentryBoardView.h
+//  DictrSubentryView.h
 //  Dictr
 //
 //  Created by Tong G. on 1/30/16.
@@ -9,8 +9,8 @@
 @class DictrSubentryTitleView;
 @class DictrBadgeView;
 
-// DictrSubentryBoardView class
-@interface DictrSubentryBoardView : NSView <DictrSubEntryWrapper>
+// DictrSubentryView class
+@interface DictrSubentryView : NSView <DictrSubEntryWrapper>
     {
 @private
     NSMutableArray __strong* __cachedConstraints;
@@ -21,4 +21,4 @@
 @property ( strong, readonly ) DictrSubentryTitleView* subEntryTitleView;
 @property ( strong, readonly ) DictrBadgeView* describesWordBadgeView;
 
-@end // DictrSubentryBoardView class
+@end // DictrSubentryView class

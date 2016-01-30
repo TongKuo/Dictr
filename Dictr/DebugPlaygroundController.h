@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class DictrSubentryBoardView;
+@class DictrSubentryView;
 
 @interface DebugPlaygroundController : NSViewController
     {
@@ -18,6 +18,6 @@
 
 @property ( strong, readwrite ) DictrEntry* entry;
 
-@property ( strong, readonly ) DictrSubentryBoardView* subEntryBoardView;
+@property ( strong, readonly ) DictrSubentryView* subEntryBoardView;
 
 @end

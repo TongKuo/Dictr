@@ -7,11 +7,11 @@
 //
 
 #import "DebugPlaygroundController.h"
-#import "DictrSubentryBoardView.h"
+#import "DictrSubentryView.h"
 
 @interface DebugPlaygroundController ()
 
-@property ( strong, readwrite ) DictrSubentryBoardView* subEntryBoardView;
+@property ( strong, readwrite ) DictrSubentryView* subEntryBoardView;
 
 @end
 
@@ -34,7 +34,7 @@
 
     if ( !self.subEntryBoardView )
         {
-        self.subEntryBoardView = [ [ DictrSubentryBoardView alloc ] initWithDictrSubEntry: subEntry ];
+        self.subEntryBoardView = [ [ DictrSubentryView alloc ] initWithDictrSubEntry: subEntry ];
         [ self.view addSubview: self.subEntryBoardView ];
         [ self.subEntryBoardView autoPinEdgesToSuperviewEdges ];
         }
