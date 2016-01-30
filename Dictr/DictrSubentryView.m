@@ -1,25 +1,25 @@
 //
-//  DictrSubentryView.m
+//  DictrSubEntryView.m
 //  Dictr
 //
 //  Created by Tong G. on 1/30/16.
 //  Copyright © 2016 Tong Kuo. All rights reserved.
 //
 
-#import "DictrSubentryView.h"
+#import "DictrSubEntryView.h"
 #import "DictrSubentryTitleView.h"
 #import "DictrBadgeView.h"
 
 // Private Interfaces
-@interface DictrSubentryView ()
+@interface DictrSubEntryView ()
 
 @property ( strong, readwrite ) DictrSubentryTitleView* subEntryTitleView;
 @property ( strong, readwrite ) DictrBadgeView* describesWordBadgeView;
 
 @end // Private Interfaces
 
-// DictrSubentryView class
-@implementation DictrSubentryView
+// DictrSubEntryView class
+@implementation DictrSubEntryView
 
 #pragma mark - Initializations
 
@@ -88,4 +88,4 @@
     return self->__dicSubEntry;
     }
 
-@end // DictrSubentryView class
+@end // DictrSubEntryView class
