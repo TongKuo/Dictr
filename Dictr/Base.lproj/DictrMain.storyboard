@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="OPE-ED-u0U">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
@@ -647,6 +647,35 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Debug Content View Controller-->
+        <scene sceneID="MJQ-2c-cdO">
+            <objects>
+                <viewController id="OPE-ED-u0U" customClass="DebugContentViewController" sceneMemberID="viewController">
+                    <view key="view" id="4fp-gK-VB9" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="YM4-ls-NP5">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="qrz-KP-bWZ" kind="embed" id="DXp-QG-N4S"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YM4-ls-NP5" secondAttribute="bottom" id="JIF-sz-YxS"/>
+                            <constraint firstItem="YM4-ls-NP5" firstAttribute="leading" secondItem="4fp-gK-VB9" secondAttribute="leading" id="N2h-BS-861"/>
+                            <constraint firstItem="YM4-ls-NP5" firstAttribute="top" secondItem="4fp-gK-VB9" secondAttribute="top" id="gsr-qC-IYq"/>
+                            <constraint firstAttribute="trailing" secondItem="YM4-ls-NP5" secondAttribute="trailing" id="rZq-20-e47"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="wI4-e7-uci" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="417"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -682,6 +711,20 @@
                 <customObject id="oiB-lP-8g0" customClass="DictrMainSplitViewController"/>
             </objects>
             <point key="canvasLocation" x="75" y="750"/>
+        </scene>
+        <!--Debug Playground Controller-->
+        <scene sceneID="wpI-AX-V7c">
+            <objects>
+                <viewController id="qrz-KP-bWZ" customClass="DebugPlaygroundController" sceneMemberID="viewController">
+                    <view key="view" id="KzP-44-C23">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="QbC-FJ-6UY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="861"/>
         </scene>
     </scenes>
 </document>
