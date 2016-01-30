@@ -59,6 +59,11 @@
     return resultView;
     }
 
+- ( void ) tableViewSelectionDidChange: ( NSNotification* )_Notif
+    {
+    NSLog( @"%@", _Notif );
+    }
+
 #pragma mark - Private Interfaces
 
 // Notification Sel
